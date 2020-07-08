@@ -1,9 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- About Section -->
 
-    @include('partials.masthead')
+<header class="masthead masthead-home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold">Come have an experience</h1>
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
 
     <section class="page-section bg-primary" id="about">
         <div class="container">
@@ -34,65 +44,59 @@
         <h2 class="text-center mt-0">At Your Service</h2>
         <hr class="divider my-4">
         <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
                 <i class="fas fa-4x fa-map text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Travel Guide</h3>
                 <p class="text-muted mb-0">You will surely be guided and insured at every moment of your tour.</p>
             </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
                 <i class="fas fa-4x fa-hotel text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Hotel Booking</h3>
                 <p class="text-muted mb-0">You will sleep in the most lavishing hotels and resorts or some great Air BnB</p>
             </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
                 <i class="fas fa-4x fa-passport text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Visa and Passport Processing</h3>
                 <p class="text-muted mb-0">Get your visa or passport in a jaw dropping time with our smooth services</p>
             </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
                 <i class="fas fa-4x fa-plane text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Airline Ticketing</h3>
                 <p class="text-muted mb-0">Get an airline ticket with no trouble or any rough hudles</p>
             </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
                 <i class="fas fa-4x fa-bus text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Bus and Ferry Booking</h3>
                 <p class="text-muted mb-0">Never miss a bus or ferry for your important journey</p>
             </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
                 <i class="fas fa-4x fa-camera text-primary mb-4"></i>
-                <h3 class="h4 mb-2">Photography</h3>
-                <p class="text-muted mb-0">Every moment captured in HD for you to remenice.</p>
+                <h3 class="h4 mb-2">Travel Insurance</h3>
+                <p class="text-muted mb-0">You are safe with us, your travel insurance is all taken care of</p>
             </div>
             </div>
         </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- gallery Section -->
     <section id="gallery">
         <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/images/1.jpg">
                 <img class="img-fluid" src="img/images/1.jpg" alt="">
-                <div class="portfolio-box-caption">
-                <div class="project-category text-white-75">
-                    BWINDI IMPEMETRABLE NATIONAL PARK
-                </div>
-                <div class="project-name"></div>
-                </div>
             </a>
             <p class="container">Looking for a gorilla trekking safari in Uganda? Located in Western Uganda, Bwindi Forest is the most popular tourist
             site in Uganda, home to the extincting mountain gorillas</p>
@@ -100,12 +104,6 @@
             <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/images/2.jpg">
                 <img class="img-fluid" src="img/images/2.jpg" alt="">
-                <div class="portfolio-box-caption">
-                <div class="project-category text-white-75">
-                    QUEEN ELIZABETH NATIONAL PARK
-                </div>
-                <div class="project-name"></div>
-                </div>
             </a>
             <p class="container">This is the second most popular tourist destination taking Uganda Safaris. It is the most popular destination for
             holiday makers having a big population of tree climbing lions</p>
@@ -113,12 +111,6 @@
             <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/images/3.jpg">
                 <img class="img-fluid" src="img/images/3.jpg" alt="">
-                <div class="portfolio-box-caption">
-                <div class="project-category text-white-75">
-                    MURCHISON FALLS
-                </div>
-                <div class="project-name"></div>
-                </div>
             </a>
                 <p class="container">Renowned safari park with diverse fauna and flora, home the great scenic Murchison falls and a variety of animals, birds
                 and plants</p>
@@ -126,12 +118,6 @@
             <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/images/4.jpg">
                 <img class="img-fluid" src="img/images/4.jpg" alt="">
-                <div class="portfolio-box-caption">
-                <div class="project-category text-white-75">
-                    KIDEPO NATIONAL PARK
-                </div>
-                <div class="project-name"></div>
-                </div>
             </a>
             <p class="container">Located in the extreme northern part of Uganda, Kidepo has an amazing array of wildlife and its indeed the best for game
             viewing</p>
@@ -139,24 +125,12 @@
             <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/images/5.jpg">
                 <img class="img-fluid" src="img/images/5.jpg" alt="">
-                <div class="portfolio-box-caption">
-                <div class="project-category text-white-75">
-                    RWENZORI NATIONAL PARK
-                </div>
-                <div class="project-name"></div>
-                </div>
             </a>
             <p class="container">Also known as the mountains of the moon, Rwenzori Mountain is one the best places for hiking to the glaciated peaks</p>
             </div>
             <div class="col-lg-4 col-sm-6">
             <a class="portfolio-box" href="img/images/6.jpg">
                 <img class="img-fluid" src="img/images/6.jpg" alt="">
-                <div class="portfolio-box-caption p-3">
-                <div class="project-category text-white-75">
-                    KIBALE FOREST NATIONAL PARK
-                </div>
-                <div class="project-name"></div>
-                </div>
             </a>
             <p class="container">This is the best place for chimpanzee tracking while in Uganda. The forest has over 13 primates that thrive in the
             forest.</p>

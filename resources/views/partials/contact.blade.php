@@ -15,7 +15,6 @@
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
           <a class="d-block" href="mailto:isikosaidi@gmail.com">jianatourismandtravel@gmail.com</a>
         </div>
       </div>
@@ -26,14 +25,17 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-              <a href="#">
+              <a href="#" class="mx-3">
                 <i class="fab fa-3x fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="#" class="mx-3">
                 <i class="fab fa-3x fa-facebook-f"></i>
               </a>
-              <a href="https://wa.me/256704672670">
+              <a href="https://wa.me/256704672670" class="mx-3">
                 <i class="fab fa-3x fa-whatsapp"></i>
+              </a>
+              <a href="#" class="mx-3">
+                <i class="fab fa-3x fa-instagram"></i>
               </a>
         </div>
       </div>

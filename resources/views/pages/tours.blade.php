@@ -2,7 +2,18 @@
 
 @section('content')
 
-@include('partials.masthead')
+<header class="masthead masthead-tours">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold">Have the best vacations with us</h1>
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                </div>
+            </div>
+        </div>
+</header>
+
     <section id="content" class="page-section">
         <h1 class="text-center mb-5">Most rated tours</h1>
         <div class="container">

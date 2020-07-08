@@ -51,7 +51,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger text-uppercase" href="#page-top">jiana tours & travel</a>
+            <a class="navbar-brand js-scroll-trigger text-uppercase" href="{{route('welcome')}}">jiana tours & travel</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -64,8 +64,8 @@
                             <a class="nav-link" href="#" role="button" id="menuDropdown" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Services</a>
                             <div class="dropdown-menu" aria-labelledby="menuDropdown">
-                                <a href="hotels.html" class="dropdown-item">Hotels</a>
-                                <a href="tours.html" class="dropdown-item">Tours</a>
+                                <a href="{{route('hotels')}}" class="dropdown-item">Hotels</a>
+                                <a href="{{route('tours')}}" class="dropdown-item">Tours</a>
                                 <a href="#" class="dropdown-item">Bus booking</a>
                                 <a href="#" class="dropdown-item">Passport and Visa</a>
                             </div>
@@ -75,10 +75,10 @@
                         <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="{{route('login')}}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link" href="{{route('register')}}">Register</a>
                     </li>
                 </ul>
             </div>

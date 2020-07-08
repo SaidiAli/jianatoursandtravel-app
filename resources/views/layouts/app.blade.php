@@ -34,7 +34,7 @@
 </body>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('js/jquery.easing.min.js')}}"></script>
+<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
 </html>

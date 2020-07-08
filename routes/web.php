@@ -16,15 +16,15 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/hotels', function () {
     return view('pages.hotels');
-});
+})->name('hotels');
 
 Route::get('/tours', function () {
     return view('pages.tours');
-});
+})->name('tours');
 
 Auth::routes();
 

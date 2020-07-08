@@ -24,11 +24,15 @@ mix.copy('node_modules/magnific-popup/dist/*.js', 'public/js');
 // custom js
 mix.copy("resources//js/main.js", "public/js");
 // jquery
-mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js');
+mix.copy('node_modules/jquery/dist/*', 'public/js');
 // boostrap
 mix.copy('node_modules/bootstrap/dist/js/*', 'public/js/bootstrap')
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+mix.options({
+    processCssUrls: false
+});
 
 // mix.browserSync("http://127.0.0.1:8000/");
