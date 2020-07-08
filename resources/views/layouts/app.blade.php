@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('css/fontawesome-free/css/all.min.css')}}">
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/fontawesome-free/css/all.min.css">
 </head>
 <body>
     <div id="app">
@@ -29,9 +29,9 @@
         @include('partials.footer')
     </div>
 </body>
-<script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/bootstrap/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('js/jquery.easing.min.js')}}"></script>
-<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/main.js"></script>
 </html>
