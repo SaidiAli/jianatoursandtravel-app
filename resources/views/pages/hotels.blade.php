@@ -20,8 +20,8 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="img/images/hotels/Forest-Cottages-Kampala.jpg">
-                            <img class="img-fluid card-img-top" src="img/images/hotels/Forest-Cottages-Kampala.jpg"
+                        <a class="portfolio-box" href="images/images/hotels/Forest-Cottages-Kampala.jpg">
+                            <img class="img-fluid card-img-top" src="images/images/hotels/Forest-Cottages-Kampala.jpg"
                                 alt="">
                         </a>
                         <div class="card-body">
@@ -34,8 +34,8 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="img/images/hotels/kyaninga-lodge-1.jpg">
-                            <img class="img-fluid card-img-top" src="img/images/hotels/kyaninga-lodge-1.jpg" alt="">
+                        <a class="portfolio-box" href="images/images/hotels/kyaninga-lodge-1.jpg">
+                            <img class="img-fluid card-img-top" src="images/images/hotels/kyaninga-lodge-1.jpg" alt="">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">Kyaninga Lodge</h5>
@@ -47,8 +47,8 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="img/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
-                            <img class="img-fluid card-img-top" src="img/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
+                        <a class="portfolio-box" href="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
+                            <img class="img-fluid card-img-top" src="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
                                 alt="">
                         </a>
                         <div class="card-body">
@@ -70,8 +70,8 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
                         <div class="card">
-                            <a class="portfolio-box" href="img/images/hotels/Forest-Cottages-Kampala.jpg">
-                                <img class="img-fluid card-img-top" src="img/images/hotels/Forest-Cottages-Kampala.jpg"
+                            <a class="portfolio-box" href="images/images/hotels/Forest-Cottages-Kampala.jpg">
+                                <img class="img-fluid card-img-top" src="images/images/hotels/Forest-Cottages-Kampala.jpg"
                                     alt="">
                             </a>
                             <div class="card-body">
@@ -87,8 +87,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="card">
-                            <a class="portfolio-box" href="img/images/hotels/kyaninga-lodge-1.jpg">
-                                <img class="img-fluid card-img-top" src="img/images/hotels/kyaninga-lodge-1.jpg" alt="">
+                            <a class="portfolio-box" href="images/images/hotels/kyaninga-lodge-1.jpg">
+                                <img class="img-fluid card-img-top" src="images/images/hotels/kyaninga-lodge-1.jpg" alt="">
                             </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
@@ -103,8 +103,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="card">
-                            <a class="portfolio-box" href="img/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
-                                <img class="img-fluid card-img-top" src="img/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
+                            <a class="portfolio-box" href="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
+                                <img class="img-fluid card-img-top" src="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
                                     alt="">
                             </a>
                             <div class="card-body">

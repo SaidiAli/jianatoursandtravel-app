@@ -34,7 +34,7 @@
               <a href="https://wa.me/256704672670" class="mx-3">
                 <i class="fab fa-3x fa-whatsapp"></i>
               </a>
-              <a href="#" class="mx-3">
+              <a href="https://instagram.com" class="mx-3">
                 <i class="fab fa-3x fa-instagram"></i>
               </a>
         </div>

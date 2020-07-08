@@ -72,7 +72,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('login')}}">Login</a>

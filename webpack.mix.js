@@ -27,12 +27,13 @@ mix.copy("resources//js/main.js", "public/js");
 mix.copy('node_modules/jquery/dist/*', 'public/js');
 // boostrap
 mix.copy('node_modules/bootstrap/dist/js/*', 'public/js/bootstrap')
+// images
+mix.copy('resources/images', 'public/images');
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
-
-mix.options({
+    .sass('resources/sass/app.scss', 'public/css')
+    .options({
     processCssUrls: false
-});
+    });
 
 // mix.browserSync("http://127.0.0.1:8000/");
