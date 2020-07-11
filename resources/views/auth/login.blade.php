@@ -1,73 +1,122 @@
-@extends('layouts.app')
+@extends('layouts.authbase')
+@section("custom_css")
+@stop
+
+
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 bg-white">
+                <div class="m-h-100">
+                    <div class="account-pages pt-5">
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="row">
+                                        <div class="col-12 p-5">
+                                            <div class="mx-auto mb-5">
+                                                <a href="{{ url('/') }}">
+                                                    <h2 class="text-center">JTT</h2> </a>
+                                            </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                                            <h6 class="h5 mb-0 mt-4">Welcome back!</h6>
+                                            <p class="text-muted mt-1 mb-4">Please enter your email and password</p>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                            <form action="{{ route('login') }}" class="needs-validation"
+                                                  method="POST" id="submitForm" novalidate>
+                                                @csrf
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="email">Email</label>
+                                                    <div class="input-group input-group-merge">
+                                                        <input type="email" id="email" name="email"
+                                                               class="form-control" placeholder="Enter your email" required>
+                                                               <div class="invalid-feedback">
+                                                        Please provide your email
+                                                    </div>
+                                                    </div>
+                                                </div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                <div class="form-group mt-4">
+                                                    <label class="form-control-label" for="password">Password</label>
+                                                    <a href="#"
+                                                       class="float-right text-muted text-unline-dashed ml-1">Forgot
+                                                        your
+                                                        password?</a>
+                                                    <div class="input-group input-group-merge">
+                                                        <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="icon-dual" data-feather="lock"></i>
+                                                        </span>
+                                                        </div>
+                                                        <input type="password" name="password" class="form-control"
+                                                               id="password" placeholder="Enter your password" required>
+                                                               <div class="invalid-feedback">
+                                                        Please provide your password
+                                                    </div>
+                                                    </div>
+                                                </div>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                                <div class="form-group mb-4">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                               id="checkbox-signin" checked>
+                                                        <label class="custom-control-label" for="checkbox-signin">Remember
+                                                            me</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group mb-0 text-center">
+                                                    <button class="btn btn-primary btn-block" type="submit"> Log In
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            {{-- commented by @jeremiahiro until social login is ready --}}
+                                            {{-- <div>
+                                                <div class="py-3 text-center">
+                                                    <span class="font-size-16 font-weight-bold">Or</span>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <a href="#" class="btn btn-white"><i
+                                                                class='uil uil-google icon-google mr-2'></i>With Google</a>
+                                                    </div>
+                                                    <div class="col-6 text-right">
+                                                        <a href="#" class="btn btn-white"><i
+                                                                class='uil uil-facebook mr-2 icon-fb'></i>With Facebook</a>
+                                                    </div>
+                                                </div>
+                                            </div> --}}
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end card-body -->
                             </div>
-                        </div>
+                            <!-- end card -->
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    <p class="text-muted">Dont have an account <a href="/register"
+                                                                                  class="text-primary font-weight-bold ml-1">Sign
+                                            Up</a></p>
+                                </div> <!-- end col -->
                             </div>
-                        </div>
+                            <!-- end row -->
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        </div> <!-- end col -->
+                        <!-- end row -->
+                        <!-- end container -->
+                    </div>
+                    <!-- end page -->
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 @endsection
+
+
+@section("javascript")
+@stop
