@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="masthead masthead-tours">
+<header class="masthead-tours">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
@@ -20,10 +20,8 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="images/images/hotels/Forest-Cottages-Kampala.jpg">
                             <img class="img-fluid card-img-top" src="images/images/hotels/Forest-Cottages-Kampala.jpg"
                                 alt="">
-                        </a>
                         <div class="card-body">
                             <h5 class="card-title">Source of the nile</h5>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
@@ -34,9 +32,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="images/images/hotels/kyaninga-lodge-1.jpg">
                             <img class="img-fluid card-img-top" src="images/images/hotels/kyaninga-lodge-1.jpg" alt="">
-                        </a>
                         <div class="card-body">
                             <h5 class="card-title">Murschison falls</h5>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
@@ -47,10 +43,8 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
                             <img class="img-fluid card-img-top" src="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
                                 alt="">
-                        </a>
                         <div class="card-body">
                             <h5 class="card-title">National muserum</h5>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
@@ -70,10 +64,8 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
                         <div class="card">
-                            <a class="portfolio-box" href="images/images/hotels/Forest-Cottages-Kampala.jpg">
                                 <img class="img-fluid card-img-top" src="images/images/hotels/Forest-Cottages-Kampala.jpg"
                                     alt="">
-                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title">Rwenzori Natinal Park</h5>
@@ -87,9 +79,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="card">
-                            <a class="portfolio-box" href="images/images/hotels/kyaninga-lodge-1.jpg">
                                 <img class="img-fluid card-img-top" src="images/images/hotels/kyaninga-lodge-1.jpg" alt="">
-                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title">National Zoo</h5>
@@ -103,10 +93,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="card">
-                            <a class="portfolio-box" href="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
                                 <img class="img-fluid card-img-top" src="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
                                     alt="">
-                            </a>
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title">Lake Mburo Safari</h5>

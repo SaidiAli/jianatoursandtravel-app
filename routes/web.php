@@ -14,22 +14,16 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', 'PagesController@home')->name('home');
 
-Route::get('/hotels', function () {
-    return view('pages.hotels');
-})->name('hotels');
+Route::get('/tours', 'PagesController@tours')->name('tours');
 
-Route::get('/tours', function () {
-    return view('pages.tours');
-})->name('tours');
+Route::get('/hotels', 'PagesController@hotels')->name('hotel.index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/profile', function() {
-    return view('backend.profile');
-})->name('profile');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/profile', 'ProfileController@index')->name('profile');
+    Route::resource('/hotel', 'HotelController')->except(['index']);
+    Route::get('/booking/create', 'BookingController@create')->name('booking.create');
+});

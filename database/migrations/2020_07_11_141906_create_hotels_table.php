@@ -19,8 +19,12 @@ class CreateHotelsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
             $table->string('description');
+            $table->string('district');
+            $table->string('email');
+            $table->string('web')->nullable();
             $table->string('address');
-            $table->string('contact');
+            $table->string('phone');
+            $table->string('cover_photo')->nullable();
             $table->timestamps();
         });
     }

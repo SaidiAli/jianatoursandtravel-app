@@ -2,13 +2,17 @@
 
 @section('content')
 
-<header class="masthead masthead-home">
+<header class="masthead-home">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
                     <h1 class="text-uppercase text-white font-weight-bold">Come have an experience</h1>
                 </div>
                 <div class="col-lg-8 align-self-baseline">
+                    @guest
+                        <p class="text-center text-white">Create an account to discover the hidden power of Jiana Tours and Travel plus some amazing deals</p>
+                        <a href="{{route('register')}}" class="btn btn-primary btn-lg">Create Account</a>
+                    @endguest
                 </div>
             </div>
         </div>
@@ -23,7 +27,7 @@
             <hr class="divider light my-4">
             <div class="container text-white-75">
                 <p>Here at Jiana Tourism and Travel we take care of everything that you feel you'd need during your tour or travel around Uganda and the rest of Africa. Our goal is to make you feel at home as musch as wherever you are from, and make you want to stay. Lol </p>
-                <p>Tourism and Travel has never been easy with our services. We serve you from when you get a thought of it.</p>
+                <p>Tourism and Travel has never been easire with our services. We serve you from when you get a thought of it.</p>
                 <p>You ever want to have a family vacation, retirement vacation , Honey moon, Business trip, School trip, want to explore nature, to mention but a few, we got it all sorted.</p>
 
                 <div class="row justify-content-center mt-5">
@@ -57,7 +61,7 @@
                 <i class="fas fa-4x fa-hotel text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Hotel Booking</h3>
                 <p class="text-muted mb-0">You will sleep in the most lavishing hotels and resorts or some great Air BnB</p>
-                <p><a href="{{route('hotels')}}">Find out more ...</a></p>
+                <p><a href="{{route('hotel.index')}}">Find out more ...</a></p>
             </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
