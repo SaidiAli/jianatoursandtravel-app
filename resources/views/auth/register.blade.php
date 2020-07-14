@@ -18,6 +18,13 @@
                                                 <a href="{{ route('home') }}">
                                                     <h2 class="text-center">JTT</h2></a>
                                             </div>
+
+                                            @if ($errors->any())
+                                                @foreach ($errors->all() as $error)
+                                                    <div class="alert alert-danger">{{$error}}</div>
+                                                @endforeach
+                                            @endif
+                                            
                                             <h3 class="h3 mb-0 mt-4 text-center">Register</h3>
                                             <br><br>
 
