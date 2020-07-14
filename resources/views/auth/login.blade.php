@@ -20,6 +20,12 @@
                                                     <h2 class="text-center">JTT</h2> </a>
                                             </div>
 
+                                            @if ($errors->any())
+                                                @foreach ($errors->all() as $error)
+                                                    <div class="alert alert-danger">{{$error}}</div>
+                                                @endforeach
+                                            @endif
+
                                             <h6 class="h5 mb-0 mt-4">Welcome back!</h6>
                                             <p class="text-muted mt-1 mb-4">Please enter your email and password</p>
 

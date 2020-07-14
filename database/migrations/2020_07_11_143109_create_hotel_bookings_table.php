@@ -19,8 +19,8 @@ class CreateHotelBookingsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('hotel_id');
             $table->foreign('hotel_id')->references('id')->on('hotels');
-            $table->timestamp('check_in');
-            $table->timestamp('check_out');
+            $table->dateTime('check_in');
+            $table->dateTime('check_out');
             $table->unsignedInteger('adults');
             $table->unsignedInteger('children');
             $table->timestamps();
