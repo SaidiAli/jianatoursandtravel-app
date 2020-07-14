@@ -49,9 +49,9 @@
             </div>
         </nav> --}}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger text-uppercase" href="{{route('welcome')}}">jiana tours & travel</a>
+            <a class="navbar-brand js-scroll-trigger text-uppercase" href="{{route('home')}}">jiana tours & travel</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -61,12 +61,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
+                        <a href="{{route('hotel.index')}}" class="nav-link">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('tours')}}" class="nav-link">Tours</a>
+                    </li>
+                    <li class="nav-item">
                         <div class="dropdown">
                             <a class="nav-link" href="#" role="button" id="menuDropdown" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Services</a>
                             <div class="dropdown-menu" aria-labelledby="menuDropdown">
-                                <a href="{{route('hotels')}}" class="dropdown-item">Hotels</a>
-                                <a href="{{route('tours')}}" class="dropdown-item">Tours</a>
+                                <a href="#" class="dropdown-item">Car Hire</a>
                                 <a href="#" class="dropdown-item">Bus booking</a>
                                 <a href="#" class="dropdown-item">Passport and Visa</a>
                             </div>

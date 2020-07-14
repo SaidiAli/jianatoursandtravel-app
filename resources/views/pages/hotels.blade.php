@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="masthead masthead-hotels">
+<header class="masthead-hotels">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
@@ -14,114 +14,64 @@
         </div>
     </header>
 
-    <section id="content" class="page-section">
-        <h1 class="text-center mb-5">The most rated Hotels</h1>
+    <section id="content" class="section">
+        <h1 class="text-center mb-5">Select from our registered Hotels</h1>
         <div class="container">
             <div class="row">
+                @forelse ($hotels as $hotel)
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                        <a class="portfolio-box" href="images/images/hotels/Forest-Cottages-Kampala.jpg">
-                            <img class="img-fluid card-img-top" src="images/images/hotels/Forest-Cottages-Kampala.jpg"
+                            <img class="img-fluid card-img-top" src="{{asset('storage/'.$hotel->cover_photo)}}"
                                 alt="">
-                        </a>
                         <div class="card-body">
-                            <h5 class="card-title">Forest Cottages Kampala</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
-                                odio. Nemo assumenda a dolores, soluta suscipit dignissimos</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
+                            <h5 class="card-title">{{$hotel->name}}</h5>
+                            <p class="card-text">{{$hotel->description}}</p>
+                            <a href="{{route('booking.create')}}" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <a class="portfolio-box" href="images/images/hotels/kyaninga-lodge-1.jpg">
-                            <img class="img-fluid card-img-top" src="images/images/hotels/kyaninga-lodge-1.jpg" alt="">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Kyaninga Lodge</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
-                                odio. Nemo assumenda a dolores, soluta suscipit dignissimos</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
-                        </div>
+                @empty
+                <div class="container">
+                    <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="text-center text-info">Sorry, there is no Hotel registered with us yet</p>
+                        <p class="text-center"><a href="{{route('hotel.create')}}">Register</a> a Hotel</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <a class="portfolio-box" href="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
-                            <img class="img-fluid card-img-top" src="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
-                                alt="">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Lake Mburo Safari Lodge</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
-                                odio. Nemo assumenda a dolores, soluta suscipit dignissimos</p>
-                            <a href="#" class="btn btn-primary">Book Now</a>
-                        </div>
+                </div>
+                @endforelse
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div>
+            <h1 class="text-center mb-5">Some discounted deals for you</h1>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="text-center text-info">Sorry, there is no Hotel with discounted deals at the moment</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section">
-        <div>
-            <h1 class="text-center mb-5">Some discounted deals for you</h1>
-            <div class="container">
+    <div class="section">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="card">
-                            <a class="portfolio-box" href="images/images/hotels/Forest-Cottages-Kampala.jpg">
-                                <img class="img-fluid card-img-top" src="images/images/hotels/Forest-Cottages-Kampala.jpg"
-                                    alt="">
-                            </a>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Forest Cottages Kampala</h5>
-                                    <p class="discount">30% off</p>
-                                </div>
-                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
-                                    odio. Nemo assumenda a dolores, soluta suscipit dignissimos</p>
-                                <a href="#" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="card">
-                            <a class="portfolio-box" href="images/images/hotels/kyaninga-lodge-1.jpg">
-                                <img class="img-fluid card-img-top" src="images/images/hotels/kyaninga-lodge-1.jpg" alt="">
-                            </a>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Kyaninga Lodge</h5>
-                                    <p class="discount">35% off</p>
-                                </div>
-                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
-                                    odio. Nemo assumenda a dolores, soluta suscipit dignissimos</p>
-                                <a href="#" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="card">
-                            <a class="portfolio-box" href="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg">
-                                <img class="img-fluid card-img-top" src="images/images/hotels/Lake-Mburo-Safari-Lodge1.jpg"
-                                    alt="">
-                            </a>
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="card-title">Lake Mburo Safari Lodge</h5>
-                                    <p class="discount">25% off</p>
-                                </div>
-                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, ut
-                                    odio. Nemo assumenda a dolores, soluta suscipit dignissimos</p>
-                                <a href="#" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-lg-6">
+                <h2 class="text-center">Register your Hotel with us</h2>
+                <p class="text-center">Let your hotel be accessed by millions who use our platform</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <a href="{{route('hotel.create')}}" class="btn btn-primary">Register Hotel</a>
+            </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     @include('partials.contact')
 @endsection

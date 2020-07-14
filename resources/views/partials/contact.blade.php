@@ -15,7 +15,7 @@
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <a class="d-block" href="mailto:isikosaidi@gmail.com">jianatourismandtravel@gmail.com</a>
+          <a class="d-block" href="mailto:jianatourismandtravel@gmail.com">jianatourismandtravel@gmail.com</a>
         </div>
       </div>
 
@@ -28,13 +28,10 @@
               <a href="#" class="mx-3">
                 <i class="fab fa-3x fa-twitter"></i>
               </a>
-              <a href="#" class="mx-3">
-                <i class="fab fa-3x fa-facebook-f"></i>
-              </a>
               <a href="https://wa.me/256704672670" class="mx-3">
                 <i class="fab fa-3x fa-whatsapp"></i>
               </a>
-              <a href="https://instagram.com" class="mx-3">
+              <a href="https://instagram.com/jianatoursandtravel" class="mx-3">
                 <i class="fab fa-3x fa-instagram"></i>
               </a>
         </div>

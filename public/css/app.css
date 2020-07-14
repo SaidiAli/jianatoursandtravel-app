@@ -10025,34 +10025,98 @@ hr.light {
   padding: 8rem 0;
 }
 
-header.masthead {
+.masthead-home {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/images/6.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../images/images/6.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
-header.masthead h1 {
+.masthead-home h1 {
   font-size: 2.25rem;
 }
 @media (min-width: 992px) {
-  header.masthead {
+  .masthead-home {
     height: 100vh;
     min-height: 40rem;
     padding-top: 72px;
     padding-bottom: 0;
   }
-  header.masthead p {
+  .masthead-home p {
     font-size: 1.15rem;
   }
-  header.masthead h1 {
+  .masthead-home h1 {
     font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
-  header.masthead h1 {
+  .masthead-home h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.masthead-hotels {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../images/images/hotels/slider12.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead-hotels h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  .masthead-hotels {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
+  .masthead-hotels p {
+    font-size: 1.15rem;
+  }
+  .masthead-hotels h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .masthead-hotels h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.masthead-tours {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../images/images/equator.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead-tours h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  .masthead-tours {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
+  .masthead-tours p {
+    font-size: 1.15rem;
+  }
+  .masthead-tours h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .masthead-tours h1 {
     font-size: 3.5rem;
   }
 }
@@ -10153,4 +10217,8 @@ body {
 .portfolio-section.portfolio-img {
   width: 10px;
   height: 10px;
+}
+
+.section {
+  padding: 3rem 0;
 }

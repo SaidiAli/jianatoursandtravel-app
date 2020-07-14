@@ -8,8 +8,8 @@
             <div class="row page-title">
                         <div class="col-md-12">
                             <h4 class="mb-1 mt-0">Profile</h4>
-                        </div>
                     </div>
+                </div>
 
                     <div class="row">
                         <div class="col-lg-3">
@@ -60,7 +60,7 @@
                                         <div class="tab-pane fade show active" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
                                             <h5 class="mt-3">My hotels</h5>
                                             <p>Hotels that you have booked before will appear here</p>
-                                            <p>Check some hotels <a href="{{route('hotels')}}">here</a></p>
+                                            <p>Check some hotels <a href="{{route('hotel.index')}}">here</a></p>
                                         </div>
 
                                         <!-- messages -->
