@@ -9,16 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class HotelController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $hotels = Hotel::all();
-        return view('pages.hotels')->with('hotels', $hotels);
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -46,7 +36,7 @@ class HotelController extends Controller
                 'district' => 'required',
                 'address' => 'required|max:200',
                 'phone' => 'required',
-                'cover_photo' => 'image|mimes:jpeg,png,jpg'
+                'cover_photo' => 'required|image|mimes:jpeg,png,jpg'
             ]
         );
 

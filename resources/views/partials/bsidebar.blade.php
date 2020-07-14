@@ -1,14 +1,13 @@
 <!-- ========== Left Sidebar Start ========== -->
 <div class="left-side-menu">
     <div class="media user-profile mt-2 mb-2">
-        <img src="/backend/assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle mr-2" alt="Shreyu"/>
-        <img src="/backend/assets/images/users/avatar-7.jpg" class="avatar-xs rounded-circle mr-2" alt="Shreyu"/>
+        <img src="/backend/assets/images/placeholder.jpg" class="avatar-sm rounded-circle mr-2" alt="Shreyu"/>
+        <img src="/backend/assets/images/placeholder.jpg" class="avatar-xs rounded-circle mr-2" alt="Shreyu"/>
         <div class="media-body">
-            @if (auth()->user())
+            @auth
                 <h6 class="pro-user-name mt-0 mb-0">{{auth()->user()->name}}</h6>
-            @else
-                <h6 class="pro-user-name mt-0 mb-0">{{"Your name"}}</h6>
-            @endif
+                <p>{{auth()->user()->email}}</p>
+            @endauth
         </div>
     </div>
     <div class="sidebar-content">
