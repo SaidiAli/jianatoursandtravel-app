@@ -44,7 +44,7 @@
                                             <a class="nav-link" id="tours-tab" data-toggle="pill"
                                                 href="#tours" role="tab" aria-controls="tours"
                                                 aria-selected="false">
-                                                My Trips
+                                                My Tours
                                             </a>
                                         </li>
                                         <li class="nav-item">

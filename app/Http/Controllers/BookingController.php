@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    public function create() {
+    public function store() {
+        dd('Booking here');
         return view('backend.booking.create');
     }
 }
