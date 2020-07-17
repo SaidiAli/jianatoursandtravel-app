@@ -15,6 +15,11 @@
         width: 5rem !important;
     }
 
+    #total-price {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
     </style>    
 @endsection
 
@@ -91,7 +96,7 @@
                                                         <h5 class="card-title font-size-16">{{$room->name}}</h5>
                                                         <p class="card-text text-muted">{{$room->description}}</p>
                                                         <p class="room-price">{{$room->price}} UGX</p>
-                                                        <input class="form-control room-select hotel-room" id="{{$room->id}}._number_of_rooms" type="number" name="rooms" required value="0">
+                                                        <input class="form-control room-select hotel-room" id="{{$room->id}}" type="number" name="rooms" required value="0" min="0">
                                                         <p class="card-text"><small class="text-muted">Status: @if ($room->is_bookable == true)
                                                             <span class="text-success">Availble</span></small>
                                                         @else
@@ -107,7 +112,8 @@
 
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
-                                        <p class="selected-items text-center">2 room 1 adult 2 children</p>
+                                        <p class="selected-items text-center"><span id="number_of_rooms">5</span> rooms <span id="number_of_adults">4</span> adult <span id="number_of_children">1</span> children</p>
+                                        <p id="total-price" class="text-center">200,000 UGX</p>
                                         <button class="btn btn-primary btn-block">Make Reservation</button>
                                     </div>
                                 </div>
@@ -161,16 +167,50 @@
 
 <script src="{{asset('js/custom.js')}}"></script>
 <script>
+    let hotel_data = <?php echo json_encode($hotel); ?>;
+    let rooms = [];
+
     $("#booking_form").submit(function(e) {
     e.preventDefault()
     let check_in_date = $("#checkin-date").val()
     let check_out_date = $("#checkout-date").val()
     let check_in_time = $("#checkin-time").val()
     let check_out_time = $("#checkout-time").val()
+    let adults = $('#adults').val()
+    let children = $('#children').val()
+    let total_price = $('#total-price').html()
+    let total_number_of_rooms = $('#number_of_rooms').html()
     
-})
+    hotel_data.rooms.forEach(room => {
+        let room_id = room.id
+        let room_count = $('#'+room_id).val()
+        let str = `${room_id}-${room_count}`
+        rooms.push(str)
+    });
 
-    let hotel_data = <?php echo json_encode($hotel); ?>;
-    console.log(hotel_data)
+    let formData = new FormData()
+    formData.append('check_in_date', check_in_date)
+    formData.append('check_out_date', check_out_date)
+    formData.append('check_in_time', check_in_time)
+    formData.append('check_out_time', check_out_time)
+    formData.append('adults', adults)
+    formData.append('children', children)
+    formData.append('hotel_id', hotel_data.id)
+    formData.append('total_price', total_price)
+
+
+    formData.append('rooms', JSON.stringify(rooms))
+
+    fetch('/booking', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+})
 </script>
 @endsection

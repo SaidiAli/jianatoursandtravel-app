@@ -29,5 +29,5 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 Route::get('/test' , function() {
-    return view('backend.booking.create');
+    dd('test completed');
 });

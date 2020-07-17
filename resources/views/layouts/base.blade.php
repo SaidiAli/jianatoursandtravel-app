@@ -6,9 +6,10 @@
         <meta charset="utf-8" />
         <title>Jiana Tours & Travel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Jian tours and Travel agency" name="description" />
+        <meta content="Jiana tours and Travel agency" name="description" />
         <meta content="IsikoSaidiali" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="csrf-token" content="{{csrf_token()}}">
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="/backend/assets/images/favicon.ico">
