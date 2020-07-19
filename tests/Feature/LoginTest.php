@@ -43,7 +43,7 @@ class LoginTest extends TestCase
             'password' => $password
         ]);
 
-        $response->assertRedirect();
+        $response->assertRedirect('/profile');
     }
 
     public function test_user_cannot_login_with_wrong_credentials()
