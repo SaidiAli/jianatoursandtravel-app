@@ -23,6 +23,8 @@ mix.copy("node_modules/magnific-popup/dist/*.css", 'public/css');
 mix.copy('node_modules/magnific-popup/dist/*.js', 'public/js');
 // custom js
 mix.copy("resources//js/main.js", "public/js");
+mix.copy("resources//js/custom.js", "public/js");
+
 // jquery
 mix.copy('node_modules/jquery/dist/*', 'public/js');
 // boostrap

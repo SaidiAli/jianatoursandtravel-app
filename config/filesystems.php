@@ -65,6 +65,14 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+        'gcs' => [
+            'driver' => 's3',
+            'key' => 'GOOGDLDDZH2NMZQLUEHDWW5N',
+            'secret' => 'xnV7DiPqBHm71LOpX+gJumozrw9Vqg6F6LAA40gk',
+            'bucket' => 'jianatoursandtravel',
+            'base_url' => 'https://storage.googleapis.com',
+        ],
+
     ],
 
     /*

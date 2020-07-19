@@ -24,9 +24,9 @@
                             <img class="img-fluid card-img-top" src="{{asset('storage/'.$hotel->cover_photo)}}"
                                 alt="">
                         <div class="card-body">
-                            <h5 class="card-title">{{$hotel->name}}</h5>
+                            <h5 class="card-title"><a href="{{route('hotel.show', ['hotel' => $hotel])}}">{{$hotel->name}}</a></h5>
                             <p class="card-text">{{$hotel->description}}</p>
-                            <a href="{{route('booking.create')}}" class="btn btn-primary">Book Now</a>
+                            <a href="{{route('hotel.show', ['hotel' => $hotel])}}" class="btn btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
