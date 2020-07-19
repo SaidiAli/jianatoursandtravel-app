@@ -9,33 +9,32 @@ use Tests\TestCase;
 class SignUpTest extends TestCase
 {
     use RefreshDatabase;
+
+
+    /**
+     * Test user can see the register form
+     *
+     * @return void
+     */
+    public function test_user_can_see_signup_form() {
+
+        $response = $this->get('/register');
+
+        $response->assertSuccessful();
+    }
     /**
      * A basic feature test signup
      *
      * @return void
      */
-    public function testSignup()
+    public function test_user_can_signup()
     {
         $response = $this->post('/register', [
             'name' => 'John Doe',
             'email' => 'test@test.com',
             'password' => 'password',
-            '_token' => csrf_token()
         ]);
 
-        $response->assertStatus(201);
-
-        $response->assertCreated();
-    }
-    
-    /**
-     * Test the database
-     *
-     * @return void
-     */
-    public function testDatabase() {
-        $this->seed();
-
-        $this->assertDatabaseCount('users', 10);
+        $response->assertRedirect('/profile');
     }
 }
