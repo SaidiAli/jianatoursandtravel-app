@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Booking;
+use App\Hotel;
+use App\User;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
     public function store(Request $request) {
+
         // $request->validate([
         //     'check_in_date' => 'required',
         //     'check_in_time' => 'required',
@@ -27,11 +30,20 @@ class BookingController extends Controller
             'total_price' => $request->input('total_price'),
             'number_of_rooms' => $request->input('number_of_rooms'),
             'payment_status' => false,
-
         ]);
 
-        return response()->json([
-            'rooms' => gettype(json_encode($request->input('rooms')))
-        ]);
+        return redirect()->route('booking.show', ['booking' => $booking]);
+    }
+
+    public function show($id) {
+        $booking = Booking::find($id)->first();
+        $hotel = Hotel::find($booking->hotel_id)->first();
+        $user = User::find($booking->user_id)->first();
+        
+        return view('backend.booking.show')->with([
+            'booking' => $booking,
+            'hotel' => $hotel,
+            'user' => $user
+            ]);
     }
 }

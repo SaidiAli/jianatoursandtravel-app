@@ -18,25 +18,22 @@
                                         <!-- Logo & title -->
                                         <div class="clearfix">
                                             <div class="float-sm-right">
-                                                <img src="assets/images/logo.png" alt="" height="48" />
-                                                <h4 class="m-0 d-inline align-middle">Shreyu</h4>
-                                                <address class="pl-2 mt-2">
-                                                    795 Folsom Ave, Suite 600<br>
-                                                    San Francisco, CA 94107<br>
-                                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                <h4 class="m-0 d-inline align-middle">{{$hotel->name}}</h4>
+                                                <address class="pl-2 mt-2"> {{$hotel->address}}<br>
+                                                    <abbr title="Phone">P:</abbr> {{$hotel->phone}}
                                                 </address>
                                             </div>
                                             <div class="float-sm-left">
                                                 <h4 class="m-0 d-print-none">Booking</h4>
                                                 <dl class="row mb-2 mt-3">
                                                     <dt class="col-sm-3 font-weight-normal">Booking ID :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">#sh1001</dd>
+                                                    <dd class="col-sm-9 font-weight-normal">#{{$booking->id}}</dd>
 
                                                     <dt class="col-sm-3 font-weight-normal">Check In Date :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">Jul 17, 2019</dd>
+                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_in_date}}</dd>
 
                                                     <dt class="col-sm-3 font-weight-normal">Check Out Date :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">Jul 27, 2019</dd>
+                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_out_date}}</dd>
                                                 </dl>
                                             </div>
                                             
@@ -45,10 +42,9 @@
                                         <div class="row mt-4">
                                             <div class="col-md-6">
                                                 <h6 class="font-weight-normal">Invoice For:</h6>
-                                                <h6 class="font-size-16">Greeva Navadiya</h6>
+                                                <h6 class="font-size-16">{{$user->name}}</h6>
                                                 <address>
-                                                    795 Folsom Ave, Suite 600<br>
-                                                    San Francisco, CA 94107<br>
+                                                    Email: {{$user->email}} <br>
                                                     <abbr title="Phone">P:</abbr> (123) 456-7890
                                                 </address>
                                             </div> <!-- end col -->
@@ -56,7 +52,7 @@
                                             <div class="col-md-6">
                                                 <div class="text-md-right">
                                                     <h6 class="font-weight-normal">Total</h6>
-                                                    <h2>$4137.75</h2>
+                                                    <h2>${{$booking->total_price}}</h2>
                                                 </div>
                                             </div> <!-- end col -->
                                         </div>
@@ -121,10 +117,10 @@
                                             <div class="col-sm-6">
                                                 <div class="float-right mt-4">
                                                     <p><span class="font-weight-medium">Sub-total:</span> <span
-                                                            class="float-right">$4597.50</span></p>
-                                                    <p><span class="font-weight-medium">Discount (10%):</span> <span
-                                                            class="float-right"> &nbsp;&nbsp;&nbsp; $459.75</span></p>
-                                                    <h3>$4137.75 USD</h3>
+                                                            class="float-right">${{$booking->total_price}}</span></p>
+                                                    <p><span class="font-weight-medium">Discount (0%):</span> <span
+                                                            class="float-right"> &nbsp;&nbsp;&nbsp; $0</span></p>
+                                                    <h3>${{$booking->total_price}} USD</h3>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div> <!-- end col -->

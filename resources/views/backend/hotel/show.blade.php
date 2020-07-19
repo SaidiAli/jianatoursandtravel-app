@@ -68,17 +68,17 @@
                                     </div>
                                     <div class="col-4 col-md-3">
                                         <label for="checkout-time">Time</label>
-                                            <input class="form-control" id="checkout-time" type="time">
+                                            <input class="form-control" id="checkout-time" type="time" name="check_out_time">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-6 col-md-3">
                                         <label for="adults">Adults</label>
-                                        <input class="form-control" id="adults" type="number" name="adults" value="1">
+                                        <input class="form-control" id="adults" type="number" name="adults" value="1" min="0">
                                     </div>
                                     <div class="col-6 col-md-3">
                                         <label for="children">Children</label>
-                                            <input class="form-control" id="children" type="number" name="children" value="0">
+                                            <input class="form-control" id="children" type="number" name="children" value="0" min="0">
                                     </div>
                                 </div>
 
@@ -109,11 +109,15 @@
                                 </div>
                                     @endforeach
                                 </div>
+                                <input type="hidden" id="number_of_rms" name="number_of_rooms">
+                                <input type="hidden" id="hotel_id_input" name="hotel_id" value="{{$hotel->id}}">
+                                <input type="hidden" id="all_rooms" name="rooms">
 
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
-                                        <p class="selected-items text-center"><span id="number_of_rooms">5</span> rooms <span id="number_of_adults">4</span> adult <span id="number_of_children">1</span> children</p>
-                                        <p id="total-price" class="text-center">200,000 UGX</p>
+                                        <p class="selected-items text-center"><span id="number_of_rooms">0</span> rooms <span id="number_of_adults">1</span> adult <span id="number_of_children">0</span> children</p>
+                                        <p class="text-center"><span id="total-price">200,000</span> UGX</p>
+                                        <input type="hidden" id="total_price" name="total_price">
                                         <button class="btn btn-primary btn-block">Make Reservation</button>
                                     </div>
                                 </div>
@@ -170,6 +174,27 @@
     let hotel_data = <?php echo json_encode($hotel); ?>;
     let rooms = [];
 
+// Change the number of adults as the user selects the value
+    $('#adults').change(e => {
+        $('#number_of_adults').html($('#adults').val())
+    })
+
+    // Change the number of children as the user selects the value
+    $('#children').change(e => {
+        $('#number_of_children').html($('#children').val())
+    })
+
+    // Change the number of rooms as the user selects the value
+    $('.hotel-room').change(e => {
+        // let nmb_of_rms =  parseInt($('#number_of_rooms').html())
+
+        hotel_data.rooms.forEach(room => {
+            let room_id = room.id
+            let room_val = $('#'+room_id).val()
+    });
+
+    })
+
     $("#booking_form").submit(function(e) {
     e.preventDefault()
     let check_in_date = $("#checkin-date").val()
@@ -180,6 +205,9 @@
     let children = $('#children').val()
     let total_price = $('#total-price').html()
     let total_number_of_rooms = $('#number_of_rooms').html()
+
+    $('#number_of_rms').val(total_number_of_rooms)
+    $('#total_price').val(parseInt(total_price))
     
     hotel_data.rooms.forEach(room => {
         let room_id = room.id
@@ -188,29 +216,32 @@
         rooms.push(str)
     });
 
-    let formData = new FormData()
-    formData.append('check_in_date', check_in_date)
-    formData.append('check_out_date', check_out_date)
-    formData.append('check_in_time', check_in_time)
-    formData.append('check_out_time', check_out_time)
-    formData.append('adults', adults)
-    formData.append('children', children)
-    formData.append('hotel_id', hotel_data.id)
-    formData.append('total_price', total_price)
+    $('#all_rooms').val(rooms)
+
+    // let formData = new FormData()
+    // formData.append('check_in_date', check_in_date)
+    // formData.append('check_out_date', check_out_date)
+    // formData.append('check_in_time', check_in_time)
+    // formData.append('check_out_time', check_out_time)
+    // formData.append('adults', adults)
+    // formData.append('children', children)
+    // formData.append('hotel_id', hotel_data.id)
+    // formData.append('total_price', total_price)
 
 
-    formData.append('rooms', JSON.stringify(rooms))
+    // formData.append('rooms', JSON.stringify(rooms))
 
-    fetch('/booking', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.error(err))
+    // fetch('/booking', {
+    //     method: 'POST',
+    //     body: formData,
+    //     headers: {
+    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //     }
+    // })
+    //     .then(res => res.json())
+    //     .then(data => console.log(data))
+    //     .catch(err => console.error(err))
+    $('#booking_form').off('submit').submit()
 })
 </script>
 @endsection

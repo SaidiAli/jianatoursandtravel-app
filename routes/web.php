@@ -25,7 +25,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::resource('/hotel', 'HotelController')->except(['index']);
-    Route::resource('/booking', 'BookingController')->only(['store']);
+    Route::resource('/booking', 'BookingController')->only(['store', 'show']);
 });
 
 Route::get('/test' , function() {
