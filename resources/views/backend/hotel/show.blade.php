@@ -116,9 +116,9 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
                                         <p class="selected-items text-center d-none"><span id="number_of_rooms">0</span> rooms <span id="number_of_adults">1</span> adult <span id="number_of_children">0</span> children</p>
-                                        <p class="text-center total-price-class"><span id="total-price">0</span> UGX</p>
-                                        <input type="hidden" id="total_price" name="total_price">
-                                        <button class="btn btn-primary btn-block">Make Reservation</button>
+                                        <p class="text-center total-price-class d-none"><span id="total-price">0</span> UGX</p>
+                                        {{-- <input type="hidden" id="total_price" name="total_price"> --}}
+                                        <button class="btn btn-primary btn-block" type="submit">Make Reservation</button>
                                     </div>
                                 </div>
                             </form>
@@ -173,16 +173,6 @@
 <script>
     let hotel_data = <?php echo json_encode($hotel); ?>;
     let rooms = {};
-    let tp;
-
-    $('.hotel-room').change(e => {
-        hotel_data.rooms.forEach(room => {
-        let room_id = room.id
-        let rm = $('#'+room_id).val()
-    });
-    })
-
-    $('#total-price').html(tp)
 
     $("#booking_form").submit(function(e) {
     e.preventDefault()
@@ -196,12 +186,15 @@
     let total_number_of_rooms = $('#number_of_rooms').html()
 
     $('#number_of_rms').val(total_number_of_rooms)
-    $('#total_price').val(parseInt(total_price))
+    // $('#total_price').val(parseInt(total_price))
     
     hotel_data.rooms.forEach(room => {
         let room_id = room.id
         let room_count = $('#'+room_id).val()
-        rooms[room_id] = room_count
+        rooms[room_id] = {
+            "number_of_rooms": room_count,
+            "total_amount": room_count*room.price
+        }
     });
 
     $('#all_rooms').val(JSON.stringify(rooms))

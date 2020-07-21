@@ -11,12 +11,12 @@ use Illuminate\Http\Request;
 class BookingController extends Controller
 {
     public function store(Request $request) {
-        // $request->validate([
-        //     'check_in_date' => 'required',
-        //     'check_in_time' => 'required',
-        //     'check_out_date' => 'required',
-        //     'check_out_time' => 'required',
-        // ]);
+        $request->validate([
+            'check_in_date' => 'required',
+            'check_in_time' => 'required',
+            'check_out_date' => 'required',
+            'check_out_time' => 'required',
+        ]);
 
         $booking = Booking::create([
             'check_in_date' => $request->input('check_in_date'),
@@ -27,7 +27,7 @@ class BookingController extends Controller
             'hotel_id' => $request->input('hotel_id'),
             'adults' => $request->input('adults'),
             'children' => $request->input('children'),
-            'total_price' => $request->input('total_price'),
+            'total_price' => array_sum(collect(json_decode($request->input('rooms'), true))->pluck('total_amount')->toArray()),
             'number_of_rooms' => $request->input('number_of_rooms'),
             'payment_status' => false,
             'rooms' => $request->input('rooms')
@@ -37,7 +37,7 @@ class BookingController extends Controller
     }
 
     public function show($id) {
-        $booking = Booking::find($id)->first();
+        $booking = Booking::where('id', $id)->first();
         $hotel = Hotel::find($booking->hotel_id)->first();
         $user = User::find($booking->user_id)->first();
         $rms = json_decode($booking->rooms, true);
