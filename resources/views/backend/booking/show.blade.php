@@ -64,7 +64,6 @@
                                                     <table class="table mt-4 table-centered">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>Item</th>
                                                                 <th style="width: 10%">Rooms</th>
                                                                 <th style="width: 10%">Price</th>
@@ -72,31 +71,20 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>
-                                                                    <h5 class="font-size-16 mt-0 mb-2">Web Design</h5>
-                                                                    <p class="text-muted mb-0">2 Pages static website -
-                                                                        my
-                                                                        website</p>
-                                                                </td>
-                                                                <td>22</td>
-                                                                <td>$30</td>
-                                                                <td class="text-right">$660.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>
-                                                                    <h5 class="font-size-16 mt-0 mb-2">Software Development</h5>
-                                                                    <p class="text-muted mb-0">Invoice editor software -
-                                                                        AB'c
-                                                                        Software</p>
-                                                                </td>
-                                                                <td>112.5</td>
-                                                                <td>$35</td>
-                                                                <td class="text-right">$3937.50</td>
-                                                            </tr>
-
+                                                            @foreach ($rooms as $room)
+                                                            @if ($number_of_rooms[$room['id']] > 0)
+                                                                <tr>
+                                                                    <td>
+                                                                        <h5 class="font-size-16 mt-0 mb-2">{{$room['name']}}</h5>
+                                                                        <p class="text-muted mb-0">{{$room['description']}}</p>
+                                                                    </td>
+                                                                    <td>{{$number_of_rooms[$room['id']]}}</td>
+                                                                    <td>${{$room['price']}}</td>
+                                                                    <td class="text-right">$660.00</td>
+                                                                </tr>
+                                                            @endif
+                                                                
+                                                            @endforeach
                                                         </tbody>
                                                     </table>
                                                 </div> <!-- end table-responsive -->

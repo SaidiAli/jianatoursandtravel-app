@@ -28,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="description">Text area</label>
+                                    <label for="description">Description</label>
                                     <textarea class="form-control" rows="2" name="description" id="description"></textarea>
                                     <div class="invalid-feedback">
                                         Please provide a brief description of the hotel
