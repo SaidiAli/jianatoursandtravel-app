@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="card-body">
                             <h4 class="header-title mt-0 mb-1">Register Your Hotel</h4>
                             <p class="sub-header">Provide information about your hotel, this information will be displayed to our customers for them to book in your hotel</p>
@@ -101,8 +101,85 @@
                                 <button class="btn btn-primary" type="submit">Register</button>
                             </form>
 
-                        </div> <!-- end card-body-->
-                    </div> <!-- end card-->
+                        </div>
+                    </div>  --}}
+                    <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mt-0 mb-1">Default wizard</h4>
+                                        <p class="sub-header">Example of Default wizard</p>
+                                        <div id="smartwizard-default">
+                                            <ul>
+                                                <li><a href="#sw-default-step-1">Account<small class="d-block">Step description</small></a></li>
+                                                <li><a href="#sw-default-step-2">Profile<small class="d-block">Step description</small></a></li>
+                                                <li><a href="#sw-default-step-3">Finish<small class="d-block">Step description</small></a></li>
+                                            </ul>
+                                            
+                                            <div class="p-3">
+                                                <div id="sw-default-step-1">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="sw-default-userName">User name</label>
+                                                                <input type="text" class="form-control" id="sw-default-userName" placeholder="Enter User name...">
+
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="sw-default-password"> Password</label>
+                                                                <input type="password" id="sw-default-password" class="form-control" placeholder="Enter Password...">
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <label for="sw-default-confirm">Re Password</label>
+                                                                <input type="password" id="sw-default-confirm" class="form-control" placeholder="Enter Re Password...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-default-step-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="sw-default-first-name">First name</label>
+                                                                <input type="text" id="sw-default-first-name" class="form-control" placeholder="Enter First name...">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="sw-default-last-name">Last name</label>
+                                                                <input type="text" id="sw-default-last-name" class="form-control" placeholder="Enter Last name...">
+                                                            </div>
+                                    
+                                                            <div class="form-group">
+                                                                <label for="sw-default-email">Email</label>
+                                                                <input type="email" id="sw-default-email" class="form-control" placeholder="Enter Email...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-default-step-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-center">
+                                                                <div class="mb-3">
+                                                                    <i class="uil uil-check-square text-success h2"></i>
+                                                                </div>
+                                                                <h3>Thank you !</h3>
+
+                                                                <p class="w-75 mb-2 mx-auto text-muted">Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam
+                                                                    mattis dictum aliquet.</p>
+
+                                                                <div class="mb-3">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="sm-default-customCheck">
+                                                                        <label class="custom-control-label" for="sm-default-customCheck">I agree with the Terms and Conditions</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                 </div>
             </div>
         </div>
