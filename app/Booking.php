@@ -8,4 +8,13 @@ class Booking extends Model
 {
     protected $guarded = [];
     protected $table = 'hotel_bookings';
+
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
+
+    public function hotel()
+    {
+        return $this->belongsTo('App\Hotel');
+    }
 }

@@ -7,15 +7,15 @@
         }
 
         .room-price {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
     .room-select {
         width: 5rem !important;
     }
 
-    #total-price {
+    .total-price-class {
         font-weight: bold;
         font-size: 1.5rem;
     }
@@ -54,21 +54,21 @@
                                 <div class="form-group row">
                                     <div class="col-8 col-md-4">
                                         <label for="checkin-date">Check In</label>
-                                        <input class="form-control" id="checkin-date" type="date" name="check_in_date">
+                                        <input class="form-control" id="checkin-date" type="date" required name="check_in_date">
                                     </div>
                                     <div class="col-4 col-md-3">
                                         <label for="checkin-time">Time</label>
-                                            <input class="form-control" id="checkin-time" type="time" name="check_in_time">
+                                            <input class="form-control" id="checkin-time" type="time" required name="check_in_time">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-8 col-md-4">
                                         <label for="checkout-date">Check Out</label>
-                                        <input class="form-control" id="checkout-date" type="date" name="check_out_date">
+                                        <input class="form-control" id="checkout-date" type="date" required name="check_out_date">
                                     </div>
                                     <div class="col-4 col-md-3">
                                         <label for="checkout-time">Time</label>
-                                            <input class="form-control" id="checkout-time" type="time" name="check_out_time">
+                                            <input class="form-control" id="checkout-time" type="time" required name="check_out_time">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -115,10 +115,10 @@
 
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
-                                        <p class="selected-items text-center"><span id="number_of_rooms">0</span> rooms <span id="number_of_adults">1</span> adult <span id="number_of_children">0</span> children</p>
-                                        <p class="text-center"><span id="total-price">200,000</span> UGX</p>
-                                        <input type="hidden" id="total_price" name="total_price">
-                                        <button class="btn btn-primary btn-block">Make Reservation</button>
+                                        <p class="selected-items text-center d-none"><span id="number_of_rooms">0</span> rooms <span id="number_of_adults">1</span> adult <span id="number_of_children">0</span> children</p>
+                                        <p class="text-center total-price-class d-none"><span id="total-price">0</span> UGX</p>
+                                        {{-- <input type="hidden" id="total_price" name="total_price"> --}}
+                                        <button class="btn btn-primary btn-block" type="submit">Make Reservation</button>
                                     </div>
                                 </div>
                             </form>
@@ -172,28 +172,7 @@
 <script src="{{asset('js/custom.js')}}"></script>
 <script>
     let hotel_data = <?php echo json_encode($hotel); ?>;
-    let rooms = [];
-
-// Change the number of adults as the user selects the value
-    $('#adults').change(e => {
-        $('#number_of_adults').html($('#adults').val())
-    })
-
-    // Change the number of children as the user selects the value
-    $('#children').change(e => {
-        $('#number_of_children').html($('#children').val())
-    })
-
-    // Change the number of rooms as the user selects the value
-    $('.hotel-room').change(e => {
-        // let nmb_of_rms =  parseInt($('#number_of_rooms').html())
-
-        hotel_data.rooms.forEach(room => {
-            let room_id = room.id
-            let room_val = $('#'+room_id).val()
-    });
-
-    })
+    let rooms = {};
 
     $("#booking_form").submit(function(e) {
     e.preventDefault()
@@ -207,40 +186,18 @@
     let total_number_of_rooms = $('#number_of_rooms').html()
 
     $('#number_of_rms').val(total_number_of_rooms)
-    $('#total_price').val(parseInt(total_price))
+    // $('#total_price').val(parseInt(total_price))
     
     hotel_data.rooms.forEach(room => {
         let room_id = room.id
         let room_count = $('#'+room_id).val()
-        let str = `${room_id}-${room_count}`
-        rooms.push(str)
+        rooms[room_id] = {
+            "number_of_rooms": room_count,
+            "total_amount": room_count*room.price
+        }
     });
 
-    $('#all_rooms').val(rooms)
-
-    // let formData = new FormData()
-    // formData.append('check_in_date', check_in_date)
-    // formData.append('check_out_date', check_out_date)
-    // formData.append('check_in_time', check_in_time)
-    // formData.append('check_out_time', check_out_time)
-    // formData.append('adults', adults)
-    // formData.append('children', children)
-    // formData.append('hotel_id', hotel_data.id)
-    // formData.append('total_price', total_price)
-
-
-    // formData.append('rooms', JSON.stringify(rooms))
-
-    // fetch('/booking', {
-    //     method: 'POST',
-    //     body: formData,
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //     }
-    // })
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    //     .catch(err => console.error(err))
+    $('#all_rooms').val(JSON.stringify(rooms))
     $('#booking_form').off('submit').submit()
 })
 </script>

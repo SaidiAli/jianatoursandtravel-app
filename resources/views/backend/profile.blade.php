@@ -60,7 +60,21 @@
                                         <div class="tab-pane fade show active" id="hotels" role="tabpanel" aria-labelledby="hotels-tab">
                                             <h5 class="mt-3">My hotels</h5>
                                             <p>Hotels that you have booked before will appear here</p>
-                                            <p>Check some hotels <a href="{{route('hotel.index')}}">here</a></p>
+                                                @foreach ($bookings as $booking)
+                                                <div class="card">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-md-5">
+                                                            <img src="{{asset('images/portfolio/thumbnails/1.jpg')}}" class="card-img img-fluid" alt="hotel room picture">
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title font-size-16">{{$booking->hotel->name}}</h5>
+                                                                <p class="card-text text-muted">{{$booking->hotel->description}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                    @endforeach
                                         </div>
 
                                         <!-- messages -->

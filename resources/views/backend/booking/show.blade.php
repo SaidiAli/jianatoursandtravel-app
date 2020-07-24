@@ -24,16 +24,16 @@
                                                 </address>
                                             </div>
                                             <div class="float-sm-left">
-                                                <h4 class="m-0 d-print-none">Booking</h4>
+                                                <h4 class="m-0 d-print-none">Hotel Reservation</h4>
                                                 <dl class="row mb-2 mt-3">
-                                                    <dt class="col-sm-3 font-weight-normal">Booking ID :</dt>
+                                                    <dt class="col-sm-3 font-weight-normal">Reservation ID :</dt>
                                                     <dd class="col-sm-9 font-weight-normal">#{{$booking->id}}</dd>
 
                                                     <dt class="col-sm-3 font-weight-normal">Check In Date :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_in_date}}</dd>
+                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_in_date .' '.$booking->check_in_time}}</dd>
 
                                                     <dt class="col-sm-3 font-weight-normal">Check Out Date :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_out_date}}</dd>
+                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_out_date.' '.$booking->check_out_time}}</dd>
                                                 </dl>
                                             </div>
                                             
@@ -45,8 +45,9 @@
                                                 <h6 class="font-size-16">{{$user->name}}</h6>
                                                 <address>
                                                     Email: {{$user->email}} <br>
-                                                    <abbr title="Phone">P:</abbr> (123) 456-7890
                                                 </address>
+                                                <h6>Adults: {{$booking->adults}}</h6>
+                                                <h6>Children: {{$booking->children}}</h6>
                                             </div> <!-- end col -->
 
                                             <div class="col-md-6">
@@ -64,7 +65,6 @@
                                                     <table class="table mt-4 table-centered">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>Item</th>
                                                                 <th style="width: 10%">Rooms</th>
                                                                 <th style="width: 10%">Price</th>
@@ -72,31 +72,20 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>
-                                                                    <h5 class="font-size-16 mt-0 mb-2">Web Design</h5>
-                                                                    <p class="text-muted mb-0">2 Pages static website -
-                                                                        my
-                                                                        website</p>
-                                                                </td>
-                                                                <td>22</td>
-                                                                <td>$30</td>
-                                                                <td class="text-right">$660.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>
-                                                                    <h5 class="font-size-16 mt-0 mb-2">Software Development</h5>
-                                                                    <p class="text-muted mb-0">Invoice editor software -
-                                                                        AB'c
-                                                                        Software</p>
-                                                                </td>
-                                                                <td>112.5</td>
-                                                                <td>$35</td>
-                                                                <td class="text-right">$3937.50</td>
-                                                            </tr>
-
+                                                            @foreach ($rooms as $room)
+                                                            @if ($number_of_rooms[$room['id']]['number_of_rooms'] > 0)
+                                                                <tr>
+                                                                    <td>
+                                                                        <h5 class="font-size-16 mt-0 mb-2">{{$room['name']}}</h5>
+                                                                        <p class="text-muted mb-0">{{$room['description']}}</p>
+                                                                    </td>
+                                                                    <td>{{$number_of_rooms[$room['id']]['number_of_rooms']}}</td>
+                                                                    <td>${{$room['price']}}</td>
+                                                                    <td class="text-right">${{$number_of_rooms[$room['id']]['total_amount']}}</td>
+                                                                </tr>
+                                                            @endif
+                                                                
+                                                            @endforeach
                                                         </tbody>
                                                     </table>
                                                 </div> <!-- end table-responsive -->
@@ -130,7 +119,7 @@
                                         <div class="row justify-content-center mt-5 mb-1">
                                             <div class="col-lg-8">
                                                 <div class="text-right d-print-none">
-                                                <a href="#" class="btn btn-outline-success btn-block"><i
+                                                <a href="{{route('payment.index')}}" class="btn btn-outline-success btn-block"><i
                                                         class="uil uil-currency mr-1"></i> Pay At Hotel</a>
                                                 <a href="#" class="btn btn-info btn-block">Pay Online</a>
                                             </div>
