@@ -49,6 +49,7 @@ class HotelController extends Controller
             $hotel->phone = $request->input('phone');
             $hotel->email = $request->input('email');
             $hotel->web = $request->input('web');
+            $hotel->verified = false;
 
             if ($request->hasFile('cover_photo')) {
                 $hotel->cover_photo = $request->file('cover_photo')->store('hotel_covers/'.$request->input('name'), 'public');

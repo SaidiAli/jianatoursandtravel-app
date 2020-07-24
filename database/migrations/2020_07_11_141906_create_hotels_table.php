@@ -25,6 +25,7 @@ class CreateHotelsTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->string('cover_photo');
+            $table->boolean('verified');
             $table->timestamps();
         });
     }

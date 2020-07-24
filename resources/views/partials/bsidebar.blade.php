@@ -22,26 +22,34 @@
                     </a>
                 </li>
                 <li>
-                                <a href="javascript: void(0);">
-                                    <i data-feather="shopping-bag"></i>
-                                    <span> Services </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="{{route('hotel.index')}}">Hotels</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('tours')}}">Tours</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0);">Car Hire</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0);">Bus Booking</a>
-                                    </li>
-                                </ul>
-                            </li>
+                    <a href="javascript: void(0);">
+                        <i data-feather="shopping-bag"></i>
+                        <span> Services </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="{{route('hotel.index')}}">Hotels</a>
+                        </li>
+                        <li>
+                            <a href="{{route('tours')}}">Tours</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">Car Hire</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">Bus Booking</a>
+                        </li>
+                    </ul>
+                </li>
+                    @isset(auth()->user()->hotels)
+                        <li>
+                            <a href="{{route('hotels.manage')}}">
+                                <i class="uil  uil-analytics"></i>
+                                <span>Manage Hotels</span>
+                            </a>
+                        </li>
+                    @endisset
                 <li>
                 <a href="#">
                      <i class="uil  uil-cog"></i>
