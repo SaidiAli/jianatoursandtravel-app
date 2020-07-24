@@ -21,6 +21,7 @@ class CreateRoomsTable extends Migration
             $table->foreign('hotel_id')->references('id')->on('hotels');
             $table->unsignedBigInteger('price');
             $table->boolean('is_bookable');
+            $table->string('room_image');
             $table->timestamps();
         });
     }

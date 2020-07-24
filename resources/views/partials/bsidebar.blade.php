@@ -42,14 +42,14 @@
                         </li>
                     </ul>
                 </li>
-                    @isset(auth()->user()->hotels)
+                    @if(auth()->user()->hotels->count() > 0)
                         <li>
                             <a href="{{route('hotels.manage')}}">
                                 <i class="uil  uil-analytics"></i>
                                 <span>Manage Hotels</span>
                             </a>
                         </li>
-                    @endisset
+                    @endif
                 <li>
                 <a href="#">
                      <i class="uil  uil-cog"></i>

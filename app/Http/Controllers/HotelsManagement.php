@@ -15,7 +15,7 @@ class HotelsManagement extends Controller
 
     public function preview($id)
     {
-        $hotel = Hotel::find($id)->first();
+        $hotel = Hotel::where('id', $id)->first();
         return view('backend.hotel.management.preview')->withHotel($hotel);
     }
 }

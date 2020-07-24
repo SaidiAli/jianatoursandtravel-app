@@ -1,5 +1,11 @@
 @extends('layouts.base')
 @section("custom_css")
+<style>
+    #hotel-name {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+</style>
 @stop
 
 @section('content')
@@ -7,10 +13,24 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">
+                            {{$error}}
+                        </div>
+                        @endforeach
+                    @endif
                     <div class="card mb-4 mb-xl-0">
                         <img class="card-img-top img-fluid" src="{{asset('storage/'.$hotel->cover_photo)}}" alt="hotel image">
                         <div class="card-body">
-                            <h2 class="card-title">{{$hotel->name}}</h2>
+                                <p class="card-title"><span id="hotel-name">{{$hotel->name}}</span> 
+                                    @if ($hotel->verified)
+                                    <span class="badge badge-success">Verified</span>
+                                @else
+                                    <span class="badge badge-warning">Not verified</span>
+                                @endif
+                            </p>
+                                
                             <p>{{$hotel->description}}</p>
                             <h5>Services Offered</h5>
                             <ol>
@@ -88,22 +108,24 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="myAddRoomLabel">Add Room</h5>
+                                                            
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form class="form-horizontal">
+                                                        <form class="form-horizontal" method="POST" action="{{route('room.store')}}" enctype="multipart/form-data">
+                                                            @csrf
                                                             <div class="form-group row mb-3">
                                                                 <label for="room-name" class="col-3 col-form-label">Name</label>
                                                                 <div class="col-9">
-                                                                    <input type="email" class="form-control" id="room-name" name="name" placeholder="Room name">
+                                                                    <input type="text" class="form-control" id="room-name" name="name" placeholder="Room name">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row mb-3">
                                                                 <label for="room-description" class="col-3 col-form-label">Description</label>
                                                                 <div class="col-9">
-                                                                    <input type="text" class="form-control" id="room-description" name="description" placeholder="A short description on the room">
+                                                                    <textarea name="description" id="room-description" class="form-control"></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row mb-3">
@@ -112,14 +134,21 @@
                                                                     <input type="text" class="form-control" id="room-price" name="price" placeholder="">
                                                                 </div>
                                                             </div>
+                                                            <div class="form-group row mb-3">
+                                                                <label class="col-3 col-form-label" for="image-input">Room Image</label>
+                                                                <div class="col-9">
+                                                                    <input type="file" class="form-control" id="image-input" name="room_image">
+                                                                </div>
+                                                            </div>
                                                             <div class="form-group row mb-3 justify-content-end">
                                                                 <div class="col-9">
                                                                     <div class="custom-control custom-checkbox">
-                                                                        <input type="checkbox" class="custom-control-input" id="availability">
+                                                                        <input type="checkbox" class="custom-control-input" id="availability" name="availability">
                                                                         <label class="custom-control-label" for="availability" name="availability">Available</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <input type="hidden" name="hotel_id" value="{{$hotel->id}}">
                                                             <div class="form-group mb-0 justify-content-end row">
                                                                 <div class="col-9">
                                                                     <button type="submit" class="btn btn-info">Add</button>

@@ -7,6 +7,7 @@
         <div class="container-fluid">
             <div class="row page-title">
                         <div class="col-md-12">
+                            <a href="{{route('hotel.create')}}" class="btn btn-primary float-right">Register new hotel</a>
                             <h4 class="mb-1 mt-0">Manage Registered Hotels</h4>
                     </div>
                 </div>

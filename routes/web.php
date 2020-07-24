@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/hotel', 'HotelController')->except(['index']);
     Route::resource('/booking', 'BookingController')->only(['store', 'show']);
     Route::resource('/payment', 'PaymentController')->only(['index']);
+    Route::resource('/room', 'RoomController')->only(['store']);
     Route::get('/hotels/management', 'HotelsManagement@manage')->name('hotels.manage');
     Route::get('/hotels/preview/{hotel}', 'HotelsManagement@preview')->name('hotels.preview');
 });

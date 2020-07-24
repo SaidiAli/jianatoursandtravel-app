@@ -56,7 +56,7 @@ class HotelController extends Controller
             }
 
             $hotel->save();
-            return redirect()->route('hotel.show', ['hotel' => $hotel]);
+            return redirect()->route('hotels.preview', ['hotel' => $hotel]);
     }
 
     /**
@@ -67,7 +67,7 @@ class HotelController extends Controller
      */
     public function show($id)
     {
-        $hotel = Hotel::find($id)->first();
+        $hotel = Hotel::where('id', $id)->first();
         return view('backend.hotel.show')->withHotel($hotel);
     }
 
