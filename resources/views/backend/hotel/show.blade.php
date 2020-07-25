@@ -28,22 +28,28 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
+
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger text-center">
+                            {{$error}}
+                        </div>
+                        @endforeach
+                    @endif
+
                     <div class="card mb-4 mb-xl-0">
                         <img class="card-img-top img-fluid" src="{{asset('storage/'.$hotel->cover_photo)}}" alt="hotel image">
                         <div class="card-body">
                             <h2 class="card-title">{{$hotel->name}}</h2>
                             <p>{{$hotel->description}}</p>
                             <h5>Services Offered</h5>
-                            <ol>
-                                <li>Single Bedrooms</li>
-                                <li>Double Bedrooms</li>
-                                <li>Spa</li>
-                                <li>Sauna</li>
-                                <li>Escorts</li>
-                                <li>Swimming pool</li>
-                                <li>Free WIFI</li>
-                                <li>Unspeakable security</li>
-                            </ol>
+                            <ul>
+                                @forelse ($hotelFacilities as $facility)
+                                    <li>{{$facility}}</li>
+                                @empty
+                                    <li><p class="text-warning">No faciliry attached to the hotel yet</p></li>
+                                @endforelse
+                            </ul>
                             <h5>Location</h5>
                             <p>Located in {{$hotel->district.' , '.$hotel->address}}</p>
 
@@ -54,21 +60,21 @@
                                 <div class="form-group row">
                                     <div class="col-8 col-md-4">
                                         <label for="checkin-date">Check In</label>
-                                        <input class="form-control" id="checkin-date" type="date" required name="check_in_date">
+                                        <input class="form-control" id="checkin-date" type="date" required name="check_in_date" required>
                                     </div>
                                     <div class="col-4 col-md-3">
                                         <label for="checkin-time">Time</label>
-                                            <input class="form-control" id="checkin-time" type="time" required name="check_in_time">
+                                            <input class="form-control" id="checkin-time" type="time" required name="check_in_time" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-8 col-md-4">
                                         <label for="checkout-date">Check Out</label>
-                                        <input class="form-control" id="checkout-date" type="date" required name="check_out_date">
+                                        <input class="form-control" id="checkout-date" type="date" required name="check_out_date" required>
                                     </div>
                                     <div class="col-4 col-md-3">
                                         <label for="checkout-time">Time</label>
-                                            <input class="form-control" id="checkout-time" type="time" required name="check_out_time">
+                                            <input class="form-control" id="checkout-time" type="time" required name="check_out_time" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">

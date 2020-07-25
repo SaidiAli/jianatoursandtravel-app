@@ -68,7 +68,9 @@ class HotelController extends Controller
     public function show($id)
     {
         $hotel = Hotel::where('id', $id)->first();
-        return view('backend.hotel.show')->withHotel($hotel);
+        $hotelFacilities = explode(',', $hotel->facilities);
+
+        return view('backend.hotel.show')->with(['hotel' => $hotel, 'hotelFacilities' => $hotelFacilities]);
     }
 
     /**
@@ -91,7 +93,12 @@ class HotelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $hotel = Hotel::where('id', $id)->first();
+
+        $hotel->facilities = implode(',', $request->input('facilities'));
+        $hotel->save();
+
+        return back();
     }
 
     /**

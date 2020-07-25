@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hotel;
+use Illuminate\Support\Facades\DB;
 
 class HotelsManagement extends Controller
 {
@@ -16,6 +17,11 @@ class HotelsManagement extends Controller
     public function preview($id)
     {
         $hotel = Hotel::where('id', $id)->first();
-        return view('backend.hotel.management.preview')->withHotel($hotel);
+        $facilities = DB::table('facilities')->get()->toArray();
+        $hotelFacilities = explode(',', $hotel->facilities);
+
+        return view('backend.hotel.management.preview')->with([
+            'hotel' => $hotel, 'facilities' =>$facilities, 'hotelFacilities' => $hotelFacilities
+            ]);
     }
 }

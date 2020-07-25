@@ -32,17 +32,27 @@
                             </p>
                                 
                             <p>{{$hotel->description}}</p>
-                            <h5>Services Offered</h5>
-                            <ol>
-                                <li>Single Bedrooms</li>
-                                <li>Double Bedrooms</li>
-                                <li>Spa</li>
-                                <li>Sauna</li>
-                                <li>Escorts</li>
-                                <li>Swimming pool</li>
-                                <li>Free WIFI</li>
-                                <li>Unspeakable security</li>
-                            </ol>
+                            <h5>Fascilities</h5>
+                            <ul>
+                                @forelse ($hotelFacilities as $facility)
+                                    <li>{{$facility}}</li>
+                                @empty
+                                    <li><p class="text-warning">No faciliry attached to the hotel yet</p></li>
+                                @endforelse
+                            </ul>
+                            
+                            <p class="text-bold">Add Hotel fascilies</p>
+                            <form action="{{route('hotel.update', ['hotel' => $hotel])}}" method="post">
+                                @csrf
+                                @method('put')
+                                <select name="facilities[]" class="form-control" multiple id="facilities-select">
+                                    @foreach ($facilities as $facility)
+                                        <option>{{$facility->name}}</option>
+                                    @endforeach
+                                </select>
+                                <input type="submit" value="Add" class="btn btn-warning mt-2">
+                            </form>
+
                             <h5>Location</h5>
                             <p>Located in {{$hotel->district.' , '.$hotel->address}}</p>
 
@@ -56,19 +66,6 @@
                                 </div>
                                 <div class="col-lg-4">
                                     No pets Allowed
-                                </div>
-                            </div>
-
-                            <h5>Facilities</h5>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    Free WIFI
-                                </div>
-                                <div class="col-lg-4">
-                                    Sauna
-                                </div>
-                                <div class="col-lg-4">
-                                    Swimming Pool
                                 </div>
                             </div>
 

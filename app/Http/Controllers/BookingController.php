@@ -16,6 +16,7 @@ class BookingController extends Controller
             'check_in_time' => 'required',
             'check_out_date' => 'required',
             'check_out_time' => 'required',
+            'rooms' => 'required'
         ]);
 
         $booking = Booking::create([
