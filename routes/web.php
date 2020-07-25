@@ -1,7 +1,9 @@
 <?php
 
+use App\Events\TestEvent;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,10 @@ Route::get('/', 'PagesController@home')->name('home');
 Route::get('/tours', 'PagesController@tours')->name('tours');
 
 Route::get('/hotels', 'PagesController@hotels')->name('hotel.index');
+
+Route::get('/test', function() {
+    Event::dispatch(new TestEvent);
+});
 
 Auth::routes();
 
