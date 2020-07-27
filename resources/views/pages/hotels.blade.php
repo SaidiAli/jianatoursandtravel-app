@@ -15,7 +15,7 @@
     </header>
 
     <section id="content" class="section">
-        <h1 class="text-center mb-5">Select from our registered Hotels</h1>
+        <h1 class="text-center mb-5 text-uppercase">our registered Hotels</h1>
         <div class="container">
             <div class="row">
                 @forelse ($hotels as $hotel)
@@ -46,7 +46,7 @@
 
     <section class="section">
         <div>
-            <h1 class="text-center mb-5">Some discounted deals for you</h1>
+            <h1 class="text-center mb-5 text-uppercase">hot deals</h1>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">

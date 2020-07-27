@@ -23,7 +23,7 @@
         <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-            <h2 class="text-white mt-0 text-center">We've got what you need!</h2>
+            <h2 class="text-white mt-0 text-center text-uppercase">We've got what you need</h2>
             <hr class="divider light my-4">
             <div class="container text-white-75">
                 <p>Here at Jiana Tourism and Travel we take care of everything that you feel you'd need during your tour or travel around Uganda and the rest of Africa. Our goal is to make you feel at home as musch as wherever you are from, and make you want to stay. Lol </p>
@@ -45,7 +45,7 @@
     <!-- Services Section -->
     <section class="page-section" id="services">
         <div class="container">
-        <h2 class="text-center mt-0">At Your Service</h2>
+        <h2 class="text-center mt-0 text-uppercase">At Your Service</h2>
         <hr class="divider my-4">
         <div class="row">
             <div class="col-lg-4 col-md-6 text-center">
@@ -90,9 +90,9 @@
             </div>
             <div class="col-lg-4 col-md-6 text-center">
             <div class="mt-5">
-                <i class="fas fa-4x fa-camera text-primary mb-4"></i>
-                <h3 class="h4 mb-2">Travel Insurance</h3>
-                <p class="text-muted mb-0">You are safe with us, your travel insurance is all taken care of</p>
+                <i class="fas fa-4x fa-car text-primary mb-4"></i>
+                <h3 class="h4 mb-2">Car Hire and Sale</h3>
+                <p class="text-muted mb-0">Find the best deals for car hire and sales on our platform with jaw dropping discounts</p>
                 <p><a href="#">Find out more ...</a></p>
             </div>
             </div>
@@ -150,33 +150,19 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="page-section">
+    <section class="section">
         <div class="container text-center">
-        <h2 class="mb-4">More Wonders To See</h2>
-        <div class="row">
-            <div class="col-lg-6 col-sm-12">
-            <img class="image-fluid" src="./images/images/bobi.jpg" alt="" style="width: 100%; height: 100%;">
+        <h2 class="mb-4 text-uppercase">the best vaccations happen with us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="./images/images/lake-naivasha-walking-giraffe-cropped.jpg" alt="">
+                    <p>A honey moon in the wild</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="./images/images/equator.jpg" alt="">
+                    <p>Cooperate vaccation, a great time to connect with your work mates and boss</p>
+                </div>
             </div>
-            <div class="col-lg-6 col-sm-12">
-            <p>Africa is known for it's wide variety of cultures, its knows to be in thousands. Link with us to get to visit some of the cultures here, you will be surprised how people so different in how they talk, live , behave, literally different in all aspects of life connect and live. Its amazing</p>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-6 col-sm-12">
-            <img class="image-fluid" src="./images/images/equator.jpg" alt="" style="width: 100%; height: 100%;">
-            </div>
-            <div class="col-lg-6 col-sm-12">
-            <p>A place known for dividing the earth into half, wow, lietrally you get to step in both halves of the world, its amazing. And there's more amazing things to find out. Book with us and you will have a story to tell.</p>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-lg-6 col-sm-12">
-            <img class="image-fluid" src="./images/images/hotels/Forest-Cottages-Kampala.jpg" alt="" style="width: 100%; height: 100%;">
-            </div>
-            <div class="col-lg-6 col-sm-12">
-            <p>The most lavishing hotels and resorts, in town and also deep down in the mountain and tropics. A place were you take a deep breath and have five years to you, lol. <br> <a href="#"> See more here</a></p>
-            </div>
-        </div>
         </div>
     </section>
 

@@ -15,7 +15,7 @@
                 <div class="col-lg-12">
                     @if ($errors->any())
                         @foreach ($errors->all() as $error)
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger text-center">
                             {{$error}}
                         </div>
                         @endforeach

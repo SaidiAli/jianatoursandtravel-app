@@ -68,7 +68,7 @@
                                                             </div>
                                                             <div class="col-md-7">
                                                             <div class="card-body">
-                                                                <h5 class="card-title font-size-16">{{$booking->hotel->name}}</h5>
+                                                                <h5 class="card-title font-size-16"><a href="{{route('hotel.show', ['hotel' => $booking->hotel->id])}}">{{$booking->hotel->name}}</a></h5>
                                                                 <p class="card-text text-muted">{{$booking->hotel->description}}</p>
                                                             </div>
                                                         </div>

@@ -1,8 +1,8 @@
-<section class="page-section" id="contact">
+<section class="section" id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <h2 class="mt-0 text-uppercase">Get In Touch</h2>
           <hr class="divider my-4">
           <p class="text-muted mb-5">Ready to have your best vacation, hit us up</p>
         </div>
@@ -21,7 +21,7 @@
 
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h2 class="mt-5">Our Socials</h2>
+          <h2 class="mt-5 text-uppercase">Our Socials</h2>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
