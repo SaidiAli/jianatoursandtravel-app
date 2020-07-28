@@ -35,7 +35,7 @@
                             <a href="{{route('tours')}}">Tours</a>
                         </li>
                         <li>
-                            <a href="javascript: void(0);">Car Hire</a>
+                            <a href="{{route('car-hire-and-sale')}}">Car Hire</a>
                         </li>
                         <li>
                             <a href="javascript: void(0);">Bus Booking</a>

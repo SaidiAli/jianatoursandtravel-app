@@ -38,7 +38,7 @@
                     @endif
 
                     <div class="card mb-4 mb-xl-0">
-                        <img class="card-img-top img-fluid" src="{{asset('storage/'.$hotel->cover_photo)}}" alt="hotel image">
+                        <img class="card-img-top img-fluid" src="{{$hotel->cover_photo}}" alt="hotel image">
                         <div class="card-body">
                             <h2 class="card-title">{{$hotel->name}}</h2>
                             <p>{{$hotel->description}}</p>
@@ -95,7 +95,7 @@
                                         <div class="card col-lg-4">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-md-5">
-                                                    <img src="{{asset('images/portfolio/thumbnails/1.jpg')}}" class="card-img img-fluid" alt="hotel room picture">
+                                                    <img src="{{$room->room_image}}" class="card-img img-fluid" alt="hotel room picture">
                                                     </div>
                                                     <div class="col-md-7">
                                                     <div class="card-body">

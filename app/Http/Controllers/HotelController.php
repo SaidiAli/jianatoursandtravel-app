@@ -52,7 +52,9 @@ class HotelController extends Controller
             $hotel->verified = false;
 
             if ($request->hasFile('cover_photo')) {
-                $hotel->cover_photo = $request->file('cover_photo')->store('hotel_covers/'.$request->input('name'), 'public');
+                if($path = $request->file('cover_photo')->store('hotel_covers/' . $request->input('name'), 'gcs')) {
+                    $hotel->cover_photo = Storage::url($path);
+                }
             }
 
             $hotel->save();
@@ -81,7 +83,7 @@ class HotelController extends Controller
      */
     public function edit($id)
     {
-        //
+        // 
     }
 
     /**

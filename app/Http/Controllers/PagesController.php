@@ -20,4 +20,8 @@ class PagesController extends Controller
     public function tours() {
         return view('pages.tours');
     }
+
+    public function car_hire_and_sale() {
+        return view('pages.car_hire_and_sale');
+    }
 }

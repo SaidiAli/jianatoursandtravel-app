@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Room;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RoomController extends Controller
 {
@@ -28,8 +29,11 @@ class RoomController extends Controller
         } else {
             $room->is_bookable = false;
         }
+
         if ($request->hasFile('room_image')) {
-            $room->room_image = $request->file('room_image')->store('room-images/' . $request->input('name'), 'public');
+            if ($path = $request->file('room_image')->store('room_images/' . $request->input('name'), 'gcs')) {
+                $room->room_image = Storage::url($path);
+            }
         }
 
         $room->save();

@@ -4,6 +4,7 @@ use App\Events\TestEvent;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,12 @@ use Illuminate\Support\Facades\Event;
 |
 */
 
+// Static Pages
+
 Route::get('/', 'PagesController@home')->name('home');
-
 Route::get('/tours', 'PagesController@tours')->name('tours');
-
 Route::get('/hotels', 'PagesController@hotels')->name('hotel.index');
+Route::get('/car-hire-and-sale', 'PagesController@car_hire_and_sale')->name('car-hire-and-sale');
 
 Route::get('/test', function() {
     Event::dispatch(new TestEvent);

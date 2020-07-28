@@ -93,7 +93,7 @@
                 <i class="fas fa-4x fa-car text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Car Hire and Sale</h3>
                 <p class="text-muted mb-0">Find the best deals for car hire and sales on our platform with jaw dropping discounts</p>
-                <p><a href="#">Find out more ...</a></p>
+                <p><a href="{{route('car-hire-and-sale')}}">Find out more ...</a></p>
             </div>
             </div>
         </div>
