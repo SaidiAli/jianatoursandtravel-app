@@ -1,14 +1,14 @@
-@extends('layouts.base')
+@extends('layouts.authbase')
 
 @section('content')
-    <div class="content">
+    <div class="content bg-light">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="row page-title mt-2 d-print-none">
-                            <div class="col-md-12">
-                                <h4 class="mb-1 mt-0">Invoice</h4>
-                            </div>
+                <div class="col-lg-8">
+                    <div class="page-title mt-2 d-print-none">
+                            <p class="mb-1 mt-0">Dear {{$booking->user->name}}</p>
+                            <p>You have successfully made a booking at <span class="text-primary">{{$booking->hotel->name}}</span> through <span class="text-primary">jianatoursandtravel.com platform</span>. This is to let you know that we have received your booking request. We will send you another email shortly once we start processing your reservation.</p>
+                            <p>Please find your booking and payment details below, including the hotel details too</p>
                         </div>
 
                         <div class="row">
@@ -18,49 +18,40 @@
                                         <!-- Logo & title -->
                                         <div class="clearfix">
                                             <div class="float-sm-right">
-                                                <h4 class="m-0 d-inline align-middle">{{$hotel->name}}</h4>
-                                                <address class="pl-2 mt-2"> {{$hotel->address}}<br>
-                                                    <abbr title="Phone">P:</abbr> {{$hotel->phone}}
+                                                <h4 class="m-0 d-print-none">Hotel Details</h4>
+                                                <h4 class="mt-2-0 text-primary">{{$booking->hotel->name}}</h4>
+                                                <address class="pl-2 mt-2"> {{$booking->hotel->address}}<br>
+                                                    <abbr title="Phone">P:</abbr> {{$booking->hotel->phone}}
                                                 </address>
                                             </div>
                                             <div class="float-sm-left">
-                                                <h4 class="m-0 d-print-none">Hotel Reservation</h4>
-                                                <dl class="row mb-2 mt-3">
-                                                    <dt class="col-sm-3 font-weight-normal">Reservation ID :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">#{{$booking->id}}</dd>
+                                                <h4 class="m-0 d-print-none">Booking Details</h4>
+                                                <div class="mb-2 mt-3">
+                                                    <p class="font-weight-normal">Reservation ID : #{{$booking->id}}</p>
 
-                                                    <dt class="col-sm-3 font-weight-normal">Check In Date :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_in_date .' '.$booking->check_in_time}}</dd>
+                                                    <p class="font-weight-normal">Check In Date : {{$booking->check_in_date .' at '.$booking->check_in_time}}</p>
 
-                                                    <dt class="col-sm-3 font-weight-normal">Check Out Date :</dt>
-                                                    <dd class="col-sm-9 font-weight-normal">{{$booking->check_out_date.' '.$booking->check_out_time}}</dd>
-                                                </dl>
+                                                    <p class="font-weight-normal">Check Out Date : {{$booking->check_out_date.' at '.$booking->check_out_time}}</p>
+                                                </div>
                                             </div>
                                             
                                         </div>
 
                                         <div class="row mt-4">
                                             <div class="col-md-6">
-                                                <h6 class="font-weight-normal">Invoice For:</h6>
-                                                <h6 class="font-size-16">{{$user->name}}</h6>
+                                                <h4>Guest Details:</h4>
+                                                <h5>{{$booking->user->name}}</h5>
                                                 <address>
-                                                    Email: {{$user->email}} <br>
+                                                    Email: {{$booking->user->email}} <br>
                                                 </address>
                                                 <h6>Adults: {{$booking->adults}}</h6>
                                                 <h6>Children: {{$booking->children}}</h6>
-                                            </div> <!-- end col -->
-
-                                            <div class="col-md-6">
-                                                <div class="text-md-right">
-                                                    <h6 class="font-weight-normal">Total</h6>
-                                                    <h2>${{$booking->total_price}}</h2>
-                                                </div>
-                                            </div> <!-- end col -->
+                                            </div>
                                         </div>
                                         <!-- end row -->
 
                                         <div class="row">
-                                            <div class="col-12">
+                                            <div class="col-md-6">
                                                 <div class="table-responsive">
                                                     <table class="table mt-4 table-centered">
                                                         <thead>
@@ -77,7 +68,6 @@
                                                                 <tr>
                                                                     <td>
                                                                         <h5 class="font-size-16 mt-0 mb-2">{{$room['name']}}</h5>
-                                                                        <p class="text-muted mb-0">{{$room['description']}}</p>
                                                                     </td>
                                                                     <td>{{$number_of_rooms[$room['id']]['number_of_rooms']}}</td>
                                                                     <td>${{$room['price']}}</td>
@@ -90,11 +80,17 @@
                                                     </table>
                                                 </div> <!-- end table-responsive -->
                                             </div> <!-- end col -->
+                                            <div class="col-md-6">
+                                                <div class="text-md-right">
+                                                    <h6 class="font-weight-normal">Total Payable</h6>
+                                                    <h2>${{$booking->total_price}}</h2>
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- end row -->
 
-                                        <div class="row">
-                                            <div class="col-sm-6">
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-8">
                                                 <div class="clearfix pt-5">
                                                     <h6 class="text-muted">Disclaimer:</h6>
 
@@ -103,28 +99,9 @@
                                                     </small>
                                                 </div>
                                             </div> <!-- end col -->
-                                            <div class="col-sm-6">
-                                                <div class="float-right mt-4">
-                                                    <p><span class="font-weight-medium">Sub-total:</span> <span
-                                                            class="float-right">${{$booking->total_price}}</span></p>
-                                                    <p><span class="font-weight-medium">Discount (0%):</span> <span
-                                                            class="float-right"> &nbsp;&nbsp;&nbsp; $0</span></p>
-                                                    <h3>${{$booking->total_price}} USD</h3>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </div> <!-- end col -->
                                         </div>
+                                        <h3 class="font-weight-bold" style="text-align: center;">Enjoy your stay at {{$booking->hotel->name}}</h3>
                                         <!-- end row -->
-
-                                        <div class="row justify-content-center mt-5 mb-1">
-                                            <div class="col-lg-8">
-                                                <div class="text-right d-print-none">
-                                                <a href="{{route('payment.index')}}?id={{$booking->id}}" class="btn btn-outline-success btn-block"><i
-                                                        class="uil uil-currency mr-1"></i> Pay At Hotel</a>
-                                                <a href="#" class="btn btn-info btn-block">Pay Online</a>
-                                            </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div> <!-- end col -->

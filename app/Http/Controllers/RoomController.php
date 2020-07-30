@@ -15,7 +15,7 @@ class RoomController extends Controller
                 'name' => 'required',
                 'description' => 'required|max:200',
                 'price' => 'required',
-                'room_image' => 'required|image|mimes:jpeg,png,jpg'
+                'room_image' => 'image|mimes:jpeg,png,jpg'
             ]
         );
 

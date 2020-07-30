@@ -36,7 +36,7 @@ class HotelController extends Controller
                 'district' => 'required',
                 'address' => 'required|max:200',
                 'phone' => 'required',
-                'cover_photo' => 'required|image|mimes:jpeg,png,jpg'
+                'cover_photo' => 'image|mimes:jpeg,png,jpg'
             ]
         );
 

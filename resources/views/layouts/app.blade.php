@@ -17,6 +17,8 @@
     <link href="css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/magnific-popup.css">
     <link rel="stylesheet" href="/css/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/css/flickity.css">
+    @yield('custom-css')
 </head>
 <body>
     <div id="app">
@@ -34,4 +36,7 @@
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/flickity.js"></script>
+<script src="js/custom.js"></script>
+@yield('custom-js')
 </html>

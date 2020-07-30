@@ -65,3 +65,53 @@ body {
 .section {
     padding: 3rem 0;
 }
+
+.carousel-cell {
+    width: 100%;
+    height: 200px;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
+    /* center images in cells with flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-cell::before {
+    display: block;
+}
+
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell img {
+    display: block;
+    max-height: 100%;
+}
+
+@include media-breakpoint-up(md) {
+    .carousel-cell {
+            width: 50%;
+            height: 250px;
+            margin-right: 10px;
+            counter-increment: carousel-cell;
+            /* center images in cells with flexbox */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .carousel-cell::before {
+                display: block;
+            }
+
+            .carousel {
+                background: #EEE;
+            }
+
+            .carousel-cell img {
+                display: block;
+                max-height: 100%;
+            }
+}
