@@ -55,7 +55,7 @@ class TestNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'message' => 'A new user has registered successfully'
+            // 
         ];
     }
 }
