@@ -28,7 +28,7 @@ Route::get('/test', function() {
     Event::dispatch(new TestEvent);
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/profile', 'ProfileController@index')->name('profile');

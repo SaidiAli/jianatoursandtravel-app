@@ -2,10 +2,12 @@
 
 namespace App\Listeners;
 
+use App\Notifications\TestNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Notification;
 
 class UserRegisteredSuccessfully
 {
@@ -27,6 +29,6 @@ class UserRegisteredSuccessfully
      */
     public function handle(Registered $event)
     {
-        Log::info('Registration Notice: A new user has registered');
+        
     }
 }
