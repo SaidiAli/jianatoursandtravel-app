@@ -50,6 +50,27 @@
                             </a>
                         </li>
                     @endif
+
+                    @if(auth()->user()->admin)
+                        <li>
+                            <a href="{{route('hotels.manage')}}">
+                                <i class="uil  uil-analytics"></i>
+                                <span>Manage Hotels</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="uil  uil-glass-martini"></i>
+                                <span>Manage Tours</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('cars.index')}}">
+                                <i class="uil  uil-car-sideview"></i>
+                                <span>Manage Cars</span>
+                            </a>
+                        </li>
+                    @endif
                 <li>
                 <a href="#">
                      <i class="uil  uil-cog"></i>

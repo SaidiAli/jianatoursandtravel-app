@@ -18,6 +18,8 @@
         <link href="/backend/assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
+    <link rel="stylesheet" href="{{asset('backend/assets/libs/dropzone/dropzone.min.css')}}">
+
     <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('backend/assets/css/app.min.css')}}" rel="stylesheet" type="text/css">
@@ -60,6 +62,7 @@
 
    <!-- Vendor js -->
    <script src="/backend/assets/js/vendor.min.js"></script>
+   <script src="/backend/assets/libs/dropzone/dropzone.min.js"></script>
 
    <!-- optional plugins -->
    <script src="/backend/assets/libs/moment/moment.min.js"></script>

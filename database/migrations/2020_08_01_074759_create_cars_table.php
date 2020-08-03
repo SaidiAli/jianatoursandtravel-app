@@ -28,6 +28,9 @@ class CreateCarsTable extends Migration
             $table->string('location');
             $table->string('type')->nullable();
             $table->string('brand')->nullable();
+            $table->boolean('hire')->nullable();
+            $table->boolean('sale')->nullable();
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
     }
