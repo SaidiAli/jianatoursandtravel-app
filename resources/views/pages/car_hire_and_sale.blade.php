@@ -26,14 +26,50 @@
             <div class="col-lg-8">
                 <h2 class="text-center">Featured Deals</h2>
                 <div class="featured-cars-carousel">
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/1.jpg')}}">
+                    <div class="mr-2">
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{asset('images/images/cars/1.jpg')}}" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title"> Car title</div>
+                                <div class="card-text">
+                                    <p>Some description of the car</p>
+                                    <address>
+                                        <p>Location: Kampala</p>
+                                    </address>
+                                    <p>Contact the seller: 0700123456789</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/7.jpg')}}">
+                    <div class="mr-2">
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{asset('images/images/cars/7.jpg')}}" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title"> Car title</div>
+                                <div class="card-text">
+                                    <p>Some description of the car</p>
+                                    <address>
+                                        <p>Location: Kampala</p>
+                                    </address>
+                                    <p>Contact the seller: 0700123456789</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/3.jpg')}}">
+                    <div class="mr-2">
+                        <div class="card" style="width: 20rem;">
+                            <img src="{{asset('images/images/cars/12.jpg')}}" class="card-img-top">
+                            <div class="card-body">
+                                <div class="card-title"> Car title</div>
+                                <div class="card-text">
+                                    <p>Some description of the car</p>
+                                    <address>
+                                        <p>Location: Kampala</p>
+                                    </address>
+                                    <p>Contact the seller: 0700123456789</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

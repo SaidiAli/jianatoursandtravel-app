@@ -43,4 +43,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/room', 'RoomController')->only(['store']);
     Route::get('/hotels/management', 'HotelsManagement@manage')->name('hotels.manage');
     Route::get('/hotels/preview/{hotel}', 'HotelsManagement@preview')->name('hotels.preview');
+
+    Route::get('admin', 'AdminController@index');
 });

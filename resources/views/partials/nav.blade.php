@@ -20,7 +20,7 @@
                             <a class="nav-link" href="#" role="button" id="menuDropdown" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Services</a>
                             <div class="dropdown-menu" aria-labelledby="menuDropdown">
-                                <a href="{{route('car-hire-and-sale')}}" class="dropdown-item">Car Hire</a>
+                                <a href="{{route('car-hire-and-sale')}}" class="dropdown-item">Car Hire and Sale</a>
                                 <a href="#" class="dropdown-item">Bus booking</a>
                                 <a href="#" class="dropdown-item">Passport and Visa</a>
                             </div>
