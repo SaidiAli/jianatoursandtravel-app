@@ -21,7 +21,6 @@ class CreateCarsTable extends Migration
             $table->string('fuel')->nullable();
             $table->string('color')->nullable();
             $table->string('year')->nullable();
-            $table->string('body_type')->nullable();
             $table->string('drive_type')->nullable();
             $table->string('door_count')->nullable();
             $table->string('price');
@@ -31,6 +30,7 @@ class CreateCarsTable extends Migration
             $table->boolean('hire')->nullable();
             $table->boolean('sale')->nullable();
             $table->boolean('available')->default(true);
+            $table->string('images_directory')->nullable();
             $table->timestamps();
         });
     }

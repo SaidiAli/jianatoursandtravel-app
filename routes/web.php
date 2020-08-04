@@ -1,10 +1,8 @@
 <?php
 
-use App\Events\TestEvent;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +27,7 @@ Route::get('mail', function(){
     return (new App\Notifications\BookingSuccessful($booking))->toMail($booking->user);
 });
 
-Route::get('/test', function() {
-    Event::dispatch(new TestEvent);
-});
+Route::post('/test', function() {});
 
 Auth::routes(['verify' => true]);
 
@@ -41,7 +37,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/booking', 'BookingController')->only(['store', 'show']);
     Route::resource('/payment', 'PaymentController')->only(['index']);
     Route::resource('/room', 'RoomController')->only(['store']);
-    Route::resource('/cars', 'CarsController')->only(['index', 'store', 'update', 'edit', 'create']);
+    Route::resource('/cars', 'CarsController');
     Route::get('/hotels/management', 'HotelsManagement@manage')->name('hotels.manage');
     Route::get('/hotels/preview/{hotel}', 'HotelsManagement@preview')->name('hotels.preview');
 

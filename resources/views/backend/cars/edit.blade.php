@@ -9,10 +9,12 @@
                 <div class="card-body">
                     <h4 class="header-title mt-0 mb-1">Add images of the car</h4>
                     <p class="sub-header text-warning">
-                        Its recommended to add the front, back and side view. You should also add a picture of the inside
+                        Its recommended to add the front, back and side view. You should also add a picture of the inside <span class="text-danger">Maximun 10 images</span>
                     </p>
 
-                    <form action="https://shreyu.coderthemes.com/" method="post" class="dropzone" id="myAwesomeDropzone">
+                    <form action="{{route('cars.update', ['car' => $car])}}" class="dropzone" id="my-awesome-dropzone" enctype="multipart/form-data">
+                        @csrf
+                        @method('put')
                         <div class="fallback">
                             <input name="file" type="file" multiple />
                         </div>
@@ -21,11 +23,14 @@
                             <i class="h1 text-muted  uil-cloud-upload"></i>
                             <h3>Drop files here or click to upload.</h3>
                         </div>
-
-                        <div class="clearfix text-right mt-3">
-                            <button type="submit" class="btn btn-danger"> <i class="uil uil-arrow-right mr-1"></i> Submit</button>
-                        </div>
                     </form>
+
+                    <div class="clearfix text-center mt-3">
+                        <a href="{{route('cars.show', ['car' => $car])}}" type="submit" class="btn btn-danger">
+                            <i class="uil uil-arrow-right mr-1"></i>
+                            Finish
+                        </a>
+                    </div>
 
                 </div>  <!-- end card-body -->
             </div>
@@ -36,4 +41,21 @@
 
 
 @section("javascript")
+<script>
+    console.log('script started');
+
+    Dropzone.options.myAwesomeDropzone = {
+        maxFiles: 10,
+        acceptedFiles: ".jpeg, .png, .jpg",
+        init: function() {
+            this.on('success', function(file, res) {
+                console.log(res);
+            })
+
+            this.on('error' , function(errorMessage) {
+                console.error('errors occured');
+            })
+        }
+        }
+</script>
 @stop

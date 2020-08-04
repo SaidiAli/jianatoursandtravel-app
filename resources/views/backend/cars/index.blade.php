@@ -72,11 +72,19 @@
                                                     <input type="text" class="form-control" id="name" name="name" placeholder="Car name">
                                                 </div>
                                             </div>
-                                            <div class="form-group row mb-3">
+                                            <div class="form-group mb-3 row">
                                                 <label for="description" class="col-3 col-form-label">Description</label>
                                                 <div class="col-9">
-                                                    <input type="text" class="form-control" id="description" name="description" placeholder="A brief description of the car">
+                                                    <textarea class="form-control" rows="2" name="description" id="description"></textarea>
                                                 </div>
+                                                <div class="invalid-feedback">
+                                                    Please provide a brief description of the car
+                                                </div>
+                                                @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="form-group row mb-3">
                                                 <label for="condition" class="col-3 col-form-label">Condition</label>
