@@ -32,10 +32,9 @@ mix.copy('node_modules/bootstrap/dist/js/*', 'public/js/bootstrap')
 // images
 mix.copy('resources/images', 'public/images');
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+mix.js("resources/js/app.js", "public/js")
+    .sass("resources/sass/app.scss", "public/css")
+    .sass("resources/sass/styles.scss", "public/css")
     .options({
-    processCssUrls: false
+        processCssUrls: false
     });
-
-// mix.browserSync("http://127.0.0.1:8000/");

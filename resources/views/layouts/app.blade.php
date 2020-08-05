@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/css/magnific-popup.css">
     <link rel="stylesheet" href="/css/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="/css/flickity.css">
+    <link rel="stylesheet" href="/css/styles.css">
     @yield('custom-css')
 </head>
 <body>

@@ -23,6 +23,10 @@
     <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('backend/assets/css/app.min.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    {{-- Flickity --}}
+    <link rel="stylesheet" href="/css/flickity.css">
 
 
 
@@ -75,6 +79,10 @@
    <!-- App js -->
    <script src="/backend/assets/js/app.min.js"></script>
 
+   {{-- Flickity --}}
+    <script src="/js/flickity.js"></script>
+
+    <script src="/js/custom.js"></script>
 
 
     @yield('javascript')

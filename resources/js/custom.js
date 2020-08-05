@@ -12,4 +12,10 @@ $(document).ready(function() {
             x3: 30
         }
     });
+
+    $(".selected-cars-carousel").flickity({
+        // options
+        autoPlay: true,
+        wrapAround: true
+    });
 });

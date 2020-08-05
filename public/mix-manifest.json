@@ -51,5 +51,6 @@
     "/js/bootstrap/bootstrap.js": "/js/bootstrap/bootstrap.js",
     "/js/bootstrap/bootstrap.js.map": "/js/bootstrap/bootstrap.js.map",
     "/js/bootstrap/bootstrap.min.js": "/js/bootstrap/bootstrap.min.js",
-    "/js/bootstrap/bootstrap.min.js.map": "/js/bootstrap/bootstrap.min.js.map"
+    "/js/bootstrap/bootstrap.min.js.map": "/js/bootstrap/bootstrap.min.js.map",
+    "/css/styles.css": "/css/styles.css"
 }
