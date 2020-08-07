@@ -5,18 +5,32 @@
 @section('content')
     <div class="content">
         <div class="container-fluid">
+                    @if(Session::has('alert'))
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="alert {{ Session::get('alert-class', 'alert-danger') }} " role="alert" >
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true" class="">&times;</span>
+                                </button>
+                                <strong class="text-center">{{ Session::get('alert') }}!</strong>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                     <div class="row mt-5">
                             <div class="col-md-6 col-xl-3">
-                                <div class="card">
+                                <a href="{{route('cars.index')}}?view-all-cars=1">
+                                    <div class="card">
                                     <div class="card-body p-0">
                                         <div class="p-3">
                                             <div class="">
                                                 <span class="text-muted text-uppercase font-size-12 font-weight-bold">All Cars</span>
-                                                <h2 class="mb-0">189</h2>
+                                                <h2 class="mb-0">{{$all_cars}}</h2>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             <div class="col-md-6 col-xl-3">
@@ -25,7 +39,7 @@
                                         <div class="media p-3">
                                             <div class="media-body">
                                                 <span class="text-muted text-uppercase font-size-12 font-weight-bold">For Hire</span>
-                                                <h2 class="mb-0">1065</h2>
+                                                <h2 class="mb-0">{{$for_hire}}</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -38,7 +52,7 @@
                                         <div class="media p-3">
                                             <div class="media-body">
                                                 <span class="text-muted text-uppercase font-size-12 font-weight-bold">For Sale</span>
-                                                <h2 class="mb-0">11</h2>
+                                                <h2 class="mb-0">{{$for_sale}}</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +65,7 @@
                                         <div class="media p-3">
                                             <div class="media-body">
                                                 <span class="text-muted text-uppercase font-size-12 font-weight-bold">Sold out</span>
-                                                <h2 class="mb-0">750</h2>
+                                                <h2 class="mb-0">{{$sold_out}}</h2>
                                             </div>
                                         </div>
                                     </div>

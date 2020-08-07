@@ -22,6 +22,7 @@ class CreateRoomsTable extends Migration
             $table->unsignedBigInteger('price');
             $table->boolean('is_bookable');
             $table->string('room_image')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

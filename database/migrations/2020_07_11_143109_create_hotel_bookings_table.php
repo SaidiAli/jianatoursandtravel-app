@@ -29,6 +29,7 @@ class CreateHotelBookingsTable extends Migration
             $table->unsignedInteger('number_of_rooms');
             $table->unsignedBigInteger('total_price');
             $table->json('rooms')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
