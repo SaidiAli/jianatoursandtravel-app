@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/css/styles.css": "/css/styles.css",
     "/css/fontawesome-free/css/all.css": "/css/fontawesome-free/css/all.css",
     "/css/fontawesome-free/css/all.min.css": "/css/fontawesome-free/css/all.min.css",
     "/css/fontawesome-free/css/brands.css": "/css/fontawesome-free/css/brands.css",
@@ -51,6 +52,5 @@
     "/js/bootstrap/bootstrap.js": "/js/bootstrap/bootstrap.js",
     "/js/bootstrap/bootstrap.js.map": "/js/bootstrap/bootstrap.js.map",
     "/js/bootstrap/bootstrap.min.js": "/js/bootstrap/bootstrap.min.js",
-    "/js/bootstrap/bootstrap.min.js.map": "/js/bootstrap/bootstrap.min.js.map",
-    "/css/styles.css": "/css/styles.css"
+    "/js/bootstrap/bootstrap.min.js.map": "/js/bootstrap/bootstrap.min.js.map"
 }

@@ -19,8 +19,11 @@
                                         <img src="/backend/assets/images/placeholder.jpg" alt=""
                                             class="avatar-lg rounded-circle" />
                                         <h5 class="mt-2 mb-0">{{ auth()->user()->name }}</h5>
+                                        
                                         <h6 class="text-muted font-weight-normal mt-2 mb-0">{{ auth()->user()->email }}</h6>
-
+                                        @if (auth()->user()->admin)
+                                            <span class="badge badge-warning p-2 text-white m-1">Admin</span> <br>
+                                        @endif
                                         <button type="button" class="btn btn-primary btn-sm mr-1 mt-2">Edit Profile</button>
                                     </div>
                                 </div>

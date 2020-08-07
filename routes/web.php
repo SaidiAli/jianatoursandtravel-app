@@ -21,6 +21,7 @@ Route::get('/', 'PagesController@home')->name('home');
 Route::get('/tours', 'PagesController@tours')->name('tours');
 Route::get('/hotels', 'PagesController@hotels')->name('hotel.index');
 Route::get('/car-hire-and-sale', 'PagesController@car_hire_and_sale')->name('car-hire-and-sale');
+Route::get('/car-preview', 'PagesController@car_preview')->name('car_preview');
 
 Route::get('mail', function(){
     $booking = App\Booking::find(1)->first();

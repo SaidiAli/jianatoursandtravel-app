@@ -15,6 +15,14 @@
     </header>
 
     <section id="content" class="section">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="bg-warning text-center p-3 mb-2">
+                    <p>Customers who book hotels on our platform receive mad discounts on car hire deals</p>
+                </div>
+            </div>
+        </div>
+        
         <h1 class="text-center mb-5 text-uppercase">our registered Hotels</h1>
         <div class="container">
             <div class="row">

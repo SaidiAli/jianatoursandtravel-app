@@ -170,21 +170,13 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <h2 class="mb-4 text-uppercase text-center">Featured car deals</h2>
-                <div class="featured-cars-carousel">
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/1.jpg')}}">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/7.jpg')}}">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/3.jpg')}}">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/12.jpg')}}">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="{{asset('images/images/cars/10.jpg')}}">
+                <div class="d-flex justify-content-center m-5">
+                    <div class="home-carousel">
+                        @foreach ($cars as $car)
+                            <div class="carousel-cell">
+                                <img src="{{$car['car_image']}}" class="img-fluid">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

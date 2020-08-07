@@ -127,3 +127,62 @@ body {
         border-radius: 0;
     }
 }
+
+.home-carousel {
+
+    width: 700px;
+
+    .carousel-cell {
+        width: 80%;
+        /* full width */
+        height: 300px;
+        /* height of carousel */
+        margin-right: 10px;
+    }
+
+    .carousel-cell {
+        counter-increment: carousel-cell;
+    }
+
+    /* smaller, dark, rounded square */
+    .flickity-button {
+        background: #333;
+    }
+
+    .flickity-button:hover {
+        background: #F90;
+    }
+
+    .flickity-prev-next-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    /* icon color */
+    .flickity-button-icon {
+        fill: white;
+    }
+
+    /* position outside */
+    .flickity-prev-next-button.previous {
+        left: -40px;
+    }
+
+    .flickity-prev-next-button.next {
+        right: -40px;
+    }
+
+    /* position dots up a bit */
+    .flickity-page-dots {
+        bottom: -22px;
+    }
+
+    /* dots are lines */
+    .flickity-page-dots .dot {
+        height: 4px;
+        width: 40px;
+        margin: 0;
+        border-radius: 0;
+    }
+}

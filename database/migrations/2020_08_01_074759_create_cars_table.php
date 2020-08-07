@@ -30,7 +30,7 @@ class CreateCarsTable extends Migration
             $table->boolean('hire')->nullable();
             $table->boolean('sale')->nullable();
             $table->boolean('available')->default(true);
-            $table->string('images_directory')->nullable();
+            $table->string('car_image')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

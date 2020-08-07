@@ -1,26 +1,24 @@
-@extends('layouts.base')
-@section("custom_css")
+@extends('layouts.app')
+
+@section('custom-css')
+    <style>
+        .badge {
+            color: white;
+        }
+
+        .link:hover {
+            text-decoration: none;
+        }
+    </style>
 @stop
 
 @section('content')
-    <div class="content">
-        <div class="container-fluid">
-            @if(Session::has('alert'))
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="alert {{ Session::get('alert-class', 'alert-danger') }} " role="alert" >
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true" class="">&times;</span>
-                        </button>
-                        <strong class="text-center">{{ Session::get('alert') }}!</strong>
-                    </div>
-                </div>
-            </div>
-            @endif
-                <div class="card mt-5">
+
+    <section class="section">
+                <div class="card mt-3">
                     <div class="card-body">
-                        <h1 class="text-center">{{$car->name}}</h1>
-                        <div class="d-flex justify-content-center mt-5 mb-5">
+                        <h1 class="text-center">Car Details</h1>
+                        <div class="d-flex justify-content-center m-5">
                             <div class="selected-cars-carousel">
                                 @forelse ($images as $image)
                                     <div class="carousel-cell">
@@ -87,33 +85,24 @@
                         </div>
                         </div>
                         <div class="row justify-content-center">
-                            <a href="{{route('cars.edit', ['car' => $car])}}?all=1" class="btn btn-warning m-2">Edit</a>
-                            <button class="btn btn-danger m-2"
-                                onclick="document.getElementById('delete-form').submit();">
-                                Delete
-                            </button>
-                            <button class="btn btn-primary m-2"
-                                onclick="document.getElementById('update-availability-form').submit();">
-                                Toggle Availability
-                            </button>
-
-                            <form id="update-availability-form" method="POST" action="{{ route('cars.update', ['car' => $car]) }}" style="display: none;">
-                                @csrf
-                                @method('put')
-                                <input type="hidden" name="update-availability" value="1">
-                            </form>
-                            <form id="delete-form" method="POST" action="{{ route('cars.destroy', ['car' => $car]) }}" style="display: none;">
-                                @csrf
-                                @method('delete')
-                            </form>
+                            <div>
+                                <h2>Call Seller: <span class="text-info">0704672670</span></h2>
+                                <button class="btn btn-warning btn-block font-weight-bold">Call Me Back</button>
+                            </div>
+                            
                         </div>
+                        <a href="{{route('home')}}" class="text-info link"><i class="uil uil-arrow-left mr-1"></i>Back Home</a>
                     </div>  <!-- end card-body -->
                 </div>
             </div>
         </div>
+    </section>
 
+    @include('partials.contact')
 @endsection
 
-
-@section("javascript")
+@section('custom-js')
+<script>
+    
+</script>
 @stop

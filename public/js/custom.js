@@ -18,4 +18,11 @@ $(document).ready(function() {
         autoPlay: true,
         wrapAround: true
     });
+
+    $(".home-carousel").flickity({
+        // options
+        autoPlay: true,
+        wrapAround: true,
+        groupCells: true
+    });
 });

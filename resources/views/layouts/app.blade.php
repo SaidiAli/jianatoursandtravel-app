@@ -17,6 +17,7 @@
     <link href="css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/magnific-popup.css">
     <link rel="stylesheet" href="/css/fontawesome-free/css/all.min.css">
+    <link href="/backend/assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/flickity.css">
     <link rel="stylesheet" href="/css/styles.css">
     @yield('custom-css')
@@ -30,6 +31,7 @@
         </main>
 
         @include('partials.footer')
+        
     </div>
 </body>
 <script src="js/jquery.min.js"></script>
