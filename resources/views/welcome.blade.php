@@ -179,6 +179,9 @@
                         @endforeach
                     </div>
                 </div>
+                <div class="d-flex justify-content-center">
+                    <a href="{{route('car-hire-and-sale')}}" class="btn btn-info btn-lg text-white">Fint Out More</a>
+                </div>
             </div>
         </div>
     </section>

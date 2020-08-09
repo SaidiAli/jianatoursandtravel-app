@@ -17,8 +17,9 @@
     <section id="content" class="section">
         <div class="row">
             <div class="col-md-8 m-auto">
-                <div class="bg-warning text-center p-3 mb-2">
-                    <p>Customers who book hotels on our platform receive mad discounts on car hire deals</p>
+                <div class="bg-warning text-center p-3 mb-2 d-flex justify-content-center">
+                    <i class="mr-2 uil uil-smile-beam text-success p-0 m-0" style="font-size: 2rem;"></i>
+                    <p class="my-auto">Customers who book hotels on our platform receive mad discounts on car hire deals</p>
                 </div>
             </div>
         </div>
