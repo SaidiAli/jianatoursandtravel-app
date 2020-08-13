@@ -21,7 +21,18 @@
                         @endforeach
                     @endif
                     <div class="card mb-4 mb-xl-0">
-                        <img class="card-img-top img-fluid" src="{{$hotel->cover_photo}}" alt="hotel image">
+                        <div class="hotel-covers-carousel m-5">
+                            @foreach ($images as $image)
+                            <div class="carousel-cell">
+                                <div class="card-img-top text-center">
+                                    <img class="img-fluid" src="{{$image}}" alt="hotel image">
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="d-flex m-auto">
+                            <a href="{{route('hotels.add_images', ['hotel' => $hotel])}}" class="btn btn-outline-info" id="add_more_cover_images">Add More Images</a>
+                        </div>
                         <div class="card-body">
                                 <p class="card-title"><span id="hotel-name">{{$hotel->name}}</span> 
                                     @if ($hotel->verified)

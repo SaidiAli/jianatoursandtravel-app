@@ -30,7 +30,7 @@ Route::get('mail', function(){
 
 Route::post('/test', function() {});
 
-Auth::routes(['verify' => true]);
+Auth::routes(['verify' => false]);
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/profile', 'ProfileController@index')->name('profile');
@@ -41,6 +41,13 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/cars', 'CarsController');
     Route::get('/hotels/management', 'HotelsManagement@manage')->name('hotels.manage');
     Route::get('/hotels/preview/{hotel}', 'HotelsManagement@preview')->name('hotels.preview');
+    Route::get('/hotels/add_images/{hotel}', 'HotelsManagement@add_images')->name('hotels.add_images');
+    Route::put('/hotels/add_images/{hotel}', 'HotelsManagement@update_cover_images')->name('hotels.update_cover_images');
 
     Route::get('admin', 'AdminController@index');
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
+    Route::get('/dashboard', 'SuperAdminController@index')->name('admin.index');
+    Route::get('/facilities/add', 'SuperAdminController@facilities_add')->name('facilities.add');
 });

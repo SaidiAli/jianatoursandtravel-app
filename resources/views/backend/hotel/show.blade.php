@@ -38,7 +38,16 @@
                     @endif
 
                     <div class="card mb-4 mb-xl-0">
-                        <img class="card-img-top img-fluid" src="{{$hotel->cover_photo}}" alt="hotel image">
+                        <div class="hotel-covers-carousel m-5">
+                            @foreach ($images as $image)
+                            <div class="carousel-cell">
+                                <div class="card-img-top text-center">
+                                    <img class="img-fluid" src="{{$image}}" alt="hotel image">
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        
                         <div class="card-body">
                             <h2 class="card-title">{{$hotel->name}}</h2>
                             <p>{{$hotel->description}}</p>

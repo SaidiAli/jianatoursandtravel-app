@@ -162,3 +162,63 @@ body {
   margin: 0;
   border-radius: 0;
 }
+
+.hotel-covers-carousel {
+  width: auto;
+  /* smaller, dark, rounded square */
+  /* icon color */
+  /* position outside */
+  /* position dots up a bit */
+  /* dots are lines */
+}
+.hotel-covers-carousel .carousel-cell {
+  width: 70%;
+  /* full width */
+  height: 300px;
+  /* height of carousel */
+  margin-right: 10px;
+}
+.hotel-covers-carousel .carousel-cell {
+  counter-increment: carousel-cell;
+}
+.hotel-covers-carousel .flickity-button {
+  background: #333;
+}
+.hotel-covers-carousel .flickity-button:hover {
+  background: #F90;
+}
+.hotel-covers-carousel .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+.hotel-covers-carousel .flickity-button-icon {
+  fill: white;
+}
+.hotel-covers-carousel .flickity-prev-next-button.previous {
+  left: -40px;
+}
+.hotel-covers-carousel .flickity-prev-next-button.next {
+  right: -40px;
+}
+.hotel-covers-carousel .flickity-page-dots {
+  bottom: -22px;
+}
+.hotel-covers-carousel .flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+@media (max-width: 576px) {
+  .hotel-covers-carousel .flickity-page-dots {
+    display: none;
+  }
+  .hotel-covers-carousel .flickity-viewport {
+    height: 150px !important;
+  }
+}
+
+#add_more_cover_images {
+  top: -10px;
+}

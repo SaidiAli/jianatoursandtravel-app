@@ -25,4 +25,11 @@ $(document).ready(function() {
         wrapAround: true,
         groupCells: true
     });
+
+    $(".hotel-covers-carousel").flickity({
+        // options
+        autoPlay: true,
+        wrapAround: true,
+        groupCells: true
+    });
 });

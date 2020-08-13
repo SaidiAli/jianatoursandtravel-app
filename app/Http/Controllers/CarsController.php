@@ -97,7 +97,7 @@ class CarsController extends Controller
         }
 
         if ($request->hasFile('file')) {
-            if ($path = $request->file('file')->store('car_images/' . $car->id, 'gcs')) {
+            if ($path = $request->file('file')->store('car_images/' . $car->id)) {
                 $car->car_image = Storage::url($path);
                 $car->save();
                 return response()->json(['message' => 'success']);

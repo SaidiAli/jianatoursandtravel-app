@@ -52,8 +52,8 @@ class HotelController extends Controller
             $hotel->verified = false;
 
             if ($request->hasFile('cover_photo')) {
-                if($path = $request->file('cover_photo')->store('hotel_covers/' . $request->input('name'), 'gcs')) {
-                    $hotel->cover_photo = Storage::url($path);
+                if($path = $request->file('cover_photo')->store('hotel_covers/' . $request->input('name'))) {
+                    $hotel->cover_photos = Storage::url($path);
                 }
             }
 
@@ -71,8 +71,16 @@ class HotelController extends Controller
     {
         $hotel = Hotel::where('id', $id)->first();
         $hotelFacilities = explode(',', $hotel->facilities);
+        $images = Storage::files('hotel_covers/' . $hotel->name);
+        $img_urls = array_map(function ($file) {
+            return Storage::url($file);
+        }, $images);
 
-        return view('backend.hotel.show')->with(['hotel' => $hotel, 'hotelFacilities' => $hotelFacilities]);
+        return view('backend.hotel.show')->with([
+            'hotel' => $hotel,
+            'hotelFacilities' => $hotelFacilities,
+            'images' => $img_urls
+         ]);
     }
 
     /**

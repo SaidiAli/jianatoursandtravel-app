@@ -15,12 +15,21 @@
         <div id="sidebar-menu" class="slimscroll-menu">
             <ul class="metismenu" id="menu-bar">
                 <li class="menu-title">Navigation</li>
-                <li>
+                @if (auth()->user()->super_admin)
+                    <li>
+                    <a href="{{route('admin.index')}}">
+                        <i data-feather="user"></i>
+                        <span> Dashboard </span>
+                    </a>
+                </li>
+                @else
+                    <li>
                     <a href="{{route('profile')}}">
                         <i data-feather="user"></i>
                         <span> My Profile </span>
                     </a>
                 </li>
+                @endif
                 <li>
                     <a href="javascript: void(0);">
                         <i data-feather="shopping-bag"></i>
