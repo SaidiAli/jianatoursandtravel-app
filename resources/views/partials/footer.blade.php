@@ -18,7 +18,6 @@
         <li><a class="text-muted" href="{{route('tours')}}">Tours and travel guide</a></li>
         <li><a class="text-muted" href="{{route('car-hire-and-sale')}}">Car Hire and Sale</a></li>
         <li><a class="text-muted" href="javascript: void(0);">Visa And Passport processing</a></li>
-        <li><a class="text-muted" href="javascript: void(0);">Immigrations</a></li>
       </ul>
     </div>
     {{-- <div class="col-6 col-md-3">
