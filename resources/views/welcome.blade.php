@@ -33,8 +33,8 @@
 
                 <div class="row justify-content-center mt-5">
                 <a href="#services" class="text-white js-scroll-trigger"
-                    style="display: inline-block; text-decoration: none; text-align: center;">What we do <br> <i
-                    class="fas fa-2x fa-arrow-down mb-4"></i></a>
+                    style="display: inline-block; text-decoration: none; text-align: center;">What we do <br>
+                     <i class="fas fa-2x fa-arrow-down mb-4"></i></a>
                 </div>
 
             </div>

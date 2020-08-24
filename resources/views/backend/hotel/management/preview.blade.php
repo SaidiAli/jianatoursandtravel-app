@@ -20,7 +20,7 @@
                         </div>
                         @endforeach
                     @endif
-                    <div class="card mb-4 mb-xl-0">
+                    <div class="card mb-4">
                         <div class="hotel-covers-carousel m-5">
                             @foreach ($images as $image)
                             <div class="carousel-cell">
@@ -172,6 +172,10 @@
                             <h5>Contact</h5>
                             <p>Phone: {{$hotel->phone}}</p>
                             <p>Email: {{$hotel->email}}</p>
+                        </div>
+                        <div class="d-flex justify-content-end mb-4 mr-3">
+                            <a href="{{route('hotel.edit', ['hotel' => $hotel])}}" class="btn btn-warning mr-2">Edit</a>
+                            <a href="javascript: void(0);" class="btn btn-danger">Request to Delete</a>
                         </div>
                     </div>
                 </div>

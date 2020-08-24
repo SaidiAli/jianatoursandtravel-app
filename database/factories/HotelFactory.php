@@ -16,6 +16,5 @@ $factory->define(Hotel::class, function (Faker $faker) {
         'web' => $faker->domainName,
         'address' => $faker->address,
         'phone' => $faker->phoneNumber,
-        'cover_photo' => 'image.jpg'
     ];
 });

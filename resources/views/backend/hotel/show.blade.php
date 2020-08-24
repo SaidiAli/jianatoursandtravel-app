@@ -145,7 +145,7 @@
                     </div>
 
                     <section class="section">
-                        <h2>More hotels like this</h2>
+                        <h2>Other Hotels around {{$hotel->district}}</h2>
 
                     <div class="row justify-content-around">
                         <div class="card col-lg-5 mr-1">

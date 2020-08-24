@@ -20,7 +20,7 @@ class HotelsManagement extends Controller
         $hotel = Hotel::where('id', $id)->first();
         $facilities = DB::table('facilities')->get()->toArray();
         $hotelFacilities = explode(',', $hotel->facilities);
-        $images = Storage::files('hotel_covers/' . $hotel->name);
+        $images = Storage::files('hotel_covers/' . $hotel->id);
         $img_urls = array_map(function ($file) {
             return Storage::url($file);
         }, $images);
@@ -38,10 +38,14 @@ class HotelsManagement extends Controller
     }
 
     public function update_cover_images($id, Request $request) {
+        $this->validate($request, [
+            'cover_photo' => 'image|mimes:jpeg,png,jpg'
+        ]);
+        
         $hotel = Hotel::where('id', $id)->first();
 
         if ($request->hasFile('file')) {
-            if ($path = $request->file('file')->store('hotel_covers/' . $hotel->name)) {
+            if ($path = $request->file('file')->store('hotel_covers/' . $hotel->id)) {
                 $hotel->cover_photos = Storage::url($path);
                 $hotel->save();
                 return response()->json(['message' => 'success']);

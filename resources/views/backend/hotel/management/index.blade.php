@@ -22,7 +22,7 @@
                                         <h5 class="card-title"><a href="{{route('hotels.preview', ['hotel' => $hotel])}}">{{$hotel->name}}</a></h5>
                                         <p class="card-text">{{$hotel->description}}</p>
                                         <a href="{{route('hotels.preview', ['hotel' => $hotel])}}" class="btn btn-primary">Preview</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
+                                        <a href="{{route('hotel.edit', ['hotel' => $hotel])}}" class="btn btn-warning">Edit</a>
                                     </div>
                                 </div>
                             </div>

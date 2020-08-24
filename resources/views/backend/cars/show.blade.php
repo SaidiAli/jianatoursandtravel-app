@@ -33,6 +33,9 @@
                                 @endforelse
                             </div>
                         </div>
+                        <div class="d-flex">
+                            <a href="{{route('cars.edit', ['car' => $car])}}" class="btn btn-outline-info m-auto" id="add_more_cover_images">Add More Images</a>
+                        </div>
                         <h3 class="text-center">Price: {{$car->price}}</h3>
                         <div class="details mt-3">
                         <div class="row justify-content-center">

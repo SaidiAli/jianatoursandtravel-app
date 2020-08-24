@@ -29,6 +29,7 @@ class CreateCarsTable extends Migration
             $table->string('brand')->nullable();
             $table->boolean('hire')->nullable();
             $table->boolean('sale')->nullable();
+            $table->string('luggage_capacity');
             $table->boolean('available')->default(true);
             $table->string('car_image')->nullable();
             $table->softDeletes();

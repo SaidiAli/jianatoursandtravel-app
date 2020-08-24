@@ -51,7 +51,7 @@
                         </li>
                     </ul>
                 </li>
-                    @if(auth()->user()->hotels->count() > 0)
+                    @if(auth()->user()->hotels->count() > 0 or auth()->user()->admin)
                         <li>
                             <a href="{{route('hotels.manage')}}">
                                 <i class="uil  uil-analytics"></i>
@@ -61,12 +61,6 @@
                     @endif
 
                     @if(auth()->user()->admin)
-                        <li>
-                            <a href="{{route('hotels.manage')}}">
-                                <i class="uil  uil-analytics"></i>
-                                <span>Manage Hotels</span>
-                            </a>
-                        </li>
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="uil  uil-glass-martini"></i>

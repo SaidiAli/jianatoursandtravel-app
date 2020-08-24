@@ -18,14 +18,14 @@ class CreateHotelsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->string('district');
             $table->string('email');
             $table->string('web')->nullable();
             $table->string('address');
             $table->string('phone');
             $table->string('cover_photos')->nullable();
-            $table->boolean('verified');
+            $table->boolean('verified')->default(false);
             $table->string('facilities')->nullable();
             $table->softDeletes();
             $table->timestamps();

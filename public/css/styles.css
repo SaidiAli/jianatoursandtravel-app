@@ -66,11 +66,6 @@ body {
 
 .selected-cars-carousel {
   width: 400px;
-  /* smaller, dark, rounded square */
-  /* icon color */
-  /* position outside */
-  /* position dots up a bit */
-  /* dots are lines */
 }
 .selected-cars-carousel .carousel-cell {
   width: 100%;
@@ -85,43 +80,9 @@ body {
   margin-right: 10px;
   counter-increment: carousel-cell;
 }
-.selected-cars-carousel .flickity-button {
-  background: #333;
-}
-.selected-cars-carousel .flickity-button:hover {
-  background: #F90;
-}
-.selected-cars-carousel .flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-.selected-cars-carousel .flickity-button-icon {
-  fill: white;
-}
-.selected-cars-carousel .flickity-prev-next-button.previous {
-  left: -40px;
-}
-.selected-cars-carousel .flickity-prev-next-button.next {
-  right: -40px;
-}
-.selected-cars-carousel .flickity-page-dots {
-  bottom: -22px;
-}
-.selected-cars-carousel .flickity-page-dots .dot {
-  height: 4px;
-  width: 40px;
-  margin: 0;
-  border-radius: 0;
-}
 
 .home-carousel {
   width: 700px;
-  /* smaller, dark, rounded square */
-  /* icon color */
-  /* position outside */
-  /* position dots up a bit */
-  /* dots are lines */
 }
 .home-carousel .carousel-cell {
   width: 80%;
@@ -133,43 +94,9 @@ body {
 .home-carousel .carousel-cell {
   counter-increment: carousel-cell;
 }
-.home-carousel .flickity-button {
-  background: #333;
-}
-.home-carousel .flickity-button:hover {
-  background: #F90;
-}
-.home-carousel .flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-.home-carousel .flickity-button-icon {
-  fill: white;
-}
-.home-carousel .flickity-prev-next-button.previous {
-  left: -40px;
-}
-.home-carousel .flickity-prev-next-button.next {
-  right: -40px;
-}
-.home-carousel .flickity-page-dots {
-  bottom: -22px;
-}
-.home-carousel .flickity-page-dots .dot {
-  height: 4px;
-  width: 40px;
-  margin: 0;
-  border-radius: 0;
-}
 
 .hotel-covers-carousel {
   width: auto;
-  /* smaller, dark, rounded square */
-  /* icon color */
-  /* position outside */
-  /* position dots up a bit */
-  /* dots are lines */
 }
 .hotel-covers-carousel .carousel-cell {
   width: 70%;
@@ -181,35 +108,6 @@ body {
 .hotel-covers-carousel .carousel-cell {
   counter-increment: carousel-cell;
 }
-.hotel-covers-carousel .flickity-button {
-  background: #333;
-}
-.hotel-covers-carousel .flickity-button:hover {
-  background: #F90;
-}
-.hotel-covers-carousel .flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-.hotel-covers-carousel .flickity-button-icon {
-  fill: white;
-}
-.hotel-covers-carousel .flickity-prev-next-button.previous {
-  left: -40px;
-}
-.hotel-covers-carousel .flickity-prev-next-button.next {
-  right: -40px;
-}
-.hotel-covers-carousel .flickity-page-dots {
-  bottom: -22px;
-}
-.hotel-covers-carousel .flickity-page-dots .dot {
-  height: 4px;
-  width: 40px;
-  margin: 0;
-  border-radius: 0;
-}
 @media (max-width: 576px) {
   .hotel-covers-carousel .flickity-page-dots {
     display: none;
@@ -219,6 +117,44 @@ body {
   }
 }
 
-#add_more_cover_images {
-  top: -10px;
+/* smaller, dark, rounded square */
+.flickity-button {
+  background: #333;
+}
+
+.flickity-button:hover {
+  background: #F90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
 }
