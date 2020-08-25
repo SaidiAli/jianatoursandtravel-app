@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Raleway&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="css/app.css" rel="stylesheet">
@@ -24,7 +25,8 @@
 </head>
 <body>
     <div id="app">
-        @include('partials.nav')
+        {{-- @include('partials.nav') --}}
+        <navbar-component></navbar-component>
 
         <main>
             @yield('content')
@@ -41,5 +43,6 @@
 <script src="js/main.js"></script>
 <script src="js/flickity.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/app.js"></script>
 @yield('custom-js')
 </html>

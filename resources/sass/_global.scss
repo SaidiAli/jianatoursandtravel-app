@@ -3,11 +3,22 @@ body,
 html {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 
 // Typography
 .text-white-75 {
     color: fade-out($white, .25);
+}
+
+p {
+    font-family: 'Raleway',
+        sans-serif !important;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display',
+    serif !important;
 }
 
 // Custom horizontal rules

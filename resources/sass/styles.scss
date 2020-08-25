@@ -1,7 +1,3 @@
-body {
-    margin: 0;
-}
-
 .discount {
     color: red;
     font-weight: bold;
@@ -173,4 +169,45 @@ body {
     width: 40px;
     margin: 0;
     border-radius: 0;
+}
+
+.navbar-custom {
+    width: 100%;
+    height: 20px;
+    padding: 3rem;
+    background-color: white;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .brand {
+        padding: 0 1rem;
+        font-size: 2rem;
+    }
+
+    .link {
+        padding: 0 .8rem;
+        font-family: 'Raleway',
+        sans-serif !important;
+    }
+
+    .flex-equal>* {
+        -ms-flex: 1;
+        flex: 1;
+    }
+
+    @media (min-width: 768px) {
+        .flex-md-equal>* {
+            -ms-flex: 1;
+            flex: 1;
+        }
+    }
+}
+
+.site-header {
+    font-family: 'Playfair Display',
+    serif;
 }

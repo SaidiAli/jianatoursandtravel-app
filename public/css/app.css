@@ -9992,10 +9992,19 @@ body,
 html {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+}
+
+p {
+  font-family: "Raleway", sans-serif !important;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif !important;
 }
 
 hr.divider {
