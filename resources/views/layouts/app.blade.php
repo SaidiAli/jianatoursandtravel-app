@@ -25,8 +25,8 @@
 </head>
 <body>
     <div id="app">
-        {{-- @include('partials.nav') --}}
-        <navbar-component></navbar-component>
+        @include('partials.nav')
+        {{-- <navbar-component></navbar-component> --}}
 
         <main>
             @yield('content')

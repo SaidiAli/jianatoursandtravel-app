@@ -155,7 +155,7 @@
   border-radius: 0;
 }
 
-.navbar-custom {
+.custom-nav {
   width: 100%;
   height: 20px;
   padding: 3rem;
@@ -168,23 +168,29 @@
   justify-content: center;
   align-items: center;
 }
-.navbar-custom .brand {
+.custom-nav .brand {
   padding: 0 1rem;
   font-size: 2rem;
 }
-.navbar-custom .link {
+.custom-nav .link {
   padding: 0 0.8rem;
   font-family: "Raleway", sans-serif !important;
 }
-.navbar-custom .flex-equal > * {
+.custom-nav .flex-equal > * {
   flex: 1;
 }
 @media (min-width: 768px) {
-  .navbar-custom .flex-md-equal > * {
+  .custom-nav .flex-md-equal > * {
     flex: 1;
   }
 }
 
 .site-header {
   font-family: "Playfair Display", serif;
+}
+
+.nav-btn {
+  display: inline-block;
+  border: 0.3rem solid #3490dc;
+  padding: 0.1rem 0.1rem;
 }

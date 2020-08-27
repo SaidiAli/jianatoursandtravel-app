@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light py-3" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color: white">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger text-uppercase" href="{{route('home')}}">jiana tours & travel</a>
+            <a class="navbar-brand text-uppercase site-header" href="{{route('home')}}">jiana tours & travel</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -10,14 +10,14 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a href="{{route('hotel.index')}}" class="nav-link">Hotels</a>
+                        <a href="{{route('hotel.index')}}" class="nav-link raleway">Hotels</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('tours')}}" class="nav-link">Tours</a>
+                        <a href="{{route('tours')}}" class="nav-link raleway">Tours</a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="nav-link" href="#" role="button" id="menuDropdown" data-toggle="dropdown"
+                            <a class="nav-link raleway" href="#" role="button" id="menuDropdown" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Services</a>
                             <div class="dropdown-menu" aria-labelledby="menuDropdown">
                                 <a href="{{route('car-hire-and-sale')}}" class="dropdown-item">Car Hire and Sale</a>
@@ -29,16 +29,16 @@
                     <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link nav-btn raleway m-md-2" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link raleway nav-btn m-md-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link raleway dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
