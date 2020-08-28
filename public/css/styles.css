@@ -91,6 +91,23 @@
   counter-increment: carousel-cell;
 }
 
+.home-hotels-carousel {
+  width: 100%;
+}
+.home-hotels-carousel .carousel-cell {
+  width: 25rem;
+  margin-right: 10px;
+}
+.home-hotels-carousel .carousel-cell {
+  counter-increment: carousel-cell;
+}
+@media (max-width: 576px) {
+  .home-hotels-carousel .carousel-cell {
+    width: 20rem;
+    margin-right: 10px;
+  }
+}
+
 .hotel-covers-carousel {
   width: auto;
 }
@@ -192,5 +209,25 @@
 .nav-btn {
   display: inline-block;
   border: 0.3rem solid #3490dc;
-  padding: 0.1rem 0.1rem;
+  padding: 0.1rem;
+  color: #3490dc;
+}
+
+.location-container {
+  position: relative;
+}
+
+.location-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.location-caption:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }

@@ -26,6 +26,13 @@ $(document).ready(function() {
         groupCells: true
     });
 
+    // $(".home-hotels-carousel").flickity({
+    //     // options
+    //     autoPlay: true,
+    //     wrapAround: true,
+    //     groupCells: true
+    // });
+
     $(".hotel-covers-carousel").flickity({
         // options
         autoPlay: true,

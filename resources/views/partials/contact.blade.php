@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div class="row h-100 align-items-center justify-content-center text-center">
+      {{-- <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
           <h2 class="mt-5 text-uppercase">Our Socials</h2>
           <hr class="divider my-4">
@@ -35,6 +35,6 @@
                 <i class="fab fa-3x fa-instagram"></i>
               </a>
         </div>
-      </div>
+      </div> --}}
     </div>
   </section>

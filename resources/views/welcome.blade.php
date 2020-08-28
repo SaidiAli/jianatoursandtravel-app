@@ -6,11 +6,11 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-white font-weight-bold">Come have an incredible experience</h1>
+                    <h1 class="text-uppercase text-white font-weight-bold">Book exclusive hotels in uganda</h1>
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     @guest
-                        <p class="text-center text-white">Create an account to connect to exquisite service at Jiana Tours and Travel</p>
+                        <p class="text-center text-white">Create an account to access exquisite services at Jiana Tours and Travel</p>
                         <a href="{{route('register')}}" class="btn btn-primary btn-lg">Create Account</a>
                     @endguest
                 </div>
@@ -18,6 +18,78 @@
         </div>
     </header>
     <!-- About Section -->
+
+    <section class="section">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="mb-4 text-uppercase text-center">top rated hotels</h2>
+                <div class="d-flex justify-content-center m-5">
+                    <div class="home-hotels-carousel" data-flickity='{"autoPlay": 3000, "wrapAround": true, "groupCells": true }'>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
+                                    <a href="" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
+                                    <a href="" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
+                                    <a href="" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
+                                    <a href="" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
+                                    <a href="" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="card">
+                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
+                                    <a href="" class="btn btn-primary">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="page-section bg-primary" id="about">
         <div class="container">
@@ -104,48 +176,79 @@
     <!-- gallery Section -->
     <section id="portfolio">
         <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/images/1.jpg">
-                <img class="img-fluid" src="images/images/1.jpg" alt="">
-            </a>
-            <p class="container">Looking for a gorilla trekking safari in Uganda?, Hidden in the curvy emerald hills in Western Uganda, Bwindi Forest and Mgahingas harbour the last of king kong's family.The treasured silverback mountain gorillas.
-        </p>
+            <h2 class="text-uppercase text-center">popular locations</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12 my-2">
+                            <div class="location-container">
+                                <img src="./images/images/hotels/1.jpg" alt="" class="img-fluid">
+                            <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                    <h3>Kampala</h3>
+                                    <p>1234 Hotels</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-12 my-2">
+                            <div class="row">
+                            <div class="col-md-6 my-sm-2 my-md-0">
+                                <div class="location-container">
+                                    <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
+                                    <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                        <h3>Entebbe</h3>
+                                        <p>1234 Hotels</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 my-sm-2 my-md-0">
+                                <div class="location-container">
+                                    <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
+                                    <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                        <h3>Gulu</h3>
+                                        <p>1234 Hotels</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12 my-2">
+                            <div class="row">
+                            <div class="col-md-6 my-sm-2 my-md-0">
+                                <div class="location-container">
+                                    <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
+                                    <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                        <h3>Mbale</h3>
+                                        <p>1234 Hotels</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 my-sm-2 my-md-0">
+                                <div class="location-container"> 
+                                    <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
+                                    <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                        <h3>Mbarara</h3>
+                                        <p>1234 Hotels</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-12 my-2">
+                            <div class="location-container">
+                                <img src="./images/images/hotels/image19.png" alt="" class="img-fluid">
+                                <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                    <h3>Jinja</h3>
+                                    <p>1234 Hotels</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="./images/images/2.jpg">
-                <img class="img-fluid" src="images/images/2.jpg" alt="">
-            </a>
-            <p class="container">This is the second most popular tourist destination  among all the numerous Ugandan Safari options. It is a very popular destination with many holiday makers and rightly so. 
-            </p>
-            </div>
-            <div class="col-lg-4 col-sm-6"> 
-            <a class="portfolio-box" href="./images/images/3.jpg">
-                <img class="img-fluid" src="images/images/3.jpg" alt="">
-            </a>
-                <p class="container">World famous safari parks with diverse fauna and flora, we boast of the great scenic Murchison falls and a variety of animal and plant species you will not regret the investment.
-                </p>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/images/4.jpg">
-                <img class="img-fluid" src="images/images/4.jpg" alt="">
-            </a>
-            <p class="container">Located in the extreme northern part of Uganda, Kidepo has an amazing array of wildlife and its indeed the best for game
-            viewing.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/images/5.jpg">
-                <img class="img-fluid" src="images/images/5.jpg" alt="">
-            </a>
-            <p class="container">The country's dramatic scenery hits the refresh button and relieves you of all stress.Mountains of the moon, Rwenzori Mountain is a marvolous site for hiking to the glaciated peaks.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/images/6.jpg">
-                <img class="img-fluid" src="images/images/6.jpg" alt="">
-            </a>
-            <p class="container">The love for our country drives us to promote local tourism. UGANDANS come see the blessing you know you have .And lose the mental stress the COVID-19 Pandemic put on us all</p>
-            </div>
-        </div>
         </div>
     </section>
 
