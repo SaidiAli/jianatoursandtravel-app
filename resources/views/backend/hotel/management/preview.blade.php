@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 @section("custom_css")
 <style>
     #hotel-name {
@@ -34,52 +34,60 @@
                             <a href="{{route('hotels.add_images', ['hotel' => $hotel])}}" class="btn btn-outline-info" id="add_more_cover_images">Add More Images</a>
                         </div>
                         <div class="card-body">
-                                <p class="card-title"><span id="hotel-name">{{$hotel->name}}</span> 
+                                <h4 class="card-title"><span id="hotel-name">{{$hotel->name}}</span> 
                                     @if ($hotel->verified)
                                     <span class="badge badge-success">Verified</span>
                                 @else
                                     <span class="badge badge-warning">Not verified</span>
                                 @endif
-                            </p>
+                                </h4>
                                 
                             <p>{{$hotel->description}}</p>
-                            <h5>Fascilities</h5>
-                            <ul>
-                                @forelse ($hotelFacilities as $facility)
-                                    <li>{{$facility}}</li>
-                                @empty
-                                    <li><p class="text-warning">No faciliry attached to the hotel yet</p></li>
-                                @endforelse
-                            </ul>
                             
+                            <h5>Fascilities</h5>
+                            @if ($facilities->count() > 1)
+                                <ul>
+                                    @foreach ($facilities as $f)
+                                        <li>{{$f->name}}</li>
+                                    @endforeach
+                                </ul>
+                            @else
+                                    <li><p class="text-warning">No faciliry attached to the hotel yet</p></li>
+                            @endif
+
                             <p class="text-bold">Add Hotel fascilies</p>
                             <form action="{{route('hotel.update', ['hotel' => $hotel])}}" method="post">
                                 @csrf
                                 @method('put')
                                 <select name="facilities[]" class="form-control" multiple id="facilities-select">
-                                    @foreach ($facilities as $facility)
-                                        <option>{{$facility->name}}</option>
+                                    @foreach ($allFacilities as $facility)
+                                        <option value="{{$facility->id}}">{{$facility->name}}</option>
                                     @endforeach
                                 </select>
                                 <input type="submit" value="Add" class="btn btn-warning mt-2">
                             </form>
 
-                            <h5>Location</h5>
-                            <p>Located in {{$hotel->district.' , '.$hotel->address}}</p>
+                            <div class="my-3">
+                                <h5>Location</h5>
+                                <p>Located in {{$hotel->district.' , '.$hotel->address}}</p>
+                            </div>
 
-                            <h5>Hotel policies</h5>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    Open 24/7
-                                </div>
-                                <div class="col-lg-4">
-                                    Tight Security
-                                </div>
-                                <div class="col-lg-4">
-                                    No pets Allowed
+                            <div class="my-3">
+                                <h5>Hotel policies</h5>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        Open 24/7
+                                    </div>
+                                    <div class="col-lg-4">
+                                        Tight Security
+                                    </div>
+                                    <div class="col-lg-4">
+                                        No pets Allowed
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="my-3">
                                 <h5>Available rooms</h5>
 
                                 <div class="row">
@@ -108,6 +116,7 @@
                                 <p class="text-center text-warning">No registered rooms yet</p>
                                 @endforelse
                                 </div>
+                            </div>
                                 <button  type="button" class="btn btn-warning" data-toggle="modal" data-target="#addroom-modal">Add a Room</button>
 
                                 {{-- Modal start --}}
@@ -159,7 +168,7 @@
                                                             <input type="hidden" name="hotel_id" value="{{$hotel->id}}">
                                                             <div class="form-group mb-0 justify-content-end row">
                                                                 <div class="col-9">
-                                                                    <button type="submit" class="btn btn-info">Add</button>
+                                                                    <button type="submit" class="btn btn-info text-white">Add</button>
                                                                 </div>
                                                             </div>
                                                         </form>
@@ -169,9 +178,11 @@
                                         </div><!-- /.modal -->
                                 {{-- Modal end --}}
 
-                            <h5>Contact</h5>
-                            <p>Phone: {{$hotel->phone}}</p>
-                            <p>Email: {{$hotel->email}}</p>
+                                <div class="my-3">
+                                    <h5>Contact</h5>
+                                    <p>Phone: {{$hotel->phone}}</p>
+                                    <p>Email: {{$hotel->email}}</p>
+                                </div>
                         </div>
                         <div class="d-flex justify-content-end mb-4 mr-3">
                             <a href="{{route('hotel.edit', ['hotel' => $hotel])}}" class="btn btn-warning mr-2">Edit</a>

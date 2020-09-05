@@ -26,7 +26,7 @@ class CreateHotelsTable extends Migration
             $table->string('phone');
             $table->string('cover_photos')->nullable();
             $table->boolean('verified')->default(false);
-            $table->string('facilities')->nullable();
+            // $table->string('facilities')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

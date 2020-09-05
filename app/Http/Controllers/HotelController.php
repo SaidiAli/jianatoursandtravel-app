@@ -54,7 +54,6 @@ class HotelController extends Controller
     public function show($id)
     {
         $hotel = Hotel::where('id', $id)->first();
-        $hotelFacilities = explode(',', $hotel->facilities);
         $images = Storage::files('hotel_covers/' . $hotel->id);
         $img_urls = array_map(function ($file) {
             return Storage::url($file);
@@ -62,7 +61,7 @@ class HotelController extends Controller
 
         return view('backend.hotel.show')->with([
             'hotel' => $hotel,
-            'hotelFacilities' => $hotelFacilities,
+            'facilities' => $hotel->facilities,
             'images' => $img_urls
          ]);
     }
@@ -91,24 +90,22 @@ class HotelController extends Controller
     {
         $hotel = Hotel::where('id', $id)->first();
 
-        $this->validator($request);
-
-        if ($request->query('all')) {
-            $hotel->name = $request->input('name');
+        if($request->input('all') == 'true') {
+            $this->validator($request);
+            
+            $hotel->name        = $request->input('name');
             $hotel->description = $request->input('description');
-            $hotel->address = $request->input('address');
-            $hotel->district = $request->input('district');
-            $hotel->phone = $request->input('phone');
-            $hotel->email = $request->input('email');
-            $hotel->web = $request->input('web');
+            $hotel->address     = $request->input('address');
+            $hotel->district    = $request->input('district');
+            $hotel->phone       = $request->input('phone');
+            $hotel->email       = $request->input('email');
+            $hotel->web         = $request->input('web');
 
             $hotel->save();
             return redirect()->route('hotels.preview', ['hotel' => $hotel]);
         }
 
-        $hotel->facilities = implode(',', $request->input('facilities'));
-        $hotel->save();
-
+        $hotel->facilities()->attach($request->input('facilities'));
         return back();
     }
 
@@ -130,12 +127,12 @@ class HotelController extends Controller
     private function validator(Request $request) {
         return $request->validate(
             [
-                'name' => 'required',
+                'name'        => 'required',
                 'description' => 'required|min:20',
-                'email' => 'required|email',
-                'district' => 'required',
-                'address' => 'required|max:200',
-                'phone' => 'required',
+                'email'       => 'required|email',
+                'district'    => 'required',
+                'address'     => 'required|max:200',
+                'phone'       => 'required',
             ]
         );
     }

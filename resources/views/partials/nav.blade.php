@@ -29,11 +29,11 @@
                     <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link nav-btn raleway m-md-2" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link nav-button raleway m-md-2" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link raleway nav-btn m-md-2" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link raleway nav-button m-md-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

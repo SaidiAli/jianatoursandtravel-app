@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Facility;
 use Illuminate\Http\Request;
 use App\Hotel;
 use Illuminate\Support\Facades\DB;
@@ -17,17 +18,19 @@ class HotelsManagement extends Controller
 
     public function preview($id)
     {
-        $hotel = Hotel::where('id', $id)->first();
-        $facilities = DB::table('facilities')->get()->toArray();
-        $hotelFacilities = explode(',', $hotel->facilities);
-        $images = Storage::files('hotel_covers/' . $hotel->id);
-        $img_urls = array_map(function ($file) {
+        $hotel         = Hotel::where('id', $id)->first();
+        $facilities    = $hotel->facilities;
+        $allFacilities = Facility::all();
+        $images        = Storage::files('hotel_covers/' . $hotel->id);
+        $img_urls      = array_map(function ($file) {
             return Storage::url($file);
         }, $images);
 
         return view('backend.hotel.management.preview')->with([
-            'hotel' => $hotel, 'facilities' =>$facilities, 
-            'hotelFacilities' => $hotelFacilities,
+            'hotel'     => $hotel,
+            'facilities' =>$facilities, 
+            'facilities' => $facilities,
+            'allFacilities' => $allFacilities,
             'images' => $img_urls
             ]);
     }

@@ -1,8 +1,6 @@
-@extends('layouts.app')
+<x-app>
 
-@section('content')
-
-<header class="masthead-home">
+    <header class="masthead-home">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
@@ -191,7 +189,7 @@
                         </div>
                         <div class="col-12 my-2">
                             <div class="row">
-                            <div class="col-md-6 my-sm-2 my-md-0">
+                            <div class="col-md-6 my-2">
                                 <div class="location-container">
                                     <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -200,7 +198,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 my-sm-2 my-md-0">
+                            <div class="col-md-6 my-2">
                                 <div class="location-container">
                                     <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -217,7 +215,7 @@
                     <div class="row">
                         <div class="col-12 my-2">
                             <div class="row">
-                            <div class="col-md-6 my-sm-2 my-md-0">
+                            <div class="col-md-6 my-2">
                                 <div class="location-container">
                                     <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -226,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 my-sm-2 my-md-0">
+                            <div class="col-md-6 my-2">
                                 <div class="location-container"> 
                                     <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -290,4 +288,4 @@
     </section>
 
     @include('partials.contact')
-@endsection
+</x-app>

@@ -15,7 +15,7 @@ class SuperAdminController extends Controller
 
     public function facilities_add() {
         try {
-            DB::table('facilities')->insert([['name' => 'Restaurant', 'icon-class' => 'uil-restaurant'], ['name' => 'Free WIFI', 'icon-class' => 'uil-wifi'], ['name' => 'Garden', 'icon-class' => 'uil-trees'], ['name' => 'Jacuzzi', 'icon-class' => 'uil-temperature'], ['name' => 'restaurant', 'icon-class' => 'uil-restaurant'], ['name' => 'Roof Top Terrace', 'icon-class' => 'uil-water'], ['name' => 'Bar', 'icon-class' => 'uil-glass-martini-alt'], ['name' => 'Airport Transportation', 'icon-class' => 'uil-plane'], ['name' => 'Swimming Pool', 'icon-class' => 'uil-swimmer']]);
+            DB::table('facilities')->insert([['name' => 'Restaurant', 'icon_class' => 'uil-restaurant'], ['name' => 'Free WIFI', 'icon_class' => 'uil-wifi'], ['name' => 'Garden', 'icon_class' => 'uil-trees'], ['name' => 'Jacuzzi', 'icon_class' => 'uil-temperature'], ['name' => 'restaurant', 'icon_class' => 'uil-restaurant'], ['name' => 'Roof Top Terrace', 'icon_class' => 'uil-water'], ['name' => 'Bar', 'icon_class' => 'uil-glass-martini-alt'], ['name' => 'Airport Transportation', 'icon_class' => 'uil-plane'], ['name' => 'Swimming Pool', 'icon_class' => 'uil-swimmer']]);
 
             return back();
 

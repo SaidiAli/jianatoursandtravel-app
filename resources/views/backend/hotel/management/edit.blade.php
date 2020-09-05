@@ -18,7 +18,7 @@
                                 @endforeach
                             @endif
 
-                            <form class="needs-validation" action="{{route('hotel.update', ['hotel' => $hotel])}}?all=1" method="POST" enctype="multipart/form-data" novalidate>
+                            <form class="needs-validation" action="{{route('hotel.update', ['hotel' => $hotel])}}?all=true" method="POST" enctype="multipart/form-data" novalidate>
                                 @csrf
                                 @method('put')
                                 <div class="form-group mb-3">

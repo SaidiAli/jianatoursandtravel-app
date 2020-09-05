@@ -1,11 +1,10 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFacilitiesTable extends Migration
+class CreateFacilityHotelPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +13,13 @@ class CreateFacilitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('facilities', function (Blueprint $table) {
+        Schema::create('facility_hotel', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('icon_class')->nullable();
+            $table->unsignedBigInteger('facility_id');
+            $table->unsignedBigInteger('hotel_id');
             $table->timestamps();
+
+            $table->unique(['facility_id', 'hotel_id']);
         });
     }
 
@@ -29,6 +30,6 @@ class CreateFacilitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facilities');
+        Schema::dropIfExists('facility_hotel');
     }
 }

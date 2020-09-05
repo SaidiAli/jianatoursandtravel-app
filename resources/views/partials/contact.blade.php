@@ -11,7 +11,7 @@
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
           <div>Mr. Nsubuga Jiana: +256 704 672-670</div>
-          <div>Mr. Isiko Saidiali: +256 000343212</div>
+          <div>Mr. Isiko Saidiali: +256 753672882</div>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>

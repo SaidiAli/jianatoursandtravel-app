@@ -9,6 +9,11 @@ class Hotel extends Model
 {
     use SoftDeletes;
     protected $guarded = [];
+    
+    public function facilities()
+    {
+        return $this->belongsToMany(Facility::class);
+    }
 
     public function rooms() {
         return $this->hasMany('App\Room');
@@ -23,4 +28,5 @@ class Hotel extends Model
     {
         return $this->hasMany('App\Booking');
     }
+
 }

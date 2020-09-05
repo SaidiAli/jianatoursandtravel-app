@@ -3,6 +3,10 @@
   font-weight: bold;
 }
 
+.content {
+  margin: 5rem 0 0 0 !important;
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -94,6 +98,15 @@
 .home-hotels-carousel {
   width: 100%;
 }
+.home-hotels-carousel .flickity-button {
+  background: transparent;
+}
+.home-hotels-carousel .flickity-button:hover {
+  background: transparent;
+}
+.home-hotels-carousel .flickity-button-icon {
+  fill: white;
+}
 .home-hotels-carousel .carousel-cell {
   width: 25rem;
   margin-right: 10px;
@@ -108,22 +121,31 @@
   }
 }
 
-.hotel-covers-carousel {
-  width: auto;
-}
 .hotel-covers-carousel .carousel-cell {
   width: 70%;
   /* full width */
   height: 300px;
   /* height of carousel */
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .hotel-covers-carousel .carousel-cell {
   counter-increment: carousel-cell;
 }
+.hotel-covers-carousel .flickity-button {
+  background: transparent;
+}
+.hotel-covers-carousel .flickity-button:hover {
+  background: transparent;
+}
+.hotel-covers-carousel .flickity-button-icon {
+  fill: white;
+}
 @media (max-width: 576px) {
   .hotel-covers-carousel .flickity-page-dots {
     display: none;
+  }
+  .hotel-covers-carousel .carousel-cell {
+    width: 100%;
   }
   .hotel-covers-carousel .flickity-viewport {
     height: 150px !important;
@@ -206,7 +228,7 @@
   font-family: "Playfair Display", serif;
 }
 
-.nav-btn {
+.nav-button {
   display: inline-block;
   border: 0.3rem solid #3490dc;
   padding: 0.1rem;
@@ -230,4 +252,16 @@
 }
 .location-caption:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.facility-icon {
+  font-size: 2rem;
+}
+
+.navtab-bg {
+  background-color: #f7f7f7;
+  color: black;
+}
+.navtab-bg .nav-link .active {
+  background-color: white;
 }

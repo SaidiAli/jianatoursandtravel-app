@@ -30,7 +30,7 @@ Route::get('mail', function(){
 
 Route::post('/test', function() {});
 
-Auth::routes(['verify' => false]);
+Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/profile', 'ProfileController@index')->name('profile');

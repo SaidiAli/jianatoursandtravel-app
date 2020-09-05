@@ -1,11 +1,11 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
     <div class="content">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <h4 class="header-title mt-0 mb-1">Register Your Hotel</h4>
                             <p class="sub-header">Provide information about your hotel, this information will be displayed to our customers for them to book in your hotel</p>

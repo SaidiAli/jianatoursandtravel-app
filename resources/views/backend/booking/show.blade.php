@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
     <div class="content">
@@ -13,9 +13,10 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <div class="card">
+                                <div class="card p-md-5 my-4">
                                     <div class="card-body">
-                                        <!-- Logo & title -->
+                                        <div class="mx-md-5">
+                                            <!-- Logo & title -->
                                         <div class="clearfix">
                                             <div class="float-sm-right">
                                                 <h4 class="m-0 d-inline align-middle">{{$hotel->name}}</h4>
@@ -58,6 +59,7 @@
                                             </div> <!-- end col -->
                                         </div>
                                         <!-- end row -->
+                                        </div>
 
                                         <div class="row">
                                             <div class="col-12">
@@ -117,11 +119,11 @@
                                         <!-- end row -->
 
                                         <div class="row justify-content-center mt-5 mb-1">
-                                            <div class="col-lg-8">
+                                            <div class="col-lg-6">
                                                 <div class="text-right d-print-none">
                                                 <a href="{{route('payment.index')}}?id={{$booking->id}}" class="btn btn-outline-success btn-block"><i
                                                         class="uil uil-currency mr-1"></i> Pay At Hotel</a>
-                                                <a href="#" class="btn btn-info btn-block">Pay Online</a>
+                                                <a href="#" class="btn btn-info btn-block text-white">Pay Online</a>
                                             </div>
                                             </div>
                                         </div>

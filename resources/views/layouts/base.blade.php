@@ -18,11 +18,11 @@
         <link href="/backend/assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
-    <link rel="stylesheet" href="{{asset('backend/assets/libs/dropzone/dropzone.min.css')}}">
+    <link rel="stylesheet" href="/backend/assets/libs/dropzone/dropzone.min.css">
 
-    <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('backend/assets/css/app.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="/backend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/backend/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/app.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/styles.css">
 
     {{-- Flickity --}}
@@ -40,17 +40,14 @@
 
         <!-- Begin page -->
         <div id="wrapper">
-            @include('partials.bsidebar')
+            {{-- @include('partials.bsidebar') --}}
 
     <!--====================  heaer area ====================-->
-            @include('partials.bheader')
+            @include('partials.nav')
     <!--====================  End of heaer area  ====================-->
-    <div class="content-page">
-        <div class="content">
-
-            @yield('content')
-
-        </div>
+    <div class="content">
+        @yield('content')
+    </div>
 
     <!--====================  footer area ====================-->
     @include('partials.bfooter')

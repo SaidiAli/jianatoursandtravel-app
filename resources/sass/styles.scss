@@ -3,6 +3,10 @@
     font-weight: bold;
 }
 
+.content {
+    margin: 5rem 0 0 0 !important;
+}
+
 .form-signin {
     width: 100%;
     max-width: 330px;
@@ -103,6 +107,18 @@
 
     width: 100%;
 
+    .flickity-button {
+        background: transparent;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    .flickity-button-icon {
+        fill: white;
+    }
+
     .carousel-cell {
         width: 25rem;
         margin-right: 10px;
@@ -122,23 +138,37 @@
 
 .hotel-covers-carousel {
 
-    width: auto;
-
     .carousel-cell {
         width: 70%;
         /* full width */
         height: 300px;
         /* height of carousel */
-        margin-right: 10px;
+        margin-right: 5px;
     }
 
     .carousel-cell {
         counter-increment: carousel-cell;
     }
 
+    .flickity-button {
+        background: transparent;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    .flickity-button-icon {
+        fill: white;
+    }
+
     @media (max-width: 576px) {
         .flickity-page-dots {
             display: none;
+        }
+
+        .carousel-cell {
+            width: 100%;
         }
 
         .flickity-viewport {
@@ -233,7 +263,7 @@
     serif;
 }
 
-.nav-btn {
+.nav-button {
     display: inline-block;
     border: .3rem solid #3490dc;
     padding: .1rem;
@@ -259,3 +289,17 @@
         background-color: rgb(0, 0, 0, 0.5);
     }
 }
+
+.facility-icon {
+    font-size: 2rem;;
+}
+
+.navtab-bg {
+    background-color: rgb(247, 247, 247);
+    color: black;
+
+    .nav-link .active {
+        background-color: white;
+    }
+}
+
