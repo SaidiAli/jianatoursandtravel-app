@@ -34,6 +34,7 @@ class HotelController extends Controller
             $hotel->user_id = auth()->user()->id;
             $hotel->name = $request->input('name');
             $hotel->description = $request->input('description');
+            $hotel->average_price = $request->input('average_price');
             $hotel->address = $request->input('address');
             $hotel->district = $request->input('district');
             $hotel->phone = $request->input('phone');
@@ -95,6 +96,7 @@ class HotelController extends Controller
             
             $hotel->name        = $request->input('name');
             $hotel->description = $request->input('description');
+            $hotel->average_price = $request->input('average_price');
             $hotel->address     = $request->input('address');
             $hotel->district    = $request->input('district');
             $hotel->phone       = $request->input('phone');
@@ -129,6 +131,7 @@ class HotelController extends Controller
             [
                 'name'        => 'required',
                 'description' => 'required|min:20',
+                'average_price' => 'required',
                 'email'       => 'required|email',
                 'district'    => 'required',
                 'address'     => 'required|max:200',

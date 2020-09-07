@@ -50,6 +50,7 @@
 
     <script src="/js/custom.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/backend/assets/js/app.min.js"></script>
     @yield('javascript')
 
 </body>

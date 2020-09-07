@@ -43,10 +43,28 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="{{route('profile')}}" class="dropdown-item">Profile</a>
+                                    <a href="{{route('profile')}}" class="dropdown-item">
+                                        <i class="uil uil-user"></i>
+                                        Profile
+                                    </a>
+                                    @if(auth()->user()->hotels->count() > 0 or auth()->user()->admin)
+                                        <a href="{{route('hotels.manage')}}" class="dropdown-item">
+                                            <i class="uil  uil-analytics"></i>
+                                            <span>Manage Hotels</span>
+                                        </a>
+                                    @endif
+
+                                    @if(auth()->user()->admin)
+                                        <a href="{{route('cars.index')}}" class="dropdown-item">
+                                            <i class="uil  uil-car-sideview"></i>
+                                            <span>Manage Cars</span>
+                                        </a>
+                                    @endif
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                                                     <i class="uil uil-sign-out-alt"></i>
                                         {{ __('Logout') }}
                                     </a>
 

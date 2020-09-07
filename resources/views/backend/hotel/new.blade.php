@@ -40,6 +40,13 @@
                                     @enderror
                                 </div>
                                 <div class="form-group mb-3">
+                                    <label for="average-price">Average Price</label>
+                                    <input type="text" class="form-control" name="average_price" id="average-price" required>
+                                    <div class="invalid-feedback">
+                                        Please provide an average price for the rooms
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
                                     <label for="email">Email Address</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">

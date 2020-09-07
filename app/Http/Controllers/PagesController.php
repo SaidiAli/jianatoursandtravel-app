@@ -27,7 +27,8 @@ class PagesController extends Controller
 
     public function car_hire_and_sale() {
         $cars = Car::where('available', true)->get()->toArray();
-        return view('pages.car_hire_and_sale')->with(['cars' => $cars]);
+        // return view('pages.car_hire_and_sale')->with(['cars' => $cars]);
+        return view('maintenance');
     }
 
     public function car_preview(Request $request) {

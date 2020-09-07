@@ -265,3 +265,46 @@
 .navtab-bg .nav-link .active {
   background-color: white;
 }
+
+p {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif !important;
+}
+
+.footer .form-control {
+  border: 1px solid transparent;
+  height: 38px;
+  padding-left: 40px;
+  padding-right: 20px;
+  background-color: white;
+  box-shadow: none;
+  border-radius: 0.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #5369f8;
+}
+a:hover {
+  text-decoration: none;
+  color: #455cf5;
+}
+
+.ave {
+  font-size: 10px;
+}
+
+.pn {
+  font-size: 15px;
+}

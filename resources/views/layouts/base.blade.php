@@ -50,10 +50,9 @@
     </div>
 
     <!--====================  footer area ====================-->
-    @include('partials.bfooter')
+    @include('partials.footer')
     <!--====================  End of footer area  ====================-->
     </div>
-
 
 
         </div>

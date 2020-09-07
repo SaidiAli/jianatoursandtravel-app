@@ -124,7 +124,7 @@
                 <i class="fas fa-4x fa-map text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Travel Guide</h3>
                 <p class="text-muted mb-0">Our team of dedicated guides will add a new flavour to your african adventure.</p>
-                <p><a href="{{route('tours')}}">Find out more ...</a></p>
+                <p><a href="{{route('tours')}}">Find out more <i class="uil uil-angle-double-right"></i></a></p>
             </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
@@ -132,7 +132,7 @@
                 <i class="fas fa-4x fa-hotel text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Hotel Booking</h3>
                 <p class="text-muted mb-0">Expect to be treated to the most comfortable world class hotels at comfortable prices.</p>
-                <p><a href="{{route('hotel.index')}}">Find out more ...</a></p>
+                <p><a href="{{route('hotel.index')}}">Find out more <i class="uil uil-angle-double-right"></i></a></p>
             </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
@@ -140,7 +140,7 @@
                 <i class="fas fa-4x fa-passport text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Visa and Passport Processing</h3>
                 <p class="text-muted mb-0">Get your visa or passport with no hurdles or deceit with our verified services.</p>
-                <p><a href="#">Find out more ...</a></p>
+                <p><a href="#">Find out more <i class="uil uil-angle-double-right"></i></a></p>
             </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
@@ -148,7 +148,7 @@
                 <i class="fas fa-4x fa-plane text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Airline Ticketing</h3>
                 <p class="text-muted mb-0">Get an airline ticket without the longline or long wait.</p>
-                <p><a href="#">Find out more ...</a></p>
+                <p><a href="#">Find out more  <i class="uil uil-angle-double-right"></i></a></p>
             </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
@@ -156,7 +156,7 @@
                 <i class="fas fa-4x fa-bus text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Boat and Luxury Cruise Booking</h3>
                 <p class="text-muted mb-0">We help you find a safe weekend cruise, or that dream boat ride.</p>
-                <p><a href="#">Find out more ...</a></p>
+                <p><a href="#">Find out more  <i class="uil uil-angle-double-right"></i></a></p>
             </div>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
@@ -164,7 +164,7 @@
                 <i class="fas fa-4x fa-car text-primary mb-4"></i>
                 <h3 class="h4 mb-2">Car Hire and Sale</h3>
                 <p class="text-muted mb-0">Find the best deals for car hire and sales on our platform with jaw dropping discounts</p>
-                <p><a href="{{route('car-hire-and-sale')}}">Find out more ...</a></p>
+                <p><a href="{{route('car-hire-and-sale')}}">Find out more <i class="uil uil-angle-double-right"></i></a></p>
             </div>
             </div>
         </div>
@@ -256,12 +256,21 @@
         <h2 class="mb-4 text-uppercase">The best vacations happen with us</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <img class="img-fluid" src="./images/images/lake-naivasha-walking-giraffe-cropped.jpg" alt="">
-                    <p>A honey moon in the wild</p>
+                    <div class="location-container">
+                        <img src="./images/images/lake-naivasha-walking-giraffe-cropped.jpg" alt="" class="img-fluid">
+                        <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                            <h3>A Honey Mo<i
+          class="fa fa-heart heart text-danger" alt="love"></i>n in the Wild</h3>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-fluid" src="./images/images/equator.jpg" alt="">
-                    <p>Cooperate vaccation, a great time to shake off that work stress and connect with your work mates and boss</p>
+                    <div class="location-container">
+                        <img src="./images/images/equator.jpg" alt="" class="img-fluid">
+                        <div class="location-caption d-flex align-items-center justify-content-center flex-column">
+                            <h5>Cooperate vaccation, a great time to shake off that work stress and connect with your work mates and boss</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

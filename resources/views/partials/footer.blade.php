@@ -1,14 +1,14 @@
-  <footer class="container-fluid text-white p-4 bg-dark">
+  <footer class="container-fluid text-white p-4 bg-dark footer">
 
-  <div class="row justify-content-center p-3">
+  <div class="row justify-content-center p-3 align-items-center">
     <div class="col-md-6 text-center">
-      <h2>Jiana Tours & Travel</h2>
+      <h2 style="color: #fff;">Jiana Tours & Travel</h2>
     </div>
     <div class="col-md-6">
       <form action="" class="">
           <label for="" class="text-muted">Get special deals straight to your inbox</label>
         <div class="d-flex">
-          <input type="email" class="form-control form-control-sm bg-dark w-50" placeholder="Email address">
+          <input type="email" class="form-control form-control-sm w-50" placeholder="Email address">
           <input type="submit" value="Subscribe" class="btn btn-primary btn-sm">
         </div>
       </form>

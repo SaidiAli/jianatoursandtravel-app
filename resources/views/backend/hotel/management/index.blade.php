@@ -5,14 +5,14 @@
 @section('content')
     <div class="content">
         <div class="container-fluid">
-            <div class="row page-title">
+            <div class="row page-title p-4">
                         <div class="col-md-12">
                             <a href="{{route('hotel.create')}}" class="btn btn-primary float-right">Register new hotel</a>
                             <h4 class="mb-1 mt-0">Manage Registered Hotels</h4>
                     </div>
                 </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         @foreach ($hotels as $hotel)
                             <div class="col-lg-4">
                                 <div class="card">

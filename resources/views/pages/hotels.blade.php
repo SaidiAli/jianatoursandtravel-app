@@ -35,7 +35,13 @@
                         <div class="card-body">
                             <h5 class="card-title"><a href="{{route('hotel.show', ['hotel' => $hotel])}}">{{$hotel->name}}</a></h5>
                             <p class="card-text">{{$hotel->description}}</p>
-                            <a href="{{route('hotel.show', ['hotel' => $hotel])}}" class="btn btn-primary">Book Now</a>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="{{route('hotel.show', ['hotel' => $hotel])}}" class="btn btn-primary">Book Now</a>
+                                <div>
+                                    <small class="ave">Averagely:</small>
+                                    <h3>${{$hotel->average_price}}/<span class="pn">per night</span></h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

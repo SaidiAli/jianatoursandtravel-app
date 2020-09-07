@@ -12,6 +12,8 @@ use Symfony\Component\HttpKernel\Event\RequestEvent;
 class CarsController extends Controller
 {
     public function index(Request $request) {
+        return view('maintenance');
+        
         $cars = Car::all();
 
         $all_cars = $cars->count();
