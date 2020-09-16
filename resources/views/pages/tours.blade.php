@@ -15,7 +15,7 @@
 </header>
 
     <section id="content" class="page-section">
-        <h1 class="text-center mb-5">Most rated tours</h1>
+        <h1 class="text-center mb-5">Most Visited</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-6">

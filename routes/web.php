@@ -44,6 +44,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/hotels/add_images/{hotel}', 'HotelsManagement@add_images')->name('hotels.add_images');
     Route::put('/hotels/add_images/{hotel}', 'HotelsManagement@update_cover_images')->name('hotels.update_cover_images');
 
+    Route::get('/hotels/search', 'HotelsManagement@search')->name('hotels.search');
+
     Route::get('admin', 'AdminController@index');
 });
 
