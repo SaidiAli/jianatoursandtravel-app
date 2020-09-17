@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Hotel extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Searchable;
+    
     protected $guarded = [];
     
     public function facilities()

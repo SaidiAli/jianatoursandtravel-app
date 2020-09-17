@@ -179,33 +179,39 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-12 my-2">
-                            <div class="location-container">
+                            <a href="{{route('hotels.search')}}?search=kampala">
+                                <div class="location-container">
                                 <img src="./images/images/hotels/1.jpg" alt="" class="img-fluid">
-                            <div class="location-caption d-flex justify-content-center align-items-center flex-column">
-                                    <h3>Kampala</h3>
-                                    <p>1234 Hotels</p>
+                                <div class="location-caption d-flex justify-content-center align-items-center flex-column">
+                                        <h3>Kampala</h3>
+                                        <p>1234 Hotels</p>
+                                </div>
                             </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-12 my-2">
                             <div class="row">
                             <div class="col-md-6 my-2">
-                                <div class="location-container">
+                                <a href="{{route('hotels.search')}}?search=entebbe">
+                                     <div class="location-container">
                                     <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
                                         <h3>Entebbe</h3>
                                         <p>1234 Hotels</p>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="col-md-6 my-2">
-                                <div class="location-container">
+                                <a href="{{route('hotels.search')}}?search=gulu">
+                                    <div class="location-container">
                                     <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
                                         <h3>Gulu</h3>
                                         <p>1234 Hotels</p>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         </div>
@@ -216,33 +222,39 @@
                         <div class="col-12 my-2">
                             <div class="row">
                             <div class="col-md-6 my-2">
-                                <div class="location-container">
+                                <a href="{{route('hotels.search')}}?search=mbale">
+                                    <div class="location-container">
                                     <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
                                         <h3>Mbale</h3>
                                         <p>1234 Hotels</p>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div class="col-md-6 my-2">
-                                <div class="location-container"> 
+                                <a href="{{route('hotels.search')}}?search=mbarara">
+                                    <div class="location-container"> 
                                     <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
                                         <h3>Mbarara</h3>
                                         <p>1234 Hotels</p>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         </div>
                         <div class="col-12 my-2">
-                            <div class="location-container">
+                            <a href="{{route('hotels.search')}}?search=jinja">
+                                <div class="location-container">
                                 <img src="./images/images/hotels/image19.png" alt="" class="img-fluid">
                                 <div class="location-caption d-flex justify-content-center align-items-center flex-column">
                                     <h3>Jinja</h3>
                                     <p>1234 Hotels</p>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     </div>
                 </div>
