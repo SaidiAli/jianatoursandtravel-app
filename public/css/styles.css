@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .discount {
   color: red;
   font-weight: bold;
@@ -307,4 +308,23 @@ a:hover {
 
 .pn {
   font-size: 15px;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating .star {
+  font-size: 1rem;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
 }

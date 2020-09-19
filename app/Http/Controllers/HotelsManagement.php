@@ -58,8 +58,8 @@ class HotelsManagement extends Controller
 
     public function linkSearch(Request $request) {
         $results = $this->search($request->query('search'));
-        dd($results);
-        return view('search_results');
+        // dd($results);
+        return view('search_results')->with(['results' =>$results, 'search_query' => $request->query('search')]);
     }
 
     private function search($str) {

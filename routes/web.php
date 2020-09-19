@@ -23,18 +23,13 @@ Route::get('/hotels', 'PagesController@hotels')->name('hotel.index');
 Route::get('/car-hire-and-sale', 'PagesController@car_hire_and_sale')->name('car-hire-and-sale');
 Route::get('/car-preview', 'PagesController@car_preview')->name('car_preview');
 
-Route::get('mail', function(){
-    $booking = App\Booking::find(1)->first();
-    return (new App\Notifications\BookingSuccessful($booking))->toMail($booking->user);
-});
-
-Route::post('/test', function() {});
-
+// Auth routes
 Auth::routes(['verify' => true]);
 
+// Protected Routes
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/profile', 'ProfileController@index')->name('profile');
-    Route::resource('/hotel', 'HotelController')->except(['index']);
+    Route::resource('/hotel', 'HotelController')->only(['create', 'store', 'destroy', 'edit', 'update']);
     Route::resource('/booking', 'BookingController')->only(['store', 'show']);
     Route::resource('/payment', 'PaymentController')->only(['index']);
     Route::resource('/room', 'RoomController')->only(['store']);
@@ -44,11 +39,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/hotels/add_images/{hotel}', 'HotelsManagement@add_images')->name('hotels.add_images');
     Route::put('/hotels/add_images/{hotel}', 'HotelsManagement@update_cover_images')->name('hotels.update_cover_images');
 
-    Route::get('/hotels/search', 'HotelsManagement@linkSearch')->name('hotels.search');
-
+    
     Route::get('admin', 'AdminController@index');
 });
 
+// Open Routes
+Route::resource('/hotel', 'HotelController')->only(['show']);
+Route::get('/hotels/search', 'HotelsManagement@linkSearch')->name('hotels.search');
+
+// Admin Routes
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::get('/dashboard', 'SuperAdminController@index')->name('admin.index');
     Route::get('/facilities/add', 'SuperAdminController@facilities_add')->name('facilities.add');
