@@ -39,13 +39,16 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/hotels/add_images/{hotel}', 'HotelsManagement@add_images')->name('hotels.add_images');
     Route::put('/hotels/add_images/{hotel}', 'HotelsManagement@update_cover_images')->name('hotels.update_cover_images');
 
-    
+
     Route::get('admin', 'AdminController@index');
 });
 
 // Open Routes
 Route::resource('/hotel', 'HotelController')->only(['show']);
-Route::get('/hotels/search', 'HotelsManagement@linkSearch')->name('hotels.search');
+
+// search routes
+Route::get('/hotels/search', 'SearchController@linkSearch')->name('hotels.linkSearch');
+Route::post('/hotels/search', 'SearchController@formSearch')->name('hotels.search');
 
 // Admin Routes
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {

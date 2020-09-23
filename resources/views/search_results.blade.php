@@ -1,6 +1,8 @@
 <x-app>
-    <div class="row">
-        <div class="col-md-4 my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-md-4 my-5">
             <div class="card">
                 <div class="card-body">
                     More search options
@@ -11,7 +13,7 @@
             <div class="card p-3">
                 <div class="card-body">
                     <div class="card-title">
-                        <h3 class="text-primary">{{$results->count()}} Hotels found in {{$search_query}} City</h3>
+                        <h3 class="text-primary">{{$results->count()}} Hotel(s) found</h3>
                     </div>
                 </div>
             </div>
@@ -64,6 +66,8 @@
             @empty
                 <h3 class="text-center">The search returned empty</h3>
             @endforelse
+        </div>
+            </div>
         </div>
     </div>
 </x-app>

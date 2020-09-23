@@ -28,7 +28,7 @@ class HotelsManagement extends Controller
 
         return view('backend.hotel.management.preview')->with([
             'hotel'     => $hotel,
-            'facilities' =>$facilities, 
+            'facilities' =>$facilities,
             'facilities' => $facilities,
             'allFacilities' => $allFacilities,
             'images' => $img_urls
@@ -44,7 +44,7 @@ class HotelsManagement extends Controller
         $this->validate($request, [
             'cover_photo' => 'image|mimes:jpeg,png,jpg'
         ]);
-        
+
         $hotel = Hotel::where('id', $id)->first();
 
         if ($request->hasFile('file')) {
@@ -54,15 +54,5 @@ class HotelsManagement extends Controller
                 return response()->json(['message' => 'success']);
             }
         }
-    }
-
-    public function linkSearch(Request $request) {
-        $results = $this->search($request->query('search'));
-        // dd($results);
-        return view('search_results')->with(['results' =>$results, 'search_query' => $request->query('search')]);
-    }
-
-    private function search($str) {
-        return Hotel::search($str)->get();
     }
 }

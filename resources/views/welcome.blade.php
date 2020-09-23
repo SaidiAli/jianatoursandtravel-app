@@ -17,6 +17,38 @@
     </header>
     <!-- About Section -->
 
+{{--    Search section --}}
+    <section class="section">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-3 m-2">
+                    <div class="card-title">
+                        <h1 class="text-center">Find Hotels in Uganda</h1>
+                        <p class="text-center">Search for a hotel in any district or place</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="">
+                          <form action="{{route('hotels.search')}}">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="search" class="form-control" placeholder="Search for a city of particular Hotel" name="search">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="submit" value="Search" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -98,7 +130,7 @@
             <div class="container text-white-75">
                 <p>Here at Jiana Tours and Travel Agency we exist only to offer you the finest and highest quality services in the market.
                     Ranging from travel assistance, hotel booking, car rentals you name it, we have got you covered. The recipe to an incredible Ugandan experience is you , us and MOTHER NATURE.
-                    
+
                     Let us show you a good time, with almost no effort on your side, well minus having fun ofcourse. Trust us with your precious time and leave a refreshed and happier member of the jiana family.</p>
 
                 <div class="row justify-content-center mt-5">
@@ -179,7 +211,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-12 my-2">
-                            <a href="{{route('hotels.search')}}?search=kampala">
+                            <a href="{{route('hotels.linkSearch')}}?search=kampala">
                                 <div class="location-container">
                                 <img src="./images/images/hotels/1.jpg" alt="" class="img-fluid">
                                 <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -192,7 +224,7 @@
                         <div class="col-12 my-2">
                             <div class="row">
                             <div class="col-md-6 my-2">
-                                <a href="{{route('hotels.search')}}?search=entebbe">
+                                <a href="{{route('hotels.linkSearch')}}?search=entebbe">
                                      <div class="location-container">
                                     <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -203,7 +235,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6 my-2">
-                                <a href="{{route('hotels.search')}}?search=gulu">
+                                <a href="{{route('hotels.linkSearch')}}?search=gulu">
                                     <div class="location-container">
                                     <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -222,7 +254,7 @@
                         <div class="col-12 my-2">
                             <div class="row">
                             <div class="col-md-6 my-2">
-                                <a href="{{route('hotels.search')}}?search=mbale">
+                                <a href="{{route('hotels.linkSearch')}}?search=mbale">
                                     <div class="location-container">
                                     <img src="./images/images/hotels/2.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
@@ -233,8 +265,8 @@
                                 </a>
                             </div>
                             <div class="col-md-6 my-2">
-                                <a href="{{route('hotels.search')}}?search=mbarara">
-                                    <div class="location-container"> 
+                                <a href="{{route('hotels.linkSearch')}}?search=mbarara">
+                                    <div class="location-container">
                                     <img src="./images/images/hotels/speke-hotel.jpg" alt="" class="img-fluid">
                                     <div class="location-caption d-flex justify-content-center align-items-center flex-column">
                                         <h3>Mbarara</h3>
@@ -246,7 +278,7 @@
                         </div>
                         </div>
                         <div class="col-12 my-2">
-                            <a href="{{route('hotels.search')}}?search=jinja">
+                            <a href="{{route('hotels.linkSearch')}}?search=jinja">
                                 <div class="location-container">
                                 <img src="./images/images/hotels/image19.png" alt="" class="img-fluid">
                                 <div class="location-caption d-flex justify-content-center align-items-center flex-column">
