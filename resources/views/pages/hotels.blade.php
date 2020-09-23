@@ -15,18 +15,33 @@
     </header>
 
     <section id="content" class="section">
-        <h1 class="text-center mb-5">Select from our registered Hotels</h1>
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="bg-warning text-center p-3 mb-2 d-flex justify-content-center">
+                    <i class="mr-2 uil uil-smile-beam text-success p-0 m-0" style="font-size: 2rem;"></i>
+                    <p class="my-auto">Customers who book hotels on our platform receive mad discounts on car hire deals</p>
+                </div>
+            </div>
+        </div>
+        
+        <h1 class="text-center mb-5 text-uppercase">our registered Hotels</h1>
         <div class="container">
             <div class="row">
                 @forelse ($hotels as $hotel)
                 <div class="col-lg-4 col-sm-6">
                     <div class="card">
-                            <img class="img-fluid card-img-top" src="{{asset('storage/'.$hotel->cover_photo)}}"
+                            <img class="img-fluid card-img-top" src="{{$hotel->cover_photos}}"
                                 alt="">
                         <div class="card-body">
                             <h5 class="card-title"><a href="{{route('hotel.show', ['hotel' => $hotel])}}">{{$hotel->name}}</a></h5>
                             <p class="card-text">{{$hotel->description}}</p>
-                            <a href="{{route('hotel.show', ['hotel' => $hotel])}}" class="btn btn-primary">Book Now</a>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="{{route('hotel.show', ['hotel' => $hotel])}}" class="btn btn-primary">Book Now</a>
+                                <div>
+                                    <small class="ave">Averagely:</small>
+                                    <h3>${{$hotel->average_price}}/<span class="pn">per night</span></h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,7 +61,7 @@
 
     <section class="section">
         <div>
-            <h1 class="text-center mb-5">Some discounted deals for you</h1>
+            <h1 class="text-center mb-5 text-uppercase">hot deals</h1>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">

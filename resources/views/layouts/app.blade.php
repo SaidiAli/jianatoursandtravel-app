@@ -12,26 +12,46 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Raleway&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link href="/backend/assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/backend/assets/libs/dropzone/dropzone.min.css">
+
+    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/fontawesome-free/css/all.min.css">
+    <link href="/backend/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/flickity.css">
+    @yield('custom_css')
 </head>
 <body>
     <div id="app">
+
         @include('partials.nav')
 
         <main>
-            @yield('content')
+            <div class="content">
+                @yield('content')
+            </div>
         </main>
 
         @include('partials.footer')
+        
     </div>
+   <!-- Vendor js -->
+   <script src="/backend/assets/js/vendor.min.js"></script>
+   <script src="/backend/assets/libs/dropzone/dropzone.min.js"></script>
+   
+   <script src="/backend/assets/libs/flatpickr/flatpickr.min.js"></script>
+
+   {{-- Flickity --}}
+    <script src="/js/flickity.js"></script>
+
+    <script src="/js/custom.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/backend/assets/js/app.min.js"></script>
+    @yield('javascript')
+
 </body>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/main.js"></script>
 </html>

@@ -28,34 +28,22 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,
-            [
-                'name' => 'required',
-                'description' => 'required|min:20|max:500',
-                'email' => 'required|email',
-                'district' => 'required',
-                'address' => 'required|max:200',
-                'phone' => 'required',
-                'cover_photo' => 'required|image|mimes:jpeg,png,jpg'
-            ]
-        );
+            $this->validator($request);
 
             $hotel = new Hotel();
             $hotel->user_id = auth()->user()->id;
             $hotel->name = $request->input('name');
             $hotel->description = $request->input('description');
+            $hotel->average_price = $request->input('average_price');
             $hotel->address = $request->input('address');
             $hotel->district = $request->input('district');
             $hotel->phone = $request->input('phone');
             $hotel->email = $request->input('email');
             $hotel->web = $request->input('web');
-
-            if ($request->hasFile('cover_photo')) {
-                $hotel->cover_photo = $request->file('cover_photo')->store('hotel_covers/'.$request->input('name'), 'public');
-            }
+            $hotel->verified = false;
 
             $hotel->save();
-            return redirect()->route('hotel.show', ['hotel' => $hotel]);
+            return redirect()->route('hotels.add_images', ['hotel' => $hotel]);
     }
 
     /**
@@ -66,8 +54,17 @@ class HotelController extends Controller
      */
     public function show($id)
     {
-        $hotel = Hotel::find($id)->first();
-        return view('backend.hotel.show')->withHotel($hotel);
+        $hotel = Hotel::where('id', $id)->first();
+        $images = Storage::files('hotel_covers/' . $hotel->id);
+        $img_urls = array_map(function ($file) {
+            return Storage::url($file);
+        }, $images);
+
+        return view('backend.hotel.show')->with([
+            'hotel' => $hotel,
+            'facilities' => $hotel->facilities,
+            'images' => $img_urls
+         ]);
     }
 
     /**
@@ -78,7 +75,9 @@ class HotelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hotel = Hotel::where('id', $id)->first();
+
+        return view('backend.hotel.management.edit')->withHotel($hotel);
     }
 
     /**
@@ -90,7 +89,26 @@ class HotelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $hotel = Hotel::where('id', $id)->first();
+
+        if($request->input('all') == 'true') {
+            $this->validator($request);
+            
+            $hotel->name        = $request->input('name');
+            $hotel->description = $request->input('description');
+            $hotel->average_price = $request->input('average_price');
+            $hotel->address     = $request->input('address');
+            $hotel->district    = $request->input('district');
+            $hotel->phone       = $request->input('phone');
+            $hotel->email       = $request->input('email');
+            $hotel->web         = $request->input('web');
+
+            $hotel->save();
+            return redirect()->route('hotels.preview', ['hotel' => $hotel]);
+        }
+
+        $hotel->facilities()->attach($request->input('facilities'));
+        return back();
     }
 
     /**
@@ -102,5 +120,23 @@ class HotelController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Validate request
+     */
+
+    private function validator(Request $request) {
+        return $request->validate(
+            [
+                'name'        => 'required',
+                'description' => 'required|min:20',
+                'average_price' => 'required',
+                'email'       => 'required|email',
+                'district'    => 'required',
+                'address'     => 'required|max:200',
+                'phone'       => 'required',
+            ]
+        );
     }
 }

@@ -1,0 +1,330 @@
+@charset "UTF-8";
+.discount {
+  color: red;
+  font-weight: bold;
+}
+
+.content {
+  margin: 5rem 0 0 0 !important;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type=email] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type=password] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.sign-in {
+  display: flex;
+  -ms-flex-align: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  max-height: 500px;
+}
+
+.portfolio-section {
+  padding: 3rem 0;
+}
+.portfolio-section.portfolio-img {
+  width: 10px;
+  height: 10px;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.selected-cars-carousel {
+  width: 400px;
+}
+.selected-cars-carousel .carousel-cell {
+  width: 100%;
+  /* full width */
+  height: 160px;
+  /* height of carousel */
+  margin-right: 10px;
+}
+.selected-cars-carousel .carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  counter-increment: carousel-cell;
+}
+
+.home-carousel {
+  width: 700px;
+}
+.home-carousel .carousel-cell {
+  width: 80%;
+  /* full width */
+  height: 300px;
+  /* height of carousel */
+  margin-right: 10px;
+}
+.home-carousel .carousel-cell {
+  counter-increment: carousel-cell;
+}
+
+.home-hotels-carousel {
+  width: 100%;
+}
+.home-hotels-carousel .flickity-button {
+  background: transparent;
+}
+.home-hotels-carousel .flickity-button:hover {
+  background: transparent;
+}
+.home-hotels-carousel .flickity-button-icon {
+  fill: white;
+}
+.home-hotels-carousel .carousel-cell {
+  width: 25rem;
+  margin-right: 10px;
+}
+.home-hotels-carousel .carousel-cell {
+  counter-increment: carousel-cell;
+}
+@media (max-width: 576px) {
+  .home-hotels-carousel .carousel-cell {
+    width: 20rem;
+    margin-right: 10px;
+  }
+}
+
+.hotel-covers-carousel .carousel-cell {
+  width: 70%;
+  /* full width */
+  height: 300px;
+  /* height of carousel */
+  margin-right: 5px;
+}
+.hotel-covers-carousel .carousel-cell {
+  counter-increment: carousel-cell;
+}
+.hotel-covers-carousel .flickity-button {
+  background: transparent;
+}
+.hotel-covers-carousel .flickity-button:hover {
+  background: transparent;
+}
+.hotel-covers-carousel .flickity-button-icon {
+  fill: white;
+}
+@media (max-width: 576px) {
+  .hotel-covers-carousel .flickity-page-dots {
+    display: none;
+  }
+  .hotel-covers-carousel .carousel-cell {
+    width: 100%;
+  }
+  .hotel-covers-carousel .flickity-viewport {
+    height: 150px !important;
+  }
+}
+
+/* smaller, dark, rounded square */
+.flickity-button {
+  background: #333;
+}
+
+.flickity-button:hover {
+  background: #F90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.custom-nav {
+  width: 100%;
+  height: 20px;
+  padding: 3rem;
+  background-color: white;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-nav .brand {
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+.custom-nav .link {
+  padding: 0 0.8rem;
+  font-family: "Raleway", sans-serif !important;
+}
+.custom-nav .flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .custom-nav .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+.site-header {
+  font-family: "Playfair Display", serif;
+}
+
+.nav-button {
+  display: inline-block;
+  border: 0.3rem solid #3490dc;
+  padding: 0.1rem;
+  color: #3490dc;
+}
+
+.location-container {
+  position: relative;
+}
+
+.location-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.location-caption:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.facility-icon {
+  font-size: 2rem;
+}
+
+.navtab-bg {
+  background-color: #f7f7f7;
+  color: black;
+}
+.navtab-bg .nav-link .active {
+  background-color: white;
+}
+
+p {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif !important;
+}
+
+.footer .form-control {
+  border: 1px solid transparent;
+  height: 38px;
+  padding-left: 40px;
+  padding-right: 20px;
+  background-color: white;
+  box-shadow: none;
+  border-radius: 0.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #5369f8;
+}
+a:hover {
+  text-decoration: none;
+  color: #455cf5;
+}
+
+.ave {
+  font-size: 10px;
+}
+
+.pn {
+  font-size: 15px;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating .star {
+  font-size: 1rem;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+}

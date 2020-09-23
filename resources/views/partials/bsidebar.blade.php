@@ -15,12 +15,65 @@
         <div id="sidebar-menu" class="slimscroll-menu">
             <ul class="metismenu" id="menu-bar">
                 <li class="menu-title">Navigation</li>
-                <li>
+                @if (auth()->user()->super_admin)
+                    <li>
+                    <a href="{{route('admin.index')}}">
+                        <i data-feather="user"></i>
+                        <span> Dashboard </span>
+                    </a>
+                </li>
+                @else
+                    <li>
                     <a href="{{route('profile')}}">
                         <i data-feather="user"></i>
                         <span> My Profile </span>
                     </a>
                 </li>
+                @endif
+                <li>
+                    <a href="javascript: void(0);">
+                        <i data-feather="shopping-bag"></i>
+                        <span> Services </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li>
+                            <a href="{{route('hotel.index')}}">Hotels</a>
+                        </li>
+                        <li>
+                            <a href="{{route('tours')}}">Tours</a>
+                        </li>
+                        <li>
+                            <a href="{{route('car-hire-and-sale')}}">Car Hire</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">Bus Booking</a>
+                        </li>
+                    </ul>
+                </li>
+                    @if(auth()->user()->hotels->count() > 0 or auth()->user()->admin)
+                        <li>
+                            <a href="{{route('hotels.manage')}}">
+                                <i class="uil  uil-analytics"></i>
+                                <span>Manage Hotels</span>
+                            </a>
+                        </li>
+                    @endif
+
+                    @if(auth()->user()->admin)
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="uil  uil-glass-martini"></i>
+                                <span>Manage Tours</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('cars.index')}}">
+                                <i class="uil  uil-car-sideview"></i>
+                                <span>Manage Cars</span>
+                            </a>
+                        </li>
+                    @endif
                 <li>
                 <a href="#">
                      <i class="uil  uil-cog"></i>

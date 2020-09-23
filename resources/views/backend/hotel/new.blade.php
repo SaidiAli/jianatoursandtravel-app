@@ -1,11 +1,11 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
     <div class="content">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <h4 class="header-title mt-0 mb-1">Register Your Hotel</h4>
                             <p class="sub-header">Provide information about your hotel, this information will be displayed to our customers for them to book in your hotel</p>
@@ -28,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="description">Text area</label>
+                                    <label for="description">Description</label>
                                     <textarea class="form-control" rows="2" name="description" id="description"></textarea>
                                     <div class="invalid-feedback">
                                         Please provide a brief description of the hotel
@@ -38,6 +38,13 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="average-price">Average Price</label>
+                                    <input type="text" class="form-control" name="average_price" id="average-price" required>
+                                    <div class="invalid-feedback">
+                                        Please provide an average price for the rooms
+                                    </div>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="email">Email Address</label>
@@ -60,7 +67,7 @@
                                 <div class="form-group mb-3">
                                     <label for="web">Web Address</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="web" aria-describedby="inputGroupPrepend">
+                                        <input type="text" class="form-control" id="web" aria-describedby="inputGroupPrepend" name="web">
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">
@@ -79,14 +86,6 @@
                                     <input type="text" class="form-control" id="phone" name="phone" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid phone contact.
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label"
-                                        for="cover-photo">Cover Photo</label>
-                                    <div class="col-lg-10">
-                                        <input type="file" class="form-control"
-                                            id="cover-photo" name="cover_photo">
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">

@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     public function index() {
-        return view('backend.profile');
+        $user = auth()->user();
+        $bookings = $user->bookings;
+        return view('backend.profile')->with([
+            'user' => $user,
+            'bookings' => $bookings
+        ]);
     }
 }
