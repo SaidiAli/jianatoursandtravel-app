@@ -37,6 +37,13 @@
                                 </li>
                             @endif
                         @else
+                            @if(auth()->user()->hotels->count() > 0 or auth()->user()->admin)
+                            <li class="nav-item">
+                                        <a href="{{route('hotels.manage')}}" class="nav-link raleway">
+                                            Manage Hotels
+                                        </a>
+                            </li>
+                    @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link raleway dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -47,12 +54,6 @@
                                         <i class="uil uil-user"></i>
                                         Profile
                                     </a>
-                                    @if(auth()->user()->hotels->count() > 0 or auth()->user()->admin)
-                                        <a href="{{route('hotels.manage')}}" class="dropdown-item">
-                                            <i class="uil  uil-analytics"></i>
-                                            <span>Manage Hotels</span>
-                                        </a>
-                                    @endif
 
                                     @if(auth()->user()->admin)
                                         <a href="{{route('cars.index')}}" class="dropdown-item">

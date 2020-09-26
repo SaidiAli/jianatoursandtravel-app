@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Storage;
 class PagesController extends Controller
 {
     public function home() {
-        $cars = Car::all()->toArray();
+        $hotels = Hotel::all();
 
-        return view('welcome')->with(['cars' => $cars]);
+        return view('welcome')->with(['hotels' => $hotels]);
     }
 
     public function hotels()

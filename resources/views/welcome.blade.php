@@ -55,66 +55,18 @@
                 <h2 class="mb-4 text-uppercase text-center">top rated hotels</h2>
                 <div class="d-flex justify-content-center m-5">
                     <div class="home-hotels-carousel" data-flickity='{"autoPlay": 3000, "wrapAround": true, "groupCells": true }'>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
-                                    <a href="" class="btn btn-primary">Book Now</a>
+                        @foreach($hotels as $hotel)
+                            <div class="carousel-cell">
+                                <div class="card">
+                                        <img class="img-fluid card-img-top" src="{{$hotel->cover_photos}}" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><h3>{{$hotel->name}}</h3></h5>
+                                        <p class="card-text">{{$hotel->description}}</p>
+                                        <a href="" class="btn btn-primary">Book Now</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
-                                    <a href="" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
-                                    <a href="" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
-                                    <a href="" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
-                                    <a href="" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                    <img class="img-fluid card-img-top" src="./images/images/hotels/speke-hotel.jpg" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title"><h3>Speke hotel</h3></h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi repudiandae ipsa impedit officia esse, sint assumenda natus nam libero voluptatem facilis</p>
-                                    <a href="" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -325,12 +277,7 @@
             <div class="col-lg-8">
                 <h2 class="mb-4 text-uppercase text-center">Featured car deals</h2>
                 <div class="d-flex justify-content-center m-5">
-                    <div class="home-carousel">
-                        @foreach ($cars as $car)
-                            <div class="carousel-cell">
-                                <img src="{{$car['car_image']}}" class="img-fluid">
-                            </div>
-                        @endforeach
+                    <div class="">
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
