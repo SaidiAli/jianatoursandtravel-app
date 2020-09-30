@@ -37,7 +37,7 @@
                                                     <dd class="col-sm-9 font-weight-normal">{{$booking->check_out_date.' '.$booking->check_out_time}}</dd>
                                                 </dl>
                                             </div>
-                                            
+
                                         </div>
 
                                         <div class="row mt-4">
@@ -54,7 +54,7 @@
                                             <div class="col-md-6">
                                                 <div class="text-md-right">
                                                     <h6 class="font-weight-normal">Total</h6>
-                                                    <h2>${{$booking->total_price}}</h2>
+                                                    <h2>UGX {{$booking->total_price}}</h2>
                                                 </div>
                                             </div> <!-- end col -->
                                         </div>
@@ -86,7 +86,7 @@
                                                                     <td class="text-right">${{$number_of_rooms[$room['id']]['total_amount']}}</td>
                                                                 </tr>
                                                             @endif
-                                                                
+
                                                             @endforeach
                                                         </tbody>
                                                     </table>

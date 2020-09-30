@@ -41,7 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h3 class="text-center">${{$hotel->average_price}}</h3>
+                                    <h3 class="text-center">UGX {{$hotel->average_price}}</h3>
 
                                     <div class="row my-4">
                                         <div class="col-12">

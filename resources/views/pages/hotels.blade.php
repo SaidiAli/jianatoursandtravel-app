@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        
+
         <h1 class="text-center mb-5 text-uppercase">our registered Hotels</h1>
         <div class="container">
             <div class="row">
@@ -34,12 +34,12 @@
                                 alt="">
                         <div class="card-body">
                             <h5 class="card-title"><a href="{{route('hotel.show', ['hotel' => $hotel])}}">{{$hotel->name}}</a></h5>
-                            <p class="card-text">{{$hotel->description}}</p>
+                            <p class="card-text">{{Str::limit($hotel->description, 200, ' ...')}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="{{route('hotel.show', ['hotel' => $hotel])}}" class="btn btn-primary">Book Now</a>
                                 <div>
                                     <small class="ave">Averagely:</small>
-                                    <h3>${{$hotel->average_price}}/<span class="pn">per night</span></h3>
+                                    <h3>UGX {{$hotel->average_price}}/<span class="pn">per night</span></h3>
                                 </div>
                             </div>
                         </div>
