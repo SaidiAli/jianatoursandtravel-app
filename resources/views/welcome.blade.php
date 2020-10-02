@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     @guest
-                        <p class="text-center text-white">Create an account to access exquisite services at Jiana Tours and Travel</p>
+                        <p class="text-center text-white">Create an account to unlock cheaper prices and more goodies</p>
                         <a href="{{route('register')}}" class="btn btn-primary btn-lg">Create Account</a>
                     @endguest
                 </div>
