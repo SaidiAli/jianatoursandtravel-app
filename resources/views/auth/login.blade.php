@@ -95,19 +95,15 @@
                                             </div> --}}
                                         </div>
                                     </div>
+                                    <div class="text-center">
+                                    <p class="text-muted">Dont have an account <a href="/register"
+                                                                                  class="text-primary font-weight-bold ml-1">Sign
+                                            Up</a></p>
+                                </div>
 
                                 </div> <!-- end card-body -->
                             </div>
                             <!-- end card -->
-
-                            <div class="row mt-3">
-                                <div class="col-12 text-center">
-                                    <p class="text-muted">Dont have an account <a href="/register"
-                                                                                  class="text-primary font-weight-bold ml-1">Sign
-                                            Up</a></p>
-                                </div> <!-- end col -->
-                            </div>
-                            <!-- end row -->
 
                         </div> <!-- end col -->
                         <!-- end row -->

@@ -60,7 +60,7 @@
                                 <div class="card">
                                         <img class="img-fluid card-img-top" src="{{$hotel->cover_photos}}" alt="">
                                     <div class="card-body">
-                                        <h5 class="card-title"><h3>{{$hotel->name}}</h3></h5>
+                                        <h5 class="card-title"><a href="{{route('hotel.show', ['hotel' => $hotel])}}">{{$hotel->name}}</a></h5>
                                         <p class="card-text">{{Str::limit($hotel->description, 200)}}</p>
                                         <a href="" class="btn btn-primary">Book Now</a>
                                     </div>
