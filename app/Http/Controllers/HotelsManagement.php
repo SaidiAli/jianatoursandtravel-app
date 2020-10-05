@@ -22,15 +22,19 @@ class HotelsManagement extends Controller
         $facilities    = $hotel->facilities;
         $allFacilities = Facility::all();
 
-        if(env('APP_ENV') == 'local') {
+        if (env('APP_ENV') == 'local') {
             $images = Storage::disk('public')->files('hotel_covers/' . $hotel->id);
+
+            $img_urls = array_map(function ($file) {
+                return Storage::url($file);
+            }, $images);
         } else if (env('APP_ENV') == 'development') {
             $images = Storage::disk('gcs')->files('hotel_covers/' . $hotel->id);
-        }
 
-        $img_urls      = array_map(function ($file) {
-            return Storage::url($file);
-        }, $images);
+            $img_urls = array_map(function ($file) {
+                return Storage::disk('gcs')->url($file);
+            }, $images);
+        }
 
         return view('backend.hotel.management.preview')->with([
             'hotel'     => $hotel,
