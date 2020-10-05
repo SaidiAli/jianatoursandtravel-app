@@ -24,7 +24,7 @@
                                                     <div class="alert alert-danger">{{$error}}</div>
                                                 @endforeach
                                             @endif
-                                            
+
                                             <h3 class="h3 mb-0 mt-4 text-center">Register</h3>
                                             <br><br>
 
@@ -34,25 +34,28 @@
                                                 <div class="form-group">
                                                     <label class="form-control-label">Name</label>
                                                     <div class="input-group input-group-merge">
-                                                        <input type="text" placeholder="Your name" id="last_name" name="name" class="form-control" required> 
-                                                    <div class="invalid-feedback">
-                                                        Please choose a name
-                                                    </div>
+                                                        <input type="text" placeholder="Your name" id="last_name"
+                                                               name="name" class="form-control" required>
+                                                        <div class="invalid-feedback">
+                                                            Please choose a name
+                                                        </div>
                                                     </div>
                                                     <label class="form-control-label">Email</label>
                                                     <div class="input-group input-group-merge">
-                                                        <input type="email" placeholder="Your email address" id="email" name="email" class="form-control" required>
+                                                        <input type="email" placeholder="Your email address" id="email"
+                                                               name="email" class="form-control" required>
                                                         <div class="invalid-feedback">
-                                                        Please choose a email
-                                                    </div>
+                                                            Please choose a email
+                                                        </div>
                                                     </div>
                                                     <label class="form-control-label mt-2 mb-2">Password</label>
                                                     <div class="input-group input-group-merge">
-                                                        <input type="password" placeholder="Your password" id="password" name="password"
+                                                        <input type="password" placeholder="Your password" id="password"
+                                                               name="password"
                                                                class="form-control" required>
-                                                               <div class="invalid-feedback">
-                                                        Please choose a password
-                                                    </div>
+                                                        <div class="invalid-feedback">
+                                                            Please choose a password
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -65,18 +68,15 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-12 text-center">
+                                        <p class="text-muted">Back to <a href="{{ route('login') }}"
+                                                                         class="text-primary font-weight-bold ml-1">Login</a>
+                                        </p>
+                                    </div>
+
                                 </div> <!-- end card-body -->
                             </div>
                             <!-- end card -->
-
-                            <div class="row mt-3">
-                                <div class="col-12 text-center">
-                                    <p class="text-muted">Back to <a href="{{ route('login') }}"
-                                                                     class="text-primary font-weight-bold ml-1">Login</a>
-                                    </p>
-                                </div> <!-- end col -->
-                            </div>
-                            <!-- end row -->
 
                         </div> <!-- end col -->
                         <!-- end row -->

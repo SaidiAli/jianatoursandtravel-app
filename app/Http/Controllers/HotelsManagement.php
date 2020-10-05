@@ -21,7 +21,13 @@ class HotelsManagement extends Controller
         $hotel         = Hotel::where('id', $id)->first();
         $facilities    = $hotel->facilities;
         $allFacilities = Facility::all();
-        $images        = Storage::files('hotel_covers/' . $hotel->id);
+
+        if(env('APP_ENV') == 'local') {
+            $images = Storage::disk('public')->files('hotel_covers/' . $hotel->id);
+        } else if (env('APP_ENV') == 'development') {
+            $images = Storage::disk('gcs')->files('hotel_covers/' . $hotel->id);
+        }
+
         $img_urls      = array_map(function ($file) {
             return Storage::url($file);
         }, $images);
