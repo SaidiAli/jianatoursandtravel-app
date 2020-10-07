@@ -59,7 +59,7 @@ class HotelsManagement extends Controller
 
         if ($request->hasFile('file')) {
             if ($path = $request->file('file')->store('hotel_covers/' . $hotel->id, 'gcs')) {
-                $hotel->cover_photos = Storage::url($path);
+                $hotel->cover_photos = Storage::disk('gcs')->url($path);
                 $hotel->save();
                 return response()->json(['message' => 'success']);
             }
