@@ -31,8 +31,8 @@ class RoomController extends Controller
         }
 
         if ($request->hasFile('room_image')) {
-            if ($path = $request->file('room_image')->store('room_images/'. $room->hotel->name .'/'. $request->input('name'))) {
-                $room->room_image = Storage::url($path);
+            if ($path = $request->file('room_image')->store('room_images/'. $room->hotel->name .'/'. $request->input('name'), 'gcs')) {
+                $room->room_image = Storage::disk('gcs')->url($path);
             }
         }
 
