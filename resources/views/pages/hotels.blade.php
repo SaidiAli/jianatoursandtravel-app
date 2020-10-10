@@ -15,11 +15,30 @@
     </header>
 
     <section id="content" class="section">
-        <div class="row">
+        <div class="row justify-content-center mb-3">
             <div class="col-md-8 m-auto">
-                <div class="bg-warning text-center p-3 mb-2 d-flex justify-content-center">
-                    <i class="mr-2 uil uil-smile-beam text-success p-0 m-0" style="font-size: 2rem;"></i>
-                    <p class="my-auto">Customers who book hotels on our platform receive mad discounts on car hire deals</p>
+                <div class="card p-3">
+                    <div class="card-title">
+                        <h2 class="text-center">Find Hotels in Uganda</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="">
+                          <form action="{{route('hotels.search')}}">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="search" class="form-control" placeholder="Search for a city of particular Hotel" name="search">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="submit" value="Search" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

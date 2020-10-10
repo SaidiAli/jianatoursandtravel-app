@@ -8,6 +8,25 @@
                     More search options
                 </div>
             </div>
+                    <div class="card p-3 mt-2">
+                    <div class="card-title">
+                        <h3 class="text-center">Find Hotels in Uganda</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="">
+                          <form action="{{route('hotels.search')}}">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="search" class="form-control" placeholder="Search for a city of particular Hotel" name="search">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="submit" value="Search" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div class="col-md-8 my-5">
             <div class="card p-3">
